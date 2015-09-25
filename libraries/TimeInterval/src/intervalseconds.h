@@ -5,6 +5,7 @@
  * \author Marco Boeris Frusca
  *
  */
+
 #ifndef INTERVALSECONDS_H_
 #define INTERVALSECONDS_H_
 
