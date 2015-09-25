@@ -1,11 +1,9 @@
 #include <measure.h>
-#include <oserialstream.h>
-
-OSerialStream debug;
+#include <Time.h>
 
 void setup() {
   // put your setup code here, to run once:  
-  debug.on();
+  Serial.begin(9600);
   
   Measure m;
   byte coordError = 0;
@@ -15,10 +13,11 @@ void setup() {
   m.setValue(3.14);
   m.setTimestamp(now());
 
-  debug.print("Timestamp: %ld", m.timestamp() );
-  debug.println("  [%s]", m.timestamp(0) );
-  debug.println("Value ( x 100): %d ]", (int) (m.value() * 100));
-  debug.println("Position: [ %s %s %s ]", m.position().latitude(), m.position().longitude(), m.position().altitude());
+  Serial.print( "Timestamp: " );
+  Serial.print(  m.timestamp() );
+  Serial.println("  [%s]", m.timestamp(0) );
+  Serial.println("Value ( x 100): %d ]", (int) (m.value() * 100));
+  Serial.println("Position: [ %s %s %s ]", m.position().latitude(), m.position().longitude(), m.position().altitude());
   
   if (!coordError)
   {
