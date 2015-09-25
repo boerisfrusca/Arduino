@@ -1,5 +1,5 @@
 #######################################
-# Syntax Coloring Map For CSPSensor
+# Syntax Coloring Map For Sensor
 ####################################### 
 # Class
 #######################################
