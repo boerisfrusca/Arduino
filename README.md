@@ -13,7 +13,7 @@ These libraries have the following structure:
 
 The smart-object libraries are:
 
-*SmrtObjIO: input/output operations from/to analog or digital pins;
+* SmrtObjIO: input/output operations from/to analog or digital pins;
 
 other libraries are: 
 
