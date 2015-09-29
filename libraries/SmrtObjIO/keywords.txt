@@ -1,0 +1,49 @@
+#######################################
+# Syntax Coloring Map
+####################################### 
+# Class
+#######################################
+Actuator	KEYWORD1
+AnalogSensor	KEYWORD1
+AnalogInput	KEYWORD1
+DigitActuator	KEYWORD1
+DigitalOutput	KEYWORD1
+IOInterface	KEYWORD1
+PWMOutput	KEYWORD1
+Sensor	KEYWORD1
+StateLED	KEYWORD1
+
+
+#######################################
+# Methods and Functions 
+#######################################	
+change	KEYWORD2
+init	KEYWORD2
+isOn	KEYWORD2
+off	KEYWORD2
+isOpen	KEYWORD2
+measure	KEYWORD2
+on	KEYWORD2
+pin	KEYWORD2
+read	KEYWORD2
+reference	KEYWORD2
+setReferenceDefault	KEYWORD2
+setReferenceExternal	KEYWORD2
+state	KEYWORD2
+type	KEYWORD2
+value	KEYWORD2
+write	KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+DEFAULT_VREF	KEYWORD3
+OFF	KEYWORD3
+ON	KEYWORD3
+NOT_INITIALIZED	KEYWORD3
+RESOLUTION	KEYWORD3
+TYPE_INPUT	KEYWORD3
+TYPE_OUTPUT	KEYWORD3
+V3_3	KEYWORD3
+V5_0	KEYWORD3
+
