@@ -13,9 +13,7 @@ These libraries have the following structure:
 
 The smart-object libraries are:
 
+* SmrtObjData: generic data as average and GPS position;
 * SmrtObjIO: input/output operations from/to analog or digital pins;
+* SmrtObjTime: timer. They handle the problem of  roll over for the time counter.
 
-other libraries are: 
-
-* Sensor: to handle values read from sensors.
-* TimeInterval: timer. They handle the problem of  roll over for the time counter.
