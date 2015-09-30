@@ -14,7 +14,7 @@
 float value = 0;
 uint8_t index = 0;
 
-avgValue avg;
+smrtobj::AvgValue avg;
 
 void setup() {
   Serial.begin(9600);

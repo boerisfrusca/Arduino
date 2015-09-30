@@ -28,7 +28,7 @@ pin	KEYWORD2
 read	KEYWORD2
 reference	KEYWORD2
 setReferenceDefault	KEYWORD2
-setReferenceExternal	KEYWORD2
+setReference	KEYWORD2
 state	KEYWORD2
 type	KEYWORD2
 value	KEYWORD2
