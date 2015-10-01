@@ -1,0 +1,22 @@
+#######################################
+# Syntax Coloring Map
+####################################### 
+# Class
+#######################################
+StringParser	KEYWORD1
+
+#######################################
+# Methods and Functions 
+#######################################	
+isDigitStr	KEYWORD2
+isFloatStr	KEYWORD2
+isIPAddress	KEYWORD2
+toFloat	KEYWORD2
+toInt	KEYWORD2
+toIPAddress	KEYWORD2
+toLong	KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+
