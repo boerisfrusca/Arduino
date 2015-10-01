@@ -15,5 +15,6 @@ The smart-object libraries are:
 
 * SmrtObjData: generic data as average and GPS position;
 * SmrtObjIO: input/output operations from/to analog or digital pins;
+* SmrtObjStrParser: string parser;
 * SmrtObjTime: timer. They handle the problem of  roll over for the time counter.
 
