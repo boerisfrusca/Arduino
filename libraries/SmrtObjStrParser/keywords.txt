@@ -15,6 +15,7 @@ toFloat	KEYWORD2
 toInt	KEYWORD2
 toIPAddress	KEYWORD2
 toLong	KEYWORD2
+readStringFromFlash	KEYWORD2
 
 #######################################
 # Constants (LITERAL1)

@@ -282,5 +282,26 @@ namespace smrtobj
 
     return false;
   }
+  
+  bool StringParser::readStringFromFlash(const char str[] PROGMEM, char* buf, uint8_t size_b)
+  {
+    // read back a char
+    int len = strlen_P(str);
+    int k = 0;
+      
+    // clear buffer
+    memset(buf, 0, size_b);
+    
+    for (k = 0; k < len && k < size_b; k++)
+    {
+      buf[k] =  pgm_read_byte_near(str + k);
+    }
+    if ( k == len )
+    {
+      return true;
+    }
+    //buf[size_b - 1] =  0;
+    return false;
+  }
 
 } /* namespace smrtobj */

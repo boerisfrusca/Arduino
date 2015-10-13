@@ -10,6 +10,8 @@
 #define STRINGPARSER_H_
 
 #include "Arduino.h"
+// Atmel libraries
+#include <avr/pgmspace.h>                     // Store data in flashmemory instead of SRAM 
 
 namespace smrtobj
 {
@@ -155,6 +157,18 @@ namespace smrtobj
 	   * \return false if the strins is not enough big.
        */
       static bool convertFloat(float n, char* buff, uint8_t stot, uint8_t decimal);
+	  
+	  /**
+	   * Reads a string from Flash memory. String is stored in a buffer 'buf' of size 'size_b'.
+	   * Buffer 'buf' must be enough large to store the wole string. If it is smaller function returns false.
+	   * 
+	   * \param[in] str string stored in flash memory
+	   * \param[out] buf buffer where store string
+	   * \param[in] size_b size of buffer 'buf'
+	   * 
+	   * \return false if buffer 'buf' is smaller then the string store in flash memory.
+	   */
+	   static bool readStringFromFlash(const char str[] PROGMEM, char* buf, uint8_t size_b);
   };
 
 } /* namespace smrtobj */
