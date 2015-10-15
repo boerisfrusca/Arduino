@@ -127,8 +127,16 @@ namespace smrtobj
     }
     else
     {
-        IR = (m_red + m_green + m_blue - m_clear)/2;
-        lux = (R_COEFF*(m_red - IR)+ G_COEFF*(m_green - IR) + B_COEFF*(m_blue - IR)) / CPL;
+        IR  = m_red;
+        IR += m_green;
+        IR += m_blue;
+        IR -= m_clear;
+        IR /=2;
+
+        lux  = R_COEFF*(m_red - IR);
+        lux += G_COEFF*(m_green - IR);
+        lux += B_COEFF*(m_blue - IR);
+        lux /= CPL;
     }
 
     if((lux < 0) && (m_clear < 50)) lux = 0;
