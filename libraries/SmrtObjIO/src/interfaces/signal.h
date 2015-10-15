@@ -50,6 +50,9 @@ namespace smrtobj
 
         //! Output
         TYPE_OUTPUT = 0x02,
+
+        //! bidirectional
+        TYPE_BIDIRECTIONAL = 0x03,
       };
 
       /**

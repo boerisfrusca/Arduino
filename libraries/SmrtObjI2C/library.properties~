@@ -1,0 +1,8 @@
+name=SmartObjIO
+version=1.0.0
+author=Marco Boeris Frusca
+email=
+sentence=Library for the Arduino to handle a smart object
+paragraph=This library allows an Arduino sketch to handle input and output devices with an Arduino board.
+url=https://github.com/boerisfrusca/Arduino
+architectures=*
