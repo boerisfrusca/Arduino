@@ -4,15 +4,22 @@
 # Class
 #######################################
 I2CDevice	KEYWORD1
+ADS1100	KEYWORD1
 
 
 #######################################
 # Methods and Functions 
 #######################################	
 address	KEYWORD2
+initialize	KEYWORD2
+isConnected	KEYWORD2
+measure	KEYWORD2
+read	KEYWORD2
 type	KEYWORD2
+value	KEYWORD2
+
 
 #######################################
 # Constants (LITERAL1)
 #######################################
-
+DEVICE_ADDRESS	KEYWORD3

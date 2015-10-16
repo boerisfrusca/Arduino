@@ -50,13 +50,13 @@ namespace smrtobj
                                                     // 0xC0 : 154 ms
                                                     // 0x00 : 700 ms
 
-      static const uint8_t WAIT_TIME_VALUE  = 0xDD; // T=5s : 256 - roundTowardsZero( 5000 / 28.8 ) = 0x53;
+      static const uint8_t WAIT_TIME_VALUE  = 0x53; // T=5s : 256 - roundTowardsZero( 5000 / 28.8 ) = 0x53;
                                                     // T=1s : 256 - roundTowardsZero( 5000 / 28.8 ) = 0xDD;
 
       static const int16_t R_COEFF = 136;
       static const int16_t G_COEFF = 1000;
       static const int16_t B_COEFF = -444;
-      static const int16_t CPL    = 497;     // gain = 1, atime = 154
+      static const int16_t CPL    = 497;            // gain = 1, atime = 154
 
       TCS34725();
       TCS34725(const TCS34725 &s);
@@ -71,7 +71,7 @@ namespace smrtobj
        */
       TCS34725 & operator=(const TCS34725 &s);
 
-      virtual bool testConnection();
+      virtual bool isConnected();
       virtual bool initialize();
       virtual bool read();
       virtual float measure();

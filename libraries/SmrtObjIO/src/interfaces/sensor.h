@@ -13,8 +13,7 @@ namespace smrtobj
 
   /**
    * The Sensor class defines the standard interface of a sensor. This is a virtual class and defines
-   * a virtual method "measure" to read the sensor. It is possible calibrate the sensor through a linear
-   * correction using the following parameters: coefficient and offset.
+   * a virtual method "measure" to read the sensor.
    */
   class Sensor
   {

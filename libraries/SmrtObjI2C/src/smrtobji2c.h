@@ -17,4 +17,5 @@
 // Sensors
 #include "sensors/TCS34725.h"
 #include "sensors/IAQ2000.h"
+#include "sensors/ADS1100.h"
 #endif /* SMRTOBJI2C_H_ */

@@ -85,7 +85,7 @@ namespace smrtobj
   }
 
 
-  bool TCS34725::testConnection()
+  bool TCS34725::isConnected()
   {
     uint8_t r_register = 0;
 
