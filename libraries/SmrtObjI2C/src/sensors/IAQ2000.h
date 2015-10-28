@@ -29,7 +29,6 @@ namespace smrtobj
       //! Device address used by default
       static const uint8_t DEVICE_ADDRESS = 0x5A;
 
-
       /**
        * Default Constructor.
        *

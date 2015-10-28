@@ -1,8 +1,9 @@
-/*
- * TCS34725.cpp
+/**
+ * \file TCS34725.cpp
+ * \brief  TCS34725 is a class to handle an TAOS TCS34725 color light-to.digital converter with IR filter.
  *
- *  Created on: Oct 14, 2015
- *      Author: boeris
+ * \author Marco Boeris Frusca
+ *
  */
 
 #include "TCS34725.h"
@@ -105,7 +106,7 @@ namespace smrtobj
   {
     uint8_t buf[8] = {0};
 
-    if ( ! I2Cdev::readBytes(DEVICE_ADDRESS, COLOR_ADDR, 8, buf) )
+    if ( ! I2Cdev::readBytes(DEVICE_ADDRESS,  create_command(COLOR_ADDR), 8, buf) )
       return false;
 
     m_clear = (uint16_t)(buf[1]<<8) + (uint16_t)buf[0];

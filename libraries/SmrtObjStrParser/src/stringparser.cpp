@@ -300,6 +300,7 @@ namespace smrtobj
     {
       return true;
     }
+
     //buf[size_b - 1] =  0;
     return false;
   }

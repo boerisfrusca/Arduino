@@ -51,47 +51,36 @@ namespace smrtobj
       enum _cmd_control_register
       {
         //! 'Command Select0'
-        //#define sel0 0x00
         SELECT0 = 0x00,
 
         //! Command 'Select1'
-        //#define sel1 0x01
         SELECT1 = 0x01,
 
         //! Command 'Select2'
-        //#define sel2 0x02
         SELECT2 = 0x02,
 
         //! Command 'Fade-On Time'
-        //#define fadeont 0x03
         FADE_ON_TIME = 0x03,
 
         //! Command 'Fully-On Time'
-        //#define fullyont 0x04
         FULLY_ON_TIME = 0x04,
 
         //! Command 'Fade-Off Time'
-        //#define fadeofft 0x05
         FADE_OFF_TIME = 0x05,
 
         //! Command 'First Fully-Off Time'
-        //#define ffullyofft 0x06
         FIRST_FULLY_OFF_TIME = 0x06,
 
         //! Command 'First Fully-Off Time'
-        //#define sfullyofft 0x07
         SECOND_FULLY_OFF_TIME = 0x07,
 
         //! Command 'Maximum Intensity'
-        //#define maxinten 0x08
         MAXIMUM_INTENSITY = 0x08,
 
         //! Command 'One Shot / Master Intensity'
-        //#define oneshotmi 0x09
         ONE_SHOT = 0x09,
 
         //! Command 'initialization'
-        //#define initialization 0x0A
         INITIALIZATION = 0x0A,
       };
 
@@ -103,34 +92,26 @@ namespace smrtobj
        */
       enum _register_description
       {
-        //#define pOff 0x00
         //! LED off (High impedence)
         LED_OFF = 0x00,
 
-        //#define OnPWM0 0x02
         //! LED on steadily with maximum intensity value of PWM0 (ALD value or BRIGHT_F0 value)
         LED_ON_PWM0 = 0x02,
 
-        //#define OnPWM1 0x03
         //! LED on steadily with maximum intensity value of PWM1 (ALD value or BRIGHT_F1 value)
         LED_ON_PWM1 = 0x03,
 
-        //#define pOn 0x04
         //! LED fully on (output low). Can be used as general-purpose output
         LED_ON = 0x04,
 
-        //#define Ononeshot 0x05
         //! LED on at brightness set by One Shot /  Master Intensity register
         LED_ON_ONE_SHOT = 0x05,
 
-        //#define Flashbank0 0x06
         //! LED blinking with intensity characteristics of BANK0 (PWM0)
         LED_BLINK_BANK0 = 0x06,
 
-        //#define Flashbank1 0x07
         //! LED blinking with intensity characteristics of BANK1 (PWM1)
         LED_BLINK_BANK1 = 0x07,
-
       };
 
       /**
@@ -165,67 +146,51 @@ namespace smrtobj
        */
       enum _time_parameter
       {
-        //#define TMS0 0x00
         //! 0 ms
         TMS0 = 0x00,
 
-        //#define TMS64 0x01
         //! 64 ms
         TMS64 = 0x01,
 
-        //#define TMS128 0x02
         //! 128 ms
         TMS128 = 0x02,
 
-        //#define TMS192 0x03
         //! 192 ms
         TMS192 = 0x03,
 
-        //#define TMS256 0x04
         //! 256 ms (default value)
         TMS256 = 0x04,
 
-        //#define TMS384 0x05
         //! 384 ms
         TMS384 = 0x05,
 
-        //#define TMS512 0x06
         //! 512 ms
         TMS512 = 0x06,
 
-        //#define TMS768 0x07
         //! 768 ms
         TMS768 = 0x07,
 
-        //#define TMS1024 0x08
         //! 1024 ms
         TMS1024 = 0x08,
 
-        //#define TMS1536 0x09
         //! 1536 ms
         TMS1536 = 0x09,
 
-        //#define TMS2048 0x0A
         //! 2048 ms
         TMS2048 = 0x0A,
 
-        //#define TMS3072 0x0B
         //! 3072 ms
         TMS3072 = 0x0B,
 
-        //#define TMS4096 0x0C
         //! 4096 ms
         TMS4096 = 0x0C,
 
-        //#define TMS5760 0x0D
         //! 5760 ms
         TMS5760 = 0x0D,
 
-        //#define TMS8128 0x0E
         //! 8128 ms
         TMS8128 = 0x0E,
 
-        //#define TMS16320 0x0F
         //! 16320 ms
         TMS16320 = 0x0F,
 
@@ -318,8 +283,8 @@ namespace smrtobj
        *
        *  Example turns on (sets low) all outputs, then turns off outputs 1 and 7 (sets high impedance).
        *
-       *  tca6507.RAWSRDrv(0x00, 0x00, 0x7F);
-       *  tca6507.RAWSRDrv(0x00, 0x00, 0x3E);
+       *  tca6507.RAWSelRegsDrv(0x00, 0x00, 0x7F);
+       *  tca6507.RAWSelRegsDrv(0x00, 0x00, 0x3E);
        *
        * \param[in] s0 Select0 register
        * \param[in] s1 Select1 register
