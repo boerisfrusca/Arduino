@@ -14,7 +14,7 @@
 namespace smrtobj
 {
   /**
-   * Class ADS1100 models the I2C iAQ2000 sensor.
+   * Class IAQ2000 models the I2C iAQ2000 sensor.
    * The iAQ2000 is designed to sense the level of volatile organic compounds (VOCs) such as smoke, cooking odors,
    * bio-effluence and pollutants.
    * This sensor gives a direct and reliable correlation to CO2 levels: output in ppm (parts-per-million):

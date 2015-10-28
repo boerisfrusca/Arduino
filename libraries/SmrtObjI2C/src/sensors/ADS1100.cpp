@@ -20,7 +20,7 @@ namespace smrtobj
     set_dev_address(DEVICE_ADDRESS);
   }
 
-  ADS1100::ADS1100(const ADS1100 &d) : I2CInterface(d)
+  ADS1100::ADS1100(const ADS1100 &d) : I2CInterface(d), Sensor(d)
   {
     m_value = d.m_value;
   }
@@ -32,6 +32,7 @@ namespace smrtobj
   ADS1100 & ADS1100::operator=(const ADS1100 &s)
   {
     I2CInterface::operator=(s);
+    Sensor::operator=(s);
 
     m_value = s.m_value;
 

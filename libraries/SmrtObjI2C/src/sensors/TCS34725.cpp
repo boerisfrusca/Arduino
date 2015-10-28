@@ -18,7 +18,7 @@ namespace smrtobj
   {
   }
 
-  TCS34725::TCS34725(const TCS34725 &s) : I2CInterface(s)
+  TCS34725::TCS34725(const TCS34725 &s) : I2CInterface(s), Sensor(s)
   {
     m_clear = s.m_clear;
     m_red   = s.m_red;
@@ -29,6 +29,7 @@ namespace smrtobj
   TCS34725 & TCS34725::operator=(const TCS34725 &s)
   {
     I2CInterface::operator=(s);
+    Sensor::operator=(s);
 
     m_clear = s.m_clear;
     m_red   = s.m_red;

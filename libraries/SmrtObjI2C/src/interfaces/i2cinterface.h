@@ -105,7 +105,7 @@ namespace smrtobj
        * \return measure or value
        *
        */
-      virtual float measure() = 0;
+      //virtual float measure() = 0;
 
     protected:
       /**
