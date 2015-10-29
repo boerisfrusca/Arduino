@@ -72,7 +72,7 @@ namespace smrtobj
     {
       tm.Second = bcd2dec(data[0] & 0x7f);
       tm.Minute = bcd2dec(data[1] );
-      tm.Hour   =   bcd2dec(data[2] & 0x3f);  // mask assumes 24hr clock
+      tm.Hour   = bcd2dec(data[2] & 0x3f);  // mask assumes 24hr clock
       tm.Wday   = bcd2dec(data[3] );
       tm.Day    = bcd2dec(data[4] );
       tm.Month  = bcd2dec(data[5] );
