@@ -1,7 +1,6 @@
-
 /**
  * \file TCA6507.h
- * \brief  TCA6507 is a class to handle an TCA6507 LED driver using I2C protovol.
+ * \brief  TCA6507 is a class to handle an TCA6507 LED driver using I2C protocol.
  *
  * \author Marco Boeris Frusca
  *
@@ -22,16 +21,16 @@
 namespace smrtobj
 {
 
-/**
- * Class TCA6507 models the TCA6507 LED driver using I2C protocol.
- * This 7-bit LED dimmer for the two-line bidirectional bus (I2C) is designed to control (or dim) LEDs
- * via the I2C interface. Without this device, the microprocessor or microcontroller must be actively
- * involved in turning on and off the LEDs (per the required dimming rate), which uses valuable processor
- * time and the overloads I2C bus.
- * The TCA6507 alleviates this issue by limiting the number of operations required by the processor in
- * blinking LEDs and, thus, helps to create a more efficient system.
- *
- */
+  /**
+   * Class TCA6507 models the TCA6507 LED driver using I2C protocol.
+   * This 7-bit LED dimmer for the two-line bidirectional bus (I2C) is designed to control (or dim) LEDs
+   * via the I2C interface. Without this device, the microprocessor or microcontroller must be actively
+   * involved in turning on and off the LEDs (per the required dimming rate), which uses valuable processor
+   * time and the overloads I2C bus.
+   * The TCA6507 alleviates this issue by limiting the number of operations required by the processor in
+   * blinking LEDs and, thus, helps to create a more efficient system.
+   *
+   */
   class TCA6507 : public I2CInterface
   {
     public:
@@ -81,7 +80,7 @@ namespace smrtobj
         ONE_SHOT = 0x09,
 
         //! Command 'initialization'
-        INITIALIZATION = 0x0A,
+        INITIALIZATION = 0x10,
       };
 
       /**
@@ -259,6 +258,7 @@ namespace smrtobj
        *  Resets registers and puts IC in shutdown mode.
        */
       void stop();
+
       /**
        * Reads data from the i2c device.
        *

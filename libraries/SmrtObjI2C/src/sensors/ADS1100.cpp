@@ -12,12 +12,12 @@ namespace smrtobj
 
   ADS1100::ADS1100() : m_value(0)
   {
-    set_dev_address(DEVICE_ADDRESS);
+    setDeviceAddress(DEVICE_ADDRESS);
   }
 
   ADS1100::ADS1100(uint8_t addredd) : m_value(0)
   {
-    set_dev_address(DEVICE_ADDRESS);
+    setDeviceAddress(DEVICE_ADDRESS);
   }
 
   ADS1100::ADS1100(const ADS1100 &d) : I2CInterface(d), Sensor(d)

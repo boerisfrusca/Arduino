@@ -18,7 +18,7 @@ namespace smrtobj
 
   IAQ2000::IAQ2000() : m_value(0)
   {
-    set_dev_address(DEVICE_ADDRESS);
+    setDeviceAddress(DEVICE_ADDRESS);
   }
 
   IAQ2000::IAQ2000(const IAQ2000 &s) : I2CInterface(s), Sensor(s)

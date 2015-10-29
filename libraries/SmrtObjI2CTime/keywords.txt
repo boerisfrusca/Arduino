@@ -1,0 +1,20 @@
+#######################################
+# Syntax Coloring Map
+####################################### 
+# Class
+#######################################
+DS130RTC	KEYWORD1
+
+#######################################
+# Methods and Functions 
+#######################################	
+setTime	KEYWORD2
+getTime	KEYWORD2
+read	KEYWORD2
+write	KEYWORD2
+
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+DEVICE_ADDRESS	KEYWORD3

@@ -109,9 +109,27 @@ namespace smrtobj
 
     protected:
       /**
+       * Convert a number (1 byte) from decimal to BCD
+       *
+       * \param[in] num decimal number
+       *
+       * \return BCD number
+       */
+      static uint8_t dec2bcd(uint8_t num);
+
+      /**
+       * Convert a number (1 byte) from BCD to decimal
+       *
+       * \param[in] num BCD number
+       *
+       * \return BCD decimal
+       */
+      static uint8_t bcd2dec(uint8_t num);
+
+      /**
        * Sets the device address. This function must be called only by constructors.
        */
-      void set_dev_address(uint8_t address)
+      void setDeviceAddress(uint8_t address)
       {
         m_device_addr = address;
       }
@@ -124,7 +142,6 @@ namespace smrtobj
        * \return false in case of errors, true otherwise
        */
       bool read_word(uint16_t &value, bool MSB = true);
-
 
       /**  Reads bytes from a slave device.
        * This is a "stripped-down" version of the standard Jeff Rowberg's I2Cdev::readBytes method,
@@ -139,6 +156,8 @@ namespace smrtobj
        * \return Number of bytes read (0 indicates failure)
        */
       int8_t readAllBytes(uint8_t devAddr, uint8_t length, uint8_t *data, uint16_t timeout=I2Cdev::readTimeout);
+
+      bool writeAllBytes(uint8_t devAddr, uint8_t length, uint8_t *data, uint16_t timeout=I2Cdev::readTimeout);
 
     private:
       // Device address

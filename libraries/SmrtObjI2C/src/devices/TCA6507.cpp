@@ -1,10 +1,10 @@
-/*
- * TCA6507.cpp
+/**
+ * \file TCA6507.h
+ * \brief  TCA6507 is a class to handle an TCA6507 LED driver using I2C protocol.
  *
- *  Created on: Oct 27, 2015
- *      Author: boeris
+ * \author Marco Boeris Frusca
+ *
  */
-
 #include "TCA6507.h"
 
 namespace smrtobj
@@ -48,70 +48,45 @@ namespace smrtobj
   void TCA6507::start()
   {
     digitalWrite(m_reset_pin, HIGH);
-    delay(10);
   }
 
   void TCA6507::stop()
   {
     digitalWrite(m_reset_pin, LOW);
-    delay(10);
   }
 
   bool TCA6507::isConnected()
   {
+    uint8_t result = 0;
 
-    Wire.beginTransmission(DEVICE_ADDRESS);
-    Wire.write(SELECT0);
-
-    if ( Wire.endTransmission() == 0 )
-    {
-      Wire.requestFrom((int) DEVICE_ADDRESS, 1);
-      uint8_t result = Wire.read();
-      return (Wire.endTransmission() == 0);
-    }
-
-    return false;
+    return ( I2Cdev::readByte(DEVICE_ADDRESS, SELECT0, &result) == 1);
   };
 
   bool TCA6507::RAWSelRegsDrv(uint8_t s0, uint8_t s1, uint8_t s2)
   {
-    Wire.beginTransmission(DEVICE_ADDRESS);
+    uint8_t data[3] = {s0, s1, s2};
 
-    Wire.write(0x10); // INITIALIZATION
-    Wire.write(s0);
-    Wire.write(s1);
-    Wire.write(s2);
-
-    return (Wire.endTransmission() == 0);
+    return I2Cdev::writeBytes(DEVICE_ADDRESS, INITIALIZATION, 3, data);
   }
 
   bool TCA6507::RAWRegDrv(uint8_t reg, uint8_t val)
   {
     if(reg >= 3 && reg <= 10)
     {
-      Wire.beginTransmission(DEVICE_ADDRESS);
-      Wire.write(reg);
-      Wire.write(val);
+      return I2Cdev::writeByte(DEVICE_ADDRESS, reg, val);
 
-      return (Wire.endTransmission() == 0);
-      }
+    }
 
     return false;
   }
 
   uint8_t TCA6507::readReg(uint8_t reg)
   {
-   Wire.beginTransmission(DEVICE_ADDRESS);
-   Wire.write(reg);
-   Wire.endTransmission();
+    uint8_t result = 0;
 
-   Wire.requestFrom((int) DEVICE_ADDRESS, 1);
-   uint8_t result = Wire.read();
-   Wire.endTransmission();
+   I2Cdev::readByte(DEVICE_ADDRESS, reg, &result);
 
-   delay(10);
-
-  return result;
+    return result;
   }
 
   uint8_t TCA6507::pinState(uint8_t pin)
