@@ -87,7 +87,7 @@ namespace smrtobj
         };
 
         /**
-         * Register Descriptions
+         * Register Descriptions.
          * The Select0 register (register 0),
          * Select1 (register 1), and Select2 register (register 2) configure the state of each of the
          * outputs
@@ -117,7 +117,7 @@ namespace smrtobj
         };
 
         /**
-         * Output pin
+         * Output pin.
          */
         enum _output_pin
         {
@@ -144,7 +144,7 @@ namespace smrtobj
         };
 
         /**
-         * Value for the time parameter
+         * Value for the time parameter.
          */
         enum _time_parameter
         {
@@ -199,7 +199,7 @@ namespace smrtobj
         };
 
         /**
-         * Basic bank number
+         * Basic bank number.
          */
         enum _basic_bank_number
         {
@@ -212,13 +212,13 @@ namespace smrtobj
 
         /**
          * Default Constructor.
-         * It sets the pin reset to 0.
+         * It sets the reset pin to 0 (\e P0).
          */
         TCA6507();
 
         /**
          * Constructor.
-         * It sets the pin reset. Reset pin can be any analog or digital pin on Arduino.
+         * It sets the reset pin to a specific value. Reset pin can be any analog or digital pin on Arduino.
          *
          * \param[in] r_pin number of the reset pin
          */
@@ -227,7 +227,7 @@ namespace smrtobj
         /**
          * Copy Constructor.
          *
-         * \param[in] d i2c led driver object
+         * \param[in] d device object
          */
         TCA6507(const TCA6507 &d);
 
@@ -239,7 +239,7 @@ namespace smrtobj
         /**
          * Override operator =
          *
-         * \param[in] d source led driver object
+         * \param[in] d source device object
          *
          * \return destination obiect reference
          */
@@ -263,7 +263,7 @@ namespace smrtobj
         void stop();
 
         /**
-         * Reads data from the i2c device.
+         * Reads data from the i2c device. This function is empty and returns always true.
          *
          * \return true if no errors
          */
@@ -286,14 +286,24 @@ namespace smrtobj
          *
          *  Example turns on (sets low) all outputs, then turns off outputs 1 and 7 (sets high impedance).
          *
+         * \code{.cpp}
+         *  smrtobj::i2c::TCA6507 tca6507;
+         *
+         *  // Enable IC for communications
+         *  tca6507.initialize();
+         *  tca6507.start();  
+         *
+         *  ...
+         *
          *  tca6507.RAWSelRegsDrv(0x00, 0x00, 0x7F);
          *  tca6507.RAWSelRegsDrv(0x00, 0x00, 0x3E);
+         * \endcode
          *
          * \param[in] s0 Select0 register
          * \param[in] s1 Select1 register
          * \param[in] s2 Select2 register
          *
-         * \return false id errors
+         * \return true for success, or false if any error occurs.
          */
         bool RAWSelRegsDrv(uint8_t s0, uint8_t s1, uint8_t s2);
 
@@ -302,9 +312,19 @@ namespace smrtobj
          * To be used with registers 3 thru 10.
          * Example below sets intensity of bank 1 to 8 and bank 0 to 15(max).
          *
-         * tca6507.RAWRegDrv(maxinten, 0x8F);
+         * \code{.cpp}
+         *  smrtobj::i2c::TCA6507 tca6507;
          *
-         * Available Registers:
+         *  // Enable IC for communications
+         *  tca6507.initialize();
+         *  tca6507.start();  
+         *
+         *  ...
+         *
+         * tca6507.RAWRegDrv(maxinten, 0x8F);
+         * \endcode
+         *
+         * Available registers:
          *    - 0x03 : Time it takes for the LED to fade to fully on state (FADE_ON_TIME).
          *    - 0x04 : Time LED stays in fully on state after fading or switching on (FULLY_ON_TIME).
          *    - 0x05 : Time it takes for the LED to fade to fully off state (FADE_OFF_TIME).
@@ -315,9 +335,9 @@ namespace smrtobj
          *    - 0x0A : Initialization register.
          *
          *  \param[in] reg register to set
-         *  \param[in] value to write into register
+         *  \param[in] val value to write into register
          *
-         *  \return false if errors
+         *  \return true for success, or false if any error occurs.
          */
         bool RAWRegDrv(uint8_t reg, uint8_t val);
 
@@ -326,8 +346,18 @@ namespace smrtobj
          * Reading entire register (both memory banks) using Read Registry function. Example reads LED
          * fully on time register and returns single value for two memory banks.
          *
+         * \code{.cpp}
          * int x = 0;
+         * smrtobj::i2c::TCA6507 tca6507;
+         *
+         * // Enable IC for communications
+         * tca6507.initialize();
+         * tca6507.start();  
+         *
+         * ...
+         * 
          * x = tca6507.Rreg(FULLY_ON_TIME);
+         * \endcode
          *
          * \param[in] reg register to read
          *
@@ -338,7 +368,7 @@ namespace smrtobj
         /**
          * Getting current pin state using Current Pin State.
          *
-         * Pin States (according to @_register_description:
+         * Pin States (according to smrtobj::i2c::TCA6507::_register_description):
          *    - 0 : Off (LED_OFF).
          *    - 2 : On with intensity of PWM0 (LED_ON_PWM0).
          *    - 3 : On with intensity of PWM1 (LED_ON_PWM1).
@@ -352,14 +382,24 @@ namespace smrtobj
          *
          * \return pin state 0, 2-7, if reading error occurs function returns 16.
          */
-        uint8_t pinState(uint8_t SPS);
+        uint8_t pinState(uint8_t pin);
 
         /**
          * Setting single output to specified state using Pin Set State function.
          * Example sets output pin 5 to on state without changing state of any other pin.
-         * State values are descriped in enum @_register_description .
+         * State values are descriped in enum smrtobj::i2c::TCA6507::_register_description.
          *
+         * \code{.cpp}
+         * smrtobj::i2c::TCA6507 tca6507;
+         *
+         * // Enable IC for communications
+         * tca6507.initialize();
+         * tca6507.start();  
+         *
+         * ...
+         * 
          * tca6507.pinSetState(P5, LED_ON);
+         * \endcode
          *
          * \param[in] pin pin number
          * \param[in] state new state to set
@@ -387,9 +427,9 @@ namespace smrtobj
          *
          * tca6507.registryToBank(Bbank1, maxinten, 0x04);
          *
-         * \param[i] nBank bank number
-         * \param[i] nReg register number
-         * \param[i] val value to write into the register
+         * \param[in] nBank bank number
+         * \param[in] nReg register number
+         * \param[in] val value to write into the register
          *
          */
         void registryToBank(uint8_t nBank, uint8_t nReg, uint8_t val);
