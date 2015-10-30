@@ -65,7 +65,7 @@ namespace smrtobj
       return ( I2Cdev::readByte(DEVICE_ADDRESS, SELECT0, &result) == 1);
     };
 
-    b ool TCA6507::RAWSelRegsDrv(uint8_t s0, uint8_t s1, uint8_t s2)
+    bool TCA6507::RAWSelRegsDrv(uint8_t s0, uint8_t s1, uint8_t s2)
     {
       uint8_t data[3] = {s0, s1, s2};
 
