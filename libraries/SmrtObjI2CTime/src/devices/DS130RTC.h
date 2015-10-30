@@ -8,15 +8,8 @@
 #ifndef DS130RTC_H_
 #define DS130RTC_H_
 
-#if ARDUINO >= 100
-#include "Arduino.h"       // for delayMicroseconds, digitalPinToBitMask, etc
-#else
-#include "WProgram.h"      // for delayMicroseconds
-#include "pins_arduino.h"  // for digitalPinToBitMask, etc
-#endif
-
-#include <Time.h>
 #include <interfaces/i2cinterface.h>
+#include <Time.h>
 
 namespace smrtobj
 {

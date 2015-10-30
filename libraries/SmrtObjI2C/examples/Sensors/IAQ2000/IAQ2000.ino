@@ -17,7 +17,7 @@
 #include <smrtobji2c.h>     // I2C device
 
 // I2C device
-smrtobj::IAQ2000 iaq;
+smrtobj::i2c::IAQ2000 iaq;
 
 // local flag: True if device id connected
 bool connected = false;
@@ -34,10 +34,10 @@ void setup()
   if( iaq.isConnected() )
   {
     connected = true;
-    Serial.println( "iaq2000 connected" );
+    Serial.println( F("iaq2000 connected") );
   }
   else
-    Serial.println( "iaq2000 connected" );
+    Serial.println( F("iaq2000 connected") );
 }
 
 void loop()
@@ -47,9 +47,9 @@ void loop()
     // Read value from ADC
     if ( iaq.read() )
     {
-      Serial.print( "VOC: ");
+      Serial.print( F("VOC: ") );
       Serial.print( iaq.measure() , DEC );
-      Serial.println( " ppm");
+      Serial.println( F(" ppm") );
     }
   }
  delay(10000);

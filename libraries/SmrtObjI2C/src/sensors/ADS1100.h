@@ -8,14 +8,6 @@
 #ifndef ADS1100_H_
 #define ADS1100_H_
 
-
-#if ARDUINO >= 100
-#include "Arduino.h"       // for delayMicroseconds, digitalPinToBitMask, etc
-#else
-#include "WProgram.h"      // for delayMicroseconds
-#include "pins_arduino.h"  // for digitalPinToBitMask, etc
-#endif
-
 #include <interfaces/i2cinterface.h>
   
  namespace smrtobj

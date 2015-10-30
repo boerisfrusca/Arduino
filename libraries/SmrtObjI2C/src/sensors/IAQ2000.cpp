@@ -16,55 +16,60 @@
 namespace smrtobj
 {
 
-  IAQ2000::IAQ2000() : m_value(0)
+  namespace i2c
   {
-    setDeviceAddress(DEVICE_ADDRESS);
-  }
-
-  IAQ2000::IAQ2000(const IAQ2000 &s) : I2CInterface(s), Sensor(s)
-  {
-    m_value = s.m_value;
-  }
-
-  IAQ2000::~IAQ2000()
-  {
-  }
-
-  IAQ2000 & IAQ2000::operator=(const IAQ2000 &s)
-  {
-    I2CInterface::operator=(s);
-    Sensor::operator=(s);
-
-    m_value = s.m_value;
-
-    return (*this);
-  }
-
-  bool IAQ2000::initialize() {
-      // Nothing is required, but
-      // the method should exist anyway.
-    return true;
-  }
-
-  bool IAQ2000::isConnected()
-  {
-    if ( read() )
+   
+    IAQ2000::IAQ2000() : m_value(0)
     {
-      if (m_value >= 450)
-      {
-          return true;
-      }
+      setDeviceAddress(DEVICE_ADDRESS);
     }
-    return false;
-  }
+  
+    IAQ2000::IAQ2000(const IAQ2000 &s) : I2CInterface(s), Sensor(s)
+    {
+      m_value = s.m_value;
+    }
+  
+    IAQ2000::~IAQ2000()
+    {
+    }
+  
+    IAQ2000 & IAQ2000::operator=(const IAQ2000 &s)
+    {
+      I2CInterface::operator=(s);
+      Sensor::operator=(s);
+  
+      m_value = s.m_value;
+  
+      return (*this);
+    }
+  
+    bool IAQ2000::initialize() {
+        // Nothing is required, but
+        // the method should exist anyway.
+      return true;
+    }
+  
+    bool IAQ2000::isConnected()
+    {
+      if ( read() )
+      {
+        if (m_value >= 450)
+        {
+            return true;
+        }
+      }
+      return false;
+    }
+  
+    bool IAQ2000::read() {
+      return read_word(m_value);
+    }
+  
+    float IAQ2000::measure()
+    {
+     return (float) m_value;
+    }
 
-  bool IAQ2000::read() {
-    return read_word(m_value);
-  }
-
-  float IAQ2000::measure()
-  {
-   return (float) m_value;
-  }
+  } /* namespace i2c */
 
 } /* namespace smrtobj */
