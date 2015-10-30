@@ -19,10 +19,10 @@
 #include <Wire.h>    // include Wire library
 
 // Create instance of tca6507, map IC reset pin, and put device in shutdown mode. (can be changed to any arduino pin).
-smrtobj::TCA6507 tca6507(5); 
+smrtobj::i2c::TCA6507 tca6507(5); 
 
 // Pin number where LED is connected
-uint8_t pin = smrtobj::TCA6507::P1;
+uint8_t pin = smrtobj::i2c::TCA6507::P1;
 
 // Device connected flag
 bool connected = false;
@@ -42,7 +42,14 @@ void setup() {
   {
     /* Set up with following parameters: Setup Bank Number 0, Fade On Time=0ms, On Time=256ms, Fade Off Time=64ms, Off Time=256ms, Second Off Time=1024ms */
     connected = true;
-    tca6507.basicBankSetup(smrtobj::TCA6507::BANK0, smrtobj::TCA6507::TMS0, smrtobj::TCA6507::TMS256, smrtobj::TCA6507::TMS64, smrtobj::TCA6507::TMS256, smrtobj::TCA6507::TMS1024);  // Setup of flash and fade bank zero. (See library manual for detailed description of commands being send)
+    tca6507.basicBankSetup( \
+	  smrtobj::i2c::TCA6507::BANK0, \
+	  smrtobj::i2c::TCA6507::TMS0, \
+	  smrtobj::i2c::TCA6507::TMS256, \
+	  smrtobj::i2c::TCA6507::TMS64, \
+	  smrtobj::i2c::TCA6507::TMS256, \
+	  smrtobj::i2c::TCA6507::TMS1024 \
+	);  // Setup of flash and fade bank zero. (See library manual for detailed description of commands being send)
   }    
 }
 
@@ -54,25 +61,25 @@ void loop() {
     Serial.println( F("TCA6507 OK") );
     /* Attach pin one of tca6507 to memory bank zero */
     // Sets specified pin to specified mode. Used for driving separate pins.
-    tca6507.pinSetState(pin, smrtobj::TCA6507::LED_BLINK_BANK0); 
+    tca6507.pinSetState(pin, smrtobj::i2c::TCA6507::LED_BLINK_BANK0); 
 
     // Pretend to do something useful.
     delay(10000);  
 
     // Turn off LED on pin 1.
-    tca6507.pinSetState(pin, smrtobj::TCA6507::LED_OFF);
+    tca6507.pinSetState(pin, smrtobj::i2c::TCA6507::LED_OFF);
 
     // Pretend to do something useful.
     delay(1000);
 
     // Turn on LED on pin 1.
-    tca6507.pinSetState(pin, smrtobj::TCA6507::LED_ON); 
+    tca6507.pinSetState(pin, smrtobj::i2c::TCA6507::LED_ON); 
   
     // Pretend to do something useful.
     delay(10000);  
  
     // Turn off LED on pin 1.
-    tca6507.pinSetState(pin, smrtobj::TCA6507::LED_OFF); 
+    tca6507.pinSetState(pin, smrtobj::i2c::TCA6507::LED_OFF); 
   }
   else
     Serial.println( F("TCA6507 KO") );

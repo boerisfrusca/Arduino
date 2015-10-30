@@ -19,7 +19,7 @@
 #define DEVICE_ADDRESS 0x48 // Device address
 
 // I2C device
-smrtobj::ADS1100 adc(DEVICE_ADDRESS);
+smrtobj::i2c::ADS1100 adc(DEVICE_ADDRESS);
 
 // local flag: True if device id connected
 bool connected = false;
