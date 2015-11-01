@@ -56,7 +56,7 @@ namespace smrtobj
         DigitalOutput & operator=(const DigitalOutput &o);
   
         /**
-         * Gets the type of the interface according to #smrtobj::Signal::_type enum
+         * Gets the type of the interface according to smrtobj::io::Signal::_type enum
          *
          * \return type of the interface
          */
@@ -154,7 +154,7 @@ namespace smrtobj
         PWMOutput & operator=(const PWMOutput &o);
   
         /**
-         * Gets the type of the interface according to #smrtobj::Signal::_type enum
+         * Gets the type of the interface according to smrtobj::io::Signal::_type enum
          *
          * \return type of the interface
          */
@@ -239,7 +239,7 @@ namespace smrtobj
         DigitalInput & operator=(const DigitalInput &o);
   
         /**
-         * Gets the type of the interface according to #smrtobj::Signal::_type enum
+         * Gets the type of the interface according to smrtobj::io::Signal::_type enum
          *
          * \return type of the interface
          */
@@ -334,14 +334,14 @@ namespace smrtobj
         /**
          * Change reference for ADCs, using default board value. Please check the working voltage for
          * your Arduino board: default analog reference of 5 volts (on 5V Arduino boards) or 3.3 volts
-         * (on 3.3V Arduino boards). If \c vdef parameter is not valid (#smrtobj::AnalogSensor::_v_default)
+         * (on 3.3V Arduino boards). If \c vdef parameter is not valid (smrtobj::io::AnalogSensor::_v_default)
          * all ADCs will be turned off, putting the reference voltage to 0.0V.
          *
          * \b Note:
          * Check the correct default voltage for your Arduino board! This function sets this value in an internal
          * attribute. If it is different from the actual board, reading will give a wrong result.
          *
-         * \param[in] vdef analog reference for your Arduino board according to #smrtobj::AnalogSensor::_v_default enum.
+         * \param[in] vdef analog reference for your Arduino board according to smrtobj::io::AnalogSensor::_v_default enum.
          *
          * \return true if  default voltage is correct, false otherwise
          */
@@ -392,7 +392,7 @@ namespace smrtobj
         AnalogInput & operator=(const AnalogInput &i);
   
         /**
-         * Gets the type of the interface according to #smrtobj::Signal::_type enum
+         * Gets the type of the interface according to smrtobj::io::Signal::_type enum
          *
          * \return type of the interface
          */
@@ -433,7 +433,7 @@ namespace smrtobj
         /**
          * Gets value as voltage. Pay attention, this value depends on reference voltage, if it has been set a
          * wrong value for this voltage, function will return a wrong result. See
-         * #smrtobj::AnalogSensor::setReferenceDefault and smrtobj::io::AnalogSensor::setReference
+         * smrtobj::io::AnalogSensor::setReferenceDefault and smrtobj::io::AnalogSensor::setReference
          *
          * \return input value as voltage
          */
