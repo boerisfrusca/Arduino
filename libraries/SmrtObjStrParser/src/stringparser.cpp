@@ -11,7 +11,7 @@
 namespace smrtobj
 {
 
-  namespace i2c
+  namespace parser
   {
 
     StringParser::StringParser()
@@ -285,7 +285,7 @@ namespace smrtobj
   
       return false;
     }
-    
+    /*
     bool StringParser::readStringFromFlash(const char str[] PROGMEM, char* buf, uint8_t size_b)
     {
       // read back a char
@@ -307,6 +307,7 @@ namespace smrtobj
       //buf[size_b - 1] =  0;
       return false;
     }
+	*/
   
   } /* namespace parser */
   

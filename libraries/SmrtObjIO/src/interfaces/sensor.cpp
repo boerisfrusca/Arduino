@@ -9,35 +9,41 @@
 
 namespace smrtobj
 {
-  /***************************************************************************
-   * Sensor
-   ***************************************************************************/
-  unsigned long Sensor::TWARMUP = 0;
 
-  // Default constructor
-  Sensor::Sensor()
+  namespace io
   {
-  }
-
-
-  // Copy constructor
-  Sensor::Sensor(const Sensor &s)
-  {
-  }
-
-  // Default destructor
-  Sensor::~Sensor()
-  {
-
-  }
-
-  Sensor & Sensor::operator=(const Sensor &s)
-  {
-    return (*this);
-  }
-
-} /* namespace smrtobj */
-
-
-
-
+    /***************************************************************************
+     * Sensor
+     ***************************************************************************/
+    unsigned long Sensor::TWARMUP = 0;
+  
+    // Default constructor
+    Sensor::Sensor()
+    {
+    }
+  
+  
+    // Copy constructor
+    Sensor::Sensor(const Sensor &s)
+    {
+    }
+  
+    // Default destructor
+    Sensor::~Sensor()
+    {
+  
+    }
+  
+    Sensor & Sensor::operator=(const Sensor &s)
+    {
+      return (*this);
+    }
+  
+  } /* namespace io */
+  
+  } /* namespace smrtobj */
+  
+  
+  
+  
+  

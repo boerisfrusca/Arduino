@@ -10,12 +10,18 @@
 namespace smrtobj
 {
 
-  OutputDevice::OutputDevice() : m_state(OFF)
+  namespace io
   {
-  }
 
-  OutputDevice::~OutputDevice()
-  {
-  }
-
-} /* namespace smrtobj */
+    OutputDevice::OutputDevice() : m_state(OFF)
+    {
+    }
+  
+    OutputDevice::~OutputDevice()
+    {
+    }
+  
+    } /* namespace io */
+  
+  } /* namespace smrtobj */
+  

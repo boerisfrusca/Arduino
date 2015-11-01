@@ -180,8 +180,9 @@ namespace smrtobj
          * \param[in] size_b size of buffer 'buf'
          * 
          * \return false if buffer 'buf' is smaller then the string store in flash memory.
-         */
+         * /
          static bool readStringFromFlash(const char str[] PROGMEM, char* buf, uint8_t size_b);
+		 */
     };
   
   } /* namespace parser */

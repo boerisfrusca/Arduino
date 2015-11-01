@@ -39,4 +39,4 @@ namespace smrtobj
   
   } /* namespace data */
 
-/* namespace smrtobj */
+}/* namespace smrtobj */
