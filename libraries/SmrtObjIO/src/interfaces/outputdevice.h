@@ -77,7 +77,7 @@ namespace smrtobj
         virtual bool off() = 0;
   
       protected:
-        //! State of the actuator. It can be ON or OFF (#smrtobj::OutputDevice::_state)
+        //! State of the actuator. It can be ON or OFF (smrtobj::io::OutputDevice::_state)
         byte m_state;
   
     };

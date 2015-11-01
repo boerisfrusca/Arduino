@@ -433,7 +433,7 @@ namespace smrtobj
         /**
          * Gets value as voltage. Pay attention, this value depends on reference voltage, if it has been set a
          * wrong value for this voltage, function will return a wrong result. See
-         * #smrtobj::AnalogSensor::setReferenceDefault and smrtobj::AnalogSensor::setReference
+         * #smrtobj::AnalogSensor::setReferenceDefault and smrtobj::io::AnalogSensor::setReference
          *
          * \return input value as voltage
          */

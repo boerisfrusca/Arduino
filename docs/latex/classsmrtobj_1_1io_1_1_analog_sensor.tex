@@ -1,0 +1,172 @@
+\hypertarget{classsmrtobj_1_1io_1_1_analog_sensor}{}\section{smrtobj\+:\+:io\+:\+:Analog\+Sensor Class Reference}
+\label{classsmrtobj_1_1io_1_1_analog_sensor}\index{smrtobj\+::io\+::\+Analog\+Sensor@{smrtobj\+::io\+::\+Analog\+Sensor}}
+
+
+{\ttfamily \#include $<$analogsensor.\+h$>$}
+
+Inheritance diagram for smrtobj\+:\+:io\+:\+:Analog\+Sensor\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classsmrtobj_1_1io_1_1_analog_sensor}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsmrtobj_1_1io_1_1_analog_sensor_a2d2cf5325090f91a9620bc2504b7833d}{Analog\+Sensor} ()
+\item 
+\hyperlink{classsmrtobj_1_1io_1_1_analog_sensor_a3f15baecbab62f6a285eec610de6eddc}{Analog\+Sensor} (const \hyperlink{classsmrtobj_1_1io_1_1_analog_sensor}{Analog\+Sensor} \&s)
+\item 
+virtual \hyperlink{classsmrtobj_1_1io_1_1_analog_sensor_a219be0f06be040ce9aa9238412885253}{$\sim$\+Analog\+Sensor} ()
+\item 
+\hyperlink{classsmrtobj_1_1io_1_1_analog_sensor}{Analog\+Sensor} \& \hyperlink{classsmrtobj_1_1io_1_1_analog_sensor_a54f94abe224bec306872b1fb5ca9180e}{operator=} (const \hyperlink{classsmrtobj_1_1io_1_1_analog_sensor}{Analog\+Sensor} \&s)
+\item 
+virtual float \hyperlink{classsmrtobj_1_1io_1_1_analog_sensor_a1084904f7f66c5f1e65b75ebdf3bf6b6}{read} ()
+\item 
+virtual float \hyperlink{classsmrtobj_1_1io_1_1_analog_sensor_a67dd93a15352fa4a98d036194963c4a7}{measure} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classsmrtobj_1_1io_1_1_analog_sensor_a6be01825a9813d8b4b28d64d99a908f2}{}float \hyperlink{classsmrtobj_1_1io_1_1_analog_sensor_a6be01825a9813d8b4b28d64d99a908f2}{m\+\_\+measure}\label{classsmrtobj_1_1io_1_1_analog_sensor_a6be01825a9813d8b4b28d64d99a908f2}
+
+\begin{DoxyCompactList}\small\item\em Last value read. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+The \hyperlink{classsmrtobj_1_1io_1_1_analog_sensor}{Analog\+Sensor} class model a generic analog sensor. It measures the voltage on a analog input of the Arduino board. The input voltage (Vin) is given by the following formula\+:
+
+\[Vin= Nadc*(Vref/2^n)\]
+
+Where\+: {\ttfamily Nadc} is the output value of the A\+D\+C;~\newline
+{\ttfamily Vref} is the reference voltage of the A\+D\+C;~\newline
+{\ttfamily n} is the number of bits used for the conversion.
+
+Vref can be the changed the Arduino {\bfseries analog\+Reference} function and smrtobj\+::\+Analog\+Sensor\+::set\+Reference (or smrtobj\+::\+Analog\+Sensor\+::set\+Reference\+Default) functions. This change applies to all analog inputs.
+
+
+\begin{DoxyCode}
+\textcolor{comment}{//analogReference(DEFAULT);}
+smrtobj::AnalogSensor::setReferenceDefault(smrtobj::AnalogSensor::V5\_0);
+
+analogReference(EXTERNAL);
+smrtobj::AnalogSensor::setReference(2.5);
+\end{DoxyCode}
+ 
+
+Definition at line 48 of file analogsensor.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classsmrtobj_1_1io_1_1_analog_sensor_a2d2cf5325090f91a9620bc2504b7833d}{}\index{smrtobj\+::io\+::\+Analog\+Sensor@{smrtobj\+::io\+::\+Analog\+Sensor}!Analog\+Sensor@{Analog\+Sensor}}
+\index{Analog\+Sensor@{Analog\+Sensor}!smrtobj\+::io\+::\+Analog\+Sensor@{smrtobj\+::io\+::\+Analog\+Sensor}}
+\subsubsection[{Analog\+Sensor()}]{\setlength{\rightskip}{0pt plus 5cm}smrtobj\+::io\+::\+Analog\+Sensor\+::\+Analog\+Sensor (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classsmrtobj_1_1io_1_1_analog_sensor_a2d2cf5325090f91a9620bc2504b7833d}
+Default Constructor. 
+
+Definition at line 20 of file analogsensor.\+cpp.
+
+\hypertarget{classsmrtobj_1_1io_1_1_analog_sensor_a3f15baecbab62f6a285eec610de6eddc}{}\index{smrtobj\+::io\+::\+Analog\+Sensor@{smrtobj\+::io\+::\+Analog\+Sensor}!Analog\+Sensor@{Analog\+Sensor}}
+\index{Analog\+Sensor@{Analog\+Sensor}!smrtobj\+::io\+::\+Analog\+Sensor@{smrtobj\+::io\+::\+Analog\+Sensor}}
+\subsubsection[{Analog\+Sensor(const Analog\+Sensor \&s)}]{\setlength{\rightskip}{0pt plus 5cm}smrtobj\+::io\+::\+Analog\+Sensor\+::\+Analog\+Sensor (
+\begin{DoxyParamCaption}
+\item[{const {\bf Analog\+Sensor} \&}]{s}
+\end{DoxyParamCaption}
+)}\label{classsmrtobj_1_1io_1_1_analog_sensor_a3f15baecbab62f6a285eec610de6eddc}
+Copy Constructor.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em s} & source sensor object \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 27 of file analogsensor.\+cpp.
+
+\hypertarget{classsmrtobj_1_1io_1_1_analog_sensor_a219be0f06be040ce9aa9238412885253}{}\index{smrtobj\+::io\+::\+Analog\+Sensor@{smrtobj\+::io\+::\+Analog\+Sensor}!````~Analog\+Sensor@{$\sim$\+Analog\+Sensor}}
+\index{````~Analog\+Sensor@{$\sim$\+Analog\+Sensor}!smrtobj\+::io\+::\+Analog\+Sensor@{smrtobj\+::io\+::\+Analog\+Sensor}}
+\subsubsection[{$\sim$\+Analog\+Sensor()}]{\setlength{\rightskip}{0pt plus 5cm}smrtobj\+::io\+::\+Analog\+Sensor\+::$\sim$\+Analog\+Sensor (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classsmrtobj_1_1io_1_1_analog_sensor_a219be0f06be040ce9aa9238412885253}
+Destructor. 
+
+Definition at line 33 of file analogsensor.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classsmrtobj_1_1io_1_1_analog_sensor_a67dd93a15352fa4a98d036194963c4a7}{}\index{smrtobj\+::io\+::\+Analog\+Sensor@{smrtobj\+::io\+::\+Analog\+Sensor}!measure@{measure}}
+\index{measure@{measure}!smrtobj\+::io\+::\+Analog\+Sensor@{smrtobj\+::io\+::\+Analog\+Sensor}}
+\subsubsection[{measure()}]{\setlength{\rightskip}{0pt plus 5cm}virtual float smrtobj\+::io\+::\+Analog\+Sensor\+::measure (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{classsmrtobj_1_1io_1_1_analog_sensor_a67dd93a15352fa4a98d036194963c4a7}
+Gets the current measurement.
+
+\begin{DoxyReturn}{Returns}
+value of the measurement 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classsmrtobj_1_1io_1_1_sensor_aa774a26ce0ca79bf9c76c3cab5336c4b}{smrtobj\+::io\+::\+Sensor}.
+
+
+
+Definition at line 92 of file analogsensor.\+h.
+
+\hypertarget{classsmrtobj_1_1io_1_1_analog_sensor_a54f94abe224bec306872b1fb5ca9180e}{}\index{smrtobj\+::io\+::\+Analog\+Sensor@{smrtobj\+::io\+::\+Analog\+Sensor}!operator=@{operator=}}
+\index{operator=@{operator=}!smrtobj\+::io\+::\+Analog\+Sensor@{smrtobj\+::io\+::\+Analog\+Sensor}}
+\subsubsection[{operator=(const Analog\+Sensor \&s)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Analog\+Sensor} \& smrtobj\+::io\+::\+Analog\+Sensor\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Analog\+Sensor} \&}]{s}
+\end{DoxyParamCaption}
+)}\label{classsmrtobj_1_1io_1_1_analog_sensor_a54f94abe224bec306872b1fb5ca9180e}
+Override operator =
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em s} & source sensor object\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+reference of the destination sensor 
+\end{DoxyReturn}
+
+
+Definition at line 38 of file analogsensor.\+cpp.
+
+\hypertarget{classsmrtobj_1_1io_1_1_analog_sensor_a1084904f7f66c5f1e65b75ebdf3bf6b6}{}\index{smrtobj\+::io\+::\+Analog\+Sensor@{smrtobj\+::io\+::\+Analog\+Sensor}!read@{read}}
+\index{read@{read}!smrtobj\+::io\+::\+Analog\+Sensor@{smrtobj\+::io\+::\+Analog\+Sensor}}
+\subsubsection[{read()}]{\setlength{\rightskip}{0pt plus 5cm}float smrtobj\+::io\+::\+Analog\+Sensor\+::read (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classsmrtobj_1_1io_1_1_analog_sensor_a1084904f7f66c5f1e65b75ebdf3bf6b6}
+Reads value from the analog input
+
+\begin{DoxyReturn}{Returns}
+value as voltage 
+\end{DoxyReturn}
+
+
+Reimplemented in \hyperlink{classsmrtobj_1_1io_1_1_m_c_p9700_a_ae50f36dae107dc570ad98646ba684a20}{smrtobj\+::io\+::\+M\+C\+P9700\+A}.
+
+
+
+Definition at line 46 of file analogsensor.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+libraries/\+Smrt\+Obj\+I\+O/src/sensor/\hyperlink{analogsensor_8h}{analogsensor.\+h}\item 
+libraries/\+Smrt\+Obj\+I\+O/src/sensor/\hyperlink{analogsensor_8cpp}{analogsensor.\+cpp}\end{DoxyCompactItemize}

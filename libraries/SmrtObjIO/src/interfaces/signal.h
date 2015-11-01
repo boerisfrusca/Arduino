@@ -96,7 +96,7 @@ namespace smrtobj
   
   
         /**
-         * Virtual method, it gets the type of the interface according to #smrtobj::Signal::_type enum
+         * Virtual method, it gets the type of the interface according to smrtobj::io::Signal::_type enum
          *
          * \return the type of the signal interface
          */

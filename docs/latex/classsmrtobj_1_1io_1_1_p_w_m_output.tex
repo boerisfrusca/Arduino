@@ -1,0 +1,213 @@
+\hypertarget{classsmrtobj_1_1io_1_1_p_w_m_output}{}\section{smrtobj\+:\+:io\+:\+:P\+W\+M\+Output Class Reference}
+\label{classsmrtobj_1_1io_1_1_p_w_m_output}\index{smrtobj\+::io\+::\+P\+W\+M\+Output@{smrtobj\+::io\+::\+P\+W\+M\+Output}}
+
+
+{\ttfamily \#include $<$iosignal.\+h$>$}
+
+Inheritance diagram for smrtobj\+:\+:io\+:\+:P\+W\+M\+Output\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classsmrtobj_1_1io_1_1_p_w_m_output}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsmrtobj_1_1io_1_1_p_w_m_output_adea97b12a8895b84b9cc0a056520770c}{P\+W\+M\+Output} ()
+\item 
+\hyperlink{classsmrtobj_1_1io_1_1_p_w_m_output_a848a4fc96ebdbb579d34b63fb152dfdd}{P\+W\+M\+Output} (const \hyperlink{classsmrtobj_1_1io_1_1_p_w_m_output}{P\+W\+M\+Output} \&o)
+\item 
+virtual \hyperlink{classsmrtobj_1_1io_1_1_p_w_m_output_aaf792a72ce1d9de754fce790f852b5c3}{$\sim$\+P\+W\+M\+Output} ()
+\item 
+\hyperlink{classsmrtobj_1_1io_1_1_p_w_m_output}{P\+W\+M\+Output} \& \hyperlink{classsmrtobj_1_1io_1_1_p_w_m_output_ad204d0cf31273a0160914de56a1c3b0c}{operator=} (const \hyperlink{classsmrtobj_1_1io_1_1_p_w_m_output}{P\+W\+M\+Output} \&o)
+\item 
+byte \hyperlink{classsmrtobj_1_1io_1_1_p_w_m_output_ac5908c2317a1e2e7a293f8ee04d42a77}{type} ()
+\item 
+void \hyperlink{classsmrtobj_1_1io_1_1_p_w_m_output_a10f8b63f2769f41df9abde0872ef209f}{init} (byte \hyperlink{classsmrtobj_1_1io_1_1_p_w_m_output_a310d81c32649b121c6a2b02173986e96}{pin})
+\item 
+byte \hyperlink{classsmrtobj_1_1io_1_1_p_w_m_output_a19bc1ccc705b00198425c587e433b2d9}{value} ()
+\item 
+byte \hyperlink{classsmrtobj_1_1io_1_1_p_w_m_output_a310d81c32649b121c6a2b02173986e96}{pin} ()
+\item 
+bool \hyperlink{classsmrtobj_1_1io_1_1_p_w_m_output_ac49273d0fbe3419c064509a068e6e667}{write} (byte \hyperlink{classsmrtobj_1_1io_1_1_p_w_m_output_a19bc1ccc705b00198425c587e433b2d9}{value})
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+The \hyperlink{classsmrtobj_1_1io_1_1_p_w_m_output}{P\+W\+M\+Output} class models a P\+W\+M (Pulse Width Modulation) output. It can be used to light a L\+E\+D at varying brightnesses or drive a motor at various speeds. Writing a value, the pin will generate a steady square wave of the specified duty cycle. This is achieved by {\bfseries analog\+Write} function. P\+W\+M duty-\/cycle is between 0 (always off) and 255 (always on). The default output pin is 0.
+
+{\bfseries Note\+:} ~\newline
+Check it out which pins support P\+W\+M on your Arduino board and the documentation of analog\+Write function if you have an unexpected behavior ( \href{http://arduino.cc/en/Reference/analogWrite}{\tt http\+://arduino.\+cc/en/\+Reference/analog\+Write} ).
+
+The P\+W\+M outputs generated on pins 5 and 6 will have higher-\/than-\/expected duty cycles. This is because of interactions with the millis() and delay() functions, which share the same internal timer used to generate those P\+W\+M outputs. This will be noticed mostly on low duty-\/cycle settings (e.\+g 0 -\/ 10) and may result in a value of 0 not fully turning off the output on pins 5 and 6. 
+
+Definition at line 123 of file iosignal.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classsmrtobj_1_1io_1_1_p_w_m_output_adea97b12a8895b84b9cc0a056520770c}{}\index{smrtobj\+::io\+::\+P\+W\+M\+Output@{smrtobj\+::io\+::\+P\+W\+M\+Output}!P\+W\+M\+Output@{P\+W\+M\+Output}}
+\index{P\+W\+M\+Output@{P\+W\+M\+Output}!smrtobj\+::io\+::\+P\+W\+M\+Output@{smrtobj\+::io\+::\+P\+W\+M\+Output}}
+\subsubsection[{P\+W\+M\+Output()}]{\setlength{\rightskip}{0pt plus 5cm}smrtobj\+::io\+::\+P\+W\+M\+Output\+::\+P\+W\+M\+Output (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classsmrtobj_1_1io_1_1_p_w_m_output_adea97b12a8895b84b9cc0a056520770c}
+Default Constructor. It initializes the last value written to 0 and the pin number to 0. 
+
+Definition at line 67 of file iosignal.\+cpp.
+
+\hypertarget{classsmrtobj_1_1io_1_1_p_w_m_output_a848a4fc96ebdbb579d34b63fb152dfdd}{}\index{smrtobj\+::io\+::\+P\+W\+M\+Output@{smrtobj\+::io\+::\+P\+W\+M\+Output}!P\+W\+M\+Output@{P\+W\+M\+Output}}
+\index{P\+W\+M\+Output@{P\+W\+M\+Output}!smrtobj\+::io\+::\+P\+W\+M\+Output@{smrtobj\+::io\+::\+P\+W\+M\+Output}}
+\subsubsection[{P\+W\+M\+Output(const P\+W\+M\+Output \&o)}]{\setlength{\rightskip}{0pt plus 5cm}smrtobj\+::io\+::\+P\+W\+M\+Output\+::\+P\+W\+M\+Output (
+\begin{DoxyParamCaption}
+\item[{const {\bf P\+W\+M\+Output} \&}]{o}
+\end{DoxyParamCaption}
+)}\label{classsmrtobj_1_1io_1_1_p_w_m_output_a848a4fc96ebdbb579d34b63fb152dfdd}
+Copy Constructor.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em o} & source P\+W\+M output\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+reference to the destination P\+W\+M output 
+\end{DoxyReturn}
+
+
+Definition at line 72 of file iosignal.\+cpp.
+
+\hypertarget{classsmrtobj_1_1io_1_1_p_w_m_output_aaf792a72ce1d9de754fce790f852b5c3}{}\index{smrtobj\+::io\+::\+P\+W\+M\+Output@{smrtobj\+::io\+::\+P\+W\+M\+Output}!````~P\+W\+M\+Output@{$\sim$\+P\+W\+M\+Output}}
+\index{````~P\+W\+M\+Output@{$\sim$\+P\+W\+M\+Output}!smrtobj\+::io\+::\+P\+W\+M\+Output@{smrtobj\+::io\+::\+P\+W\+M\+Output}}
+\subsubsection[{$\sim$\+P\+W\+M\+Output()}]{\setlength{\rightskip}{0pt plus 5cm}smrtobj\+::io\+::\+P\+W\+M\+Output\+::$\sim$\+P\+W\+M\+Output (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classsmrtobj_1_1io_1_1_p_w_m_output_aaf792a72ce1d9de754fce790f852b5c3}
+Destructor. 
+
+Definition at line 78 of file iosignal.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classsmrtobj_1_1io_1_1_p_w_m_output_a10f8b63f2769f41df9abde0872ef209f}{}\index{smrtobj\+::io\+::\+P\+W\+M\+Output@{smrtobj\+::io\+::\+P\+W\+M\+Output}!init@{init}}
+\index{init@{init}!smrtobj\+::io\+::\+P\+W\+M\+Output@{smrtobj\+::io\+::\+P\+W\+M\+Output}}
+\subsubsection[{init(byte pin)}]{\setlength{\rightskip}{0pt plus 5cm}void smrtobj\+::io\+::\+P\+W\+M\+Output\+::init (
+\begin{DoxyParamCaption}
+\item[{byte}]{pin}
+\end{DoxyParamCaption}
+)}\label{classsmrtobj_1_1io_1_1_p_w_m_output_a10f8b63f2769f41df9abde0872ef209f}
+Opens the pin and initializes the P\+W\+M output, writing 0 as duty cycle.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em pin} & number of the output pin \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 91 of file iosignal.\+cpp.
+
+\hypertarget{classsmrtobj_1_1io_1_1_p_w_m_output_ad204d0cf31273a0160914de56a1c3b0c}{}\index{smrtobj\+::io\+::\+P\+W\+M\+Output@{smrtobj\+::io\+::\+P\+W\+M\+Output}!operator=@{operator=}}
+\index{operator=@{operator=}!smrtobj\+::io\+::\+P\+W\+M\+Output@{smrtobj\+::io\+::\+P\+W\+M\+Output}}
+\subsubsection[{operator=(const P\+W\+M\+Output \&o)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf P\+W\+M\+Output} \& smrtobj\+::io\+::\+P\+W\+M\+Output\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf P\+W\+M\+Output} \&}]{o}
+\end{DoxyParamCaption}
+)}\label{classsmrtobj_1_1io_1_1_p_w_m_output_ad204d0cf31273a0160914de56a1c3b0c}
+Override operator =
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em o} & source P\+W\+M output\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+reference to the destination P\+W\+M output 
+\end{DoxyReturn}
+
+
+Definition at line 82 of file iosignal.\+cpp.
+
+\hypertarget{classsmrtobj_1_1io_1_1_p_w_m_output_a310d81c32649b121c6a2b02173986e96}{}\index{smrtobj\+::io\+::\+P\+W\+M\+Output@{smrtobj\+::io\+::\+P\+W\+M\+Output}!pin@{pin}}
+\index{pin@{pin}!smrtobj\+::io\+::\+P\+W\+M\+Output@{smrtobj\+::io\+::\+P\+W\+M\+Output}}
+\subsubsection[{pin()}]{\setlength{\rightskip}{0pt plus 5cm}byte smrtobj\+::io\+::\+P\+W\+M\+Output\+::pin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classsmrtobj_1_1io_1_1_p_w_m_output_a310d81c32649b121c6a2b02173986e96}
+Gets the number of the output pin.
+
+\begin{DoxyReturn}{Returns}
+pin number 
+\end{DoxyReturn}
+
+
+Definition at line 183 of file iosignal.\+h.
+
+\hypertarget{classsmrtobj_1_1io_1_1_p_w_m_output_ac5908c2317a1e2e7a293f8ee04d42a77}{}\index{smrtobj\+::io\+::\+P\+W\+M\+Output@{smrtobj\+::io\+::\+P\+W\+M\+Output}!type@{type}}
+\index{type@{type}!smrtobj\+::io\+::\+P\+W\+M\+Output@{smrtobj\+::io\+::\+P\+W\+M\+Output}}
+\subsubsection[{type()}]{\setlength{\rightskip}{0pt plus 5cm}byte smrtobj\+::io\+::\+P\+W\+M\+Output\+::type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{classsmrtobj_1_1io_1_1_p_w_m_output_ac5908c2317a1e2e7a293f8ee04d42a77}
+Gets the type of the interface according to \#smrtobj\+::\+Signal\+::\+\_\+type enum
+
+\begin{DoxyReturn}{Returns}
+type of the interface 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classsmrtobj_1_1io_1_1_signal_a38cd36f413f1ad2213684e4364ac4270}{smrtobj\+::io\+::\+Signal}.
+
+
+
+Definition at line 161 of file iosignal.\+h.
+
+\hypertarget{classsmrtobj_1_1io_1_1_p_w_m_output_a19bc1ccc705b00198425c587e433b2d9}{}\index{smrtobj\+::io\+::\+P\+W\+M\+Output@{smrtobj\+::io\+::\+P\+W\+M\+Output}!value@{value}}
+\index{value@{value}!smrtobj\+::io\+::\+P\+W\+M\+Output@{smrtobj\+::io\+::\+P\+W\+M\+Output}}
+\subsubsection[{value()}]{\setlength{\rightskip}{0pt plus 5cm}byte smrtobj\+::io\+::\+P\+W\+M\+Output\+::value (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classsmrtobj_1_1io_1_1_p_w_m_output_a19bc1ccc705b00198425c587e433b2d9}
+Gets the last value written (P\+W\+M duty-\/cycle between 0 and 255).
+
+\begin{DoxyReturn}{Returns}
+last value written 
+\end{DoxyReturn}
+
+
+Definition at line 176 of file iosignal.\+h.
+
+\hypertarget{classsmrtobj_1_1io_1_1_p_w_m_output_ac49273d0fbe3419c064509a068e6e667}{}\index{smrtobj\+::io\+::\+P\+W\+M\+Output@{smrtobj\+::io\+::\+P\+W\+M\+Output}!write@{write}}
+\index{write@{write}!smrtobj\+::io\+::\+P\+W\+M\+Output@{smrtobj\+::io\+::\+P\+W\+M\+Output}}
+\subsubsection[{write(byte value)}]{\setlength{\rightskip}{0pt plus 5cm}bool smrtobj\+::io\+::\+P\+W\+M\+Output\+::write (
+\begin{DoxyParamCaption}
+\item[{byte}]{value}
+\end{DoxyParamCaption}
+)}\label{classsmrtobj_1_1io_1_1_p_w_m_output_ac49273d0fbe3419c064509a068e6e667}
+Writes value on the output pin
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em value} & he duty cycle\+: between 0 (always off) and 255 (always on)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false if digital output not initialized yet 
+\end{DoxyReturn}
+
+
+Definition at line 100 of file iosignal.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+libraries/\+Smrt\+Obj\+I\+O/src/\hyperlink{iosignal_8h}{iosignal.\+h}\item 
+libraries/\+Smrt\+Obj\+I\+O/src/\hyperlink{iosignal_8cpp}{iosignal.\+cpp}\end{DoxyCompactItemize}
