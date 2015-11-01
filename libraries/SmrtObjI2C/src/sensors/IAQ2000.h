@@ -26,7 +26,7 @@ namespace smrtobj
      *
      */
   
-    class IAQ2000 : public I2CInterface, public Sensor
+    class IAQ2000 : public I2CInterface, public smrtobj::io::Sensor
     {
       public:
         //! Device address used by default

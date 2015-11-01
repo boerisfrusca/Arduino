@@ -26,7 +26,7 @@ namespace smrtobj
      * serial interface. These registers provide for a variety of control functions and can be read to determine
      * results of the ADC conversions.
      */
-    class TCS34725 : public I2CInterface, public Sensor
+    class TCS34725 : public I2CInterface, public smrtobj::io::Sensor
     {
       public:
         /// Device address (slave)

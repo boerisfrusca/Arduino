@@ -34,7 +34,7 @@ namespace smrtobj
      *   - measure : calculate a measure or specific value from the all data read.
      *
      */
-    class I2CInterface : public Signal
+    class I2CInterface : public smrtobj::io::Signal
     {
       public:
         /**

@@ -24,7 +24,7 @@
      * power supply ranging from 2.7V to 5.5V.
      *
      */
-    class ADS1100: public I2CInterface, public Sensor
+    class ADS1100: public I2CInterface, public smrtobj::io::Sensor
     {
       public:
         //! Device address used by default
