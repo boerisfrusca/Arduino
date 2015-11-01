@@ -13,7 +13,7 @@ void setup() {
   // put your setup code here, to run once:
   Serial.begin(9600);
   
-  smrtobj::GPSPosition p;
+  smrtobj::data::GPSPosition p;
   char lat[12] = {0};
   int err = 0;
   

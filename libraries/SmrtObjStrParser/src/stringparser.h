@@ -118,8 +118,9 @@ namespace smrtobj
          * It returns false if the string is not a IP address.
          *
          * \param[in] str string with the representation of an IP address.
+         * \param[out] ip array whey the octets are saved.
          * \param[in] size maximum size of string str.
-           *
+         *
          * \return false if the string is not a IP address.
          */
         static bool toIPAddress(char* str, uint8_t*ip, uint8_t size = 255);
