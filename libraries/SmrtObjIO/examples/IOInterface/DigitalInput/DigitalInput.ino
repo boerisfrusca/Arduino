@@ -9,7 +9,7 @@
 #include <iosignal.h>
 
 // Digital input
-smrtobj::DigitalInput Pin;
+smrtobj::io::DigitalInput Pin;
 
 void setup(){
   // Open serial monitor

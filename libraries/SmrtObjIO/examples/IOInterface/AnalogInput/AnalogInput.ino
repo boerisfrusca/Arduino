@@ -10,7 +10,7 @@
 #include <smrtobjio.h>
 
 // Analog input
-smrtobj::AnalogInput Pin;
+smrtobj::io::AnalogInput Pin;
 
 void setup(){
   // Open serial monitor

@@ -13,9 +13,12 @@
 #include "actuator/digitalactuator.h"
 #include "iosignal.h"
 
-
 namespace smrtobj
 {
+
+namespace io
+{
+
   /**
    * This class models an LED array to give feedback about the state of the object.
    * This is a abstract class.
@@ -182,6 +185,9 @@ namespace smrtobj
        */
       virtual bool change(byte state) = 0;
   };
+  
+} /* namespace io */
+
 } /* namespace smrtobj */
 
 #endif /* LEDARRAY_H_ */

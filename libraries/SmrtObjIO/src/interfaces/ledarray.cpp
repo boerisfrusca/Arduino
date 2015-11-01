@@ -10,62 +10,67 @@
 namespace smrtobj
 {
 
-  LEDArray::LEDArray() :
-      m_state(0)
+  namespace io
   {
-  }
-
-  LEDArray::LEDArray(const LEDArray &l)
-  {
-    m_state = l.m_state;
-  }
-
-  LEDArray::~LEDArray()
-  {
-  }
-
-  bool LEDArray::check(smrtobj::DigitalActuator** ledsArray, byte size)
-  {
-    for (byte cycle = 0; cycle < 3; cycle++)
+  
+    LEDArray::LEDArray() :
+        m_state(0)
     {
-      for (byte i = 0; i < size; i++)
+    }
+  
+    LEDArray::LEDArray(const LEDArray &l)
+    {
+      m_state = l.m_state;
+    }
+  
+    LEDArray::~LEDArray()
+    {
+    }
+  
+    bool LEDArray::check(smrtobj::DigitalActuator** ledsArray, byte size)
+    {
+      for (byte cycle = 0; cycle < 3; cycle++)
       {
-        if (cycle == 2 && i == 0)
+        for (byte i = 0; i < size; i++)
         {
-          delay(CHECK_TIME);
-        }
-        switch (cycle)
-        {
-          case 0:
+          if (cycle == 2 && i == 0)
           {
-            if (ledsArray[i])
-            {
-              ledsArray[i]->off();
-            }
+            delay(CHECK_TIME);
           }
-            break;
-
-          case 1:
+          switch (cycle)
           {
-            if (ledsArray[i])
+            case 0:
             {
-              ledsArray[i]->on();
+              if (ledsArray[i])
+              {
+                ledsArray[i]->off();
+              }
             }
-          }
-            break;
-          case 2:
-          {
-            if (ledsArray[i])
+              break;
+  
+            case 1:
             {
-              ledsArray[i]->off();
+              if (ledsArray[i])
+              {
+                ledsArray[i]->on();
+              }
             }
+              break;
+            case 2:
+            {
+              if (ledsArray[i])
+              {
+                ledsArray[i]->off();
+              }
+            }
+              break;
           }
-            break;
         }
       }
+  
+      return true;
     }
-
-    return true;
-  }
-
+  
+  } /* namespace io */
+  
 } /* namespace smrtobj */

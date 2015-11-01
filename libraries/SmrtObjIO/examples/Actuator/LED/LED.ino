@@ -9,7 +9,7 @@
 #include <smrtobjio.h>
 
 // The digital actuator is a LED
-smrtobj::DigitalActuator led;
+smrtobj::io::DigitalActuator led;
 
 void setup() {
   // Initializes LED as connected to pin 6

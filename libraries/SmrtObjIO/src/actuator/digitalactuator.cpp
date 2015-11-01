@@ -10,6 +10,9 @@
 namespace smrtobj
 {
 
+namespace io
+{
+
   DigitalActuator::DigitalActuator() : m_negate(false)
   {
   }
@@ -67,5 +70,7 @@ namespace smrtobj
 
     return true;
   }
+
+} /* namespace io */
 
 } /* namespace smrtobj */

@@ -10,26 +10,31 @@
 namespace smrtobj
 {
 
-  Signal::Signal() : m_type(NOT_INITIALIZED), m_open(false)
+  namespace io
   {
-  }
-
-  Signal::Signal(const Signal &s)
-  {
-    m_type = s.m_type;
-    m_open = s.m_open;
-  }
-
-  Signal::~Signal()
-  {
-  }
-
-  Signal & Signal::operator=(const Signal &s)
-  {
-    m_type = s.m_type;
-    m_open = s.m_open;
-
-    return (*this);
-  }
-
+  
+    Signal::Signal() : m_type(NOT_INITIALIZED), m_open(false)
+    {
+    }
+  
+    Signal::Signal(const Signal &s)
+    {
+      m_type = s.m_type;
+      m_open = s.m_open;
+    }
+  
+    Signal::~Signal()
+    {
+    }
+  
+    Signal & Signal::operator=(const Signal &s)
+    {
+      m_type = s.m_type;
+      m_open = s.m_open;
+  
+      return (*this);
+    }
+  
+  } /* namespace io */
+  
 } /* namespace smrtobj */

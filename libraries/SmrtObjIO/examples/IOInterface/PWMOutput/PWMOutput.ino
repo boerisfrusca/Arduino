@@ -9,7 +9,7 @@
 #include <smrtobjio.h>
 
 // PWM output
-smrtobj::PWMOutput Pout;
+smrtobj::io::PWMOutput Pout;
 
 // Duty cycle value
 byte value = 0;

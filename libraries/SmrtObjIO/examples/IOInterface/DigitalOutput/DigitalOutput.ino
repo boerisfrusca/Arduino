@@ -9,7 +9,7 @@
 #include <smrtobjio.h>
 
 // Digital output
-smrtobj::DigitalOutput Pout;
+smrtobj::io::DigitalOutput Pout;
 
 void setup(){
   // Initialize the pin of the digital output
