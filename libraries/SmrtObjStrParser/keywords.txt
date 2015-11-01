@@ -7,15 +7,16 @@ StringParser	KEYWORD1
 
 #######################################
 # Methods and Functions 
-#######################################	
+#######################################
+convertFloat	KEYWORD2
 isDigitStr	KEYWORD2
 isFloatStr	KEYWORD2
 isIPAddress	KEYWORD2
+readStringFromFlash	KEYWORD2
 toFloat	KEYWORD2
 toInt	KEYWORD2
 toIPAddress	KEYWORD2
 toLong	KEYWORD2
-readStringFromFlash	KEYWORD2
 
 #######################################
 # Constants (LITERAL1)

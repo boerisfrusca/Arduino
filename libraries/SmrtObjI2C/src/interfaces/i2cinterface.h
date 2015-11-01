@@ -22,7 +22,6 @@
 namespace smrtobj
 {
 
-
   namespace i2c
   {
 
