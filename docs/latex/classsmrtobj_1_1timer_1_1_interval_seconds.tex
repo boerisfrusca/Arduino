@@ -1,0 +1,245 @@
+\hypertarget{classsmrtobj_1_1timer_1_1_interval_seconds}{}\section{smrtobj\+:\+:timer\+:\+:Interval\+Seconds Class Reference}
+\label{classsmrtobj_1_1timer_1_1_interval_seconds}\index{smrtobj\+::timer\+::\+Interval\+Seconds@{smrtobj\+::timer\+::\+Interval\+Seconds}}
+
+
+{\ttfamily \#include $<$intervalseconds.\+h$>$}
+
+Inheritance diagram for smrtobj\+:\+:timer\+:\+:Interval\+Seconds\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classsmrtobj_1_1timer_1_1_interval_seconds}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{classsmrtobj_1_1timer_1_1_interval_seconds_ab2187a2f2aab3fb8d6fcebba3680f764}{\+\_\+size} \{ \hyperlink{classsmrtobj_1_1timer_1_1_interval_seconds_ab2187a2f2aab3fb8d6fcebba3680f764af1f97577d8278e2e1b54551fafd67e0d}{S\+I\+Z\+E\+\_\+\+B\+U\+F\+F\+E\+R} = 20
+ \}
+\item 
+enum \hyperlink{classsmrtobj_1_1timer_1_1_interval_seconds_a6ea1edd04e074d9fbaacee7ce297c7f8}{\+\_\+time\+\_\+format} \{ \hyperlink{classsmrtobj_1_1timer_1_1_interval_seconds_a6ea1edd04e074d9fbaacee7ce297c7f8a5e6def1fd27d935d55908db5ce04e808}{D\+E\+F\+A\+U\+L\+T\+\_\+\+T\+F} = 0, 
+\hyperlink{classsmrtobj_1_1timer_1_1_interval_seconds_a6ea1edd04e074d9fbaacee7ce297c7f8a0993e789564a57e0bab49c5dad63be94}{E\+N} = 1, 
+\hyperlink{classsmrtobj_1_1timer_1_1_interval_seconds_a6ea1edd04e074d9fbaacee7ce297c7f8a88d4402a7caafbd1e4383f0e40ec4b4b}{I\+O\+T} = 2
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsmrtobj_1_1timer_1_1_interval_seconds_ac20f0f88661147329c47f397ca327900}{Interval\+Seconds} ()
+\item 
+\hyperlink{classsmrtobj_1_1timer_1_1_interval_seconds_ab6e29ed19bd3b68089c249fe16b62f42}{Interval\+Seconds} (unsigned long \hyperlink{classsmrtobj_1_1timer_1_1_interval_seconds_a1f8919a76123d44358ff32a1066c42b6}{start})
+\item 
+\hyperlink{classsmrtobj_1_1timer_1_1_interval_seconds_a3867300221f4967d7330c6ccced4813f}{Interval\+Seconds} (const \hyperlink{classsmrtobj_1_1timer_1_1_interval_seconds}{Interval\+Seconds} \&s)
+\item 
+virtual \hyperlink{classsmrtobj_1_1timer_1_1_interval_seconds_ac91271734ede29acfb795e4a0980f039}{$\sim$\+Interval\+Seconds} ()
+\item 
+void \hyperlink{classsmrtobj_1_1timer_1_1_interval_seconds_a0a2d997d360532f179a43c6d858afd37}{reset} (unsigned long \hyperlink{classsmrtobj_1_1timer_1_1_interval_seconds_a1f8919a76123d44358ff32a1066c42b6}{start})
+\item 
+virtual void \hyperlink{classsmrtobj_1_1timer_1_1_interval_seconds_a7253c7ab7b9e311dd13bbefbaa807c78}{update} ()
+\item 
+unsigned long \hyperlink{classsmrtobj_1_1timer_1_1_interval_seconds_a1f8919a76123d44358ff32a1066c42b6}{start} ()
+\item 
+virtual unsigned long \hyperlink{classsmrtobj_1_1timer_1_1_interval_seconds_a677364e751bbed28d85980f1270575a8}{time} ()
+\item 
+char $\ast$ \hyperlink{classsmrtobj_1_1timer_1_1_interval_seconds_ac4d08e03f84041a3132616b291c4c0ea}{get\+Time\+As\+String} (byte format=\hyperlink{classsmrtobj_1_1timer_1_1_interval_seconds_a6ea1edd04e074d9fbaacee7ce297c7f8a5e6def1fd27d935d55908db5ce04e808}{D\+E\+F\+A\+U\+L\+T\+\_\+\+T\+F})
+\item 
+\hyperlink{classsmrtobj_1_1timer_1_1_interval_seconds}{Interval\+Seconds} \& \hyperlink{classsmrtobj_1_1timer_1_1_interval_seconds_a2cc3e997f084e994bcf38494be513f02}{operator=} (const \hyperlink{classsmrtobj_1_1timer_1_1_interval_seconds}{Interval\+Seconds} \&)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+The \hyperlink{classsmrtobj_1_1timer_1_1_interval_seconds}{Interval\+Seconds} class handles time intervals (in seconds). This class inheritances from \hyperlink{classsmrtobj_1_1timer_1_1_interval_aaf7a279101cc8d105693107d9bdcb26a}{Interval} class. 
+
+Definition at line 26 of file intervalseconds.\+h.
+
+
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{classsmrtobj_1_1timer_1_1_interval_seconds_ab2187a2f2aab3fb8d6fcebba3680f764}{}\index{smrtobj\+::timer\+::\+Interval\+Seconds@{smrtobj\+::timer\+::\+Interval\+Seconds}!\+\_\+size@{\+\_\+size}}
+\index{\+\_\+size@{\+\_\+size}!smrtobj\+::timer\+::\+Interval\+Seconds@{smrtobj\+::timer\+::\+Interval\+Seconds}}
+\subsubsection[{\+\_\+size}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf smrtobj\+::timer\+::\+Interval\+Seconds\+::\+\_\+size}}\label{classsmrtobj_1_1timer_1_1_interval_seconds_ab2187a2f2aab3fb8d6fcebba3680f764}
+Size of internal buffers \begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{S\+I\+Z\+E\+\_\+\+B\+U\+F\+F\+E\+R@{S\+I\+Z\+E\+\_\+\+B\+U\+F\+F\+E\+R}!smrtobj\+::timer\+::\+Interval\+Seconds@{smrtobj\+::timer\+::\+Interval\+Seconds}}\index{smrtobj\+::timer\+::\+Interval\+Seconds@{smrtobj\+::timer\+::\+Interval\+Seconds}!S\+I\+Z\+E\+\_\+\+B\+U\+F\+F\+E\+R@{S\+I\+Z\+E\+\_\+\+B\+U\+F\+F\+E\+R}}\item[{\em 
+\hypertarget{classsmrtobj_1_1timer_1_1_interval_seconds_ab2187a2f2aab3fb8d6fcebba3680f764af1f97577d8278e2e1b54551fafd67e0d}{}S\+I\+Z\+E\+\_\+\+B\+U\+F\+F\+E\+R\label{classsmrtobj_1_1timer_1_1_interval_seconds_ab2187a2f2aab3fb8d6fcebba3680f764af1f97577d8278e2e1b54551fafd67e0d}
+}]Internal buffer size. \end{description}
+\end{Desc}
+
+
+Definition at line 34 of file intervalseconds.\+h.
+
+\hypertarget{classsmrtobj_1_1timer_1_1_interval_seconds_a6ea1edd04e074d9fbaacee7ce297c7f8}{}\index{smrtobj\+::timer\+::\+Interval\+Seconds@{smrtobj\+::timer\+::\+Interval\+Seconds}!\+\_\+time\+\_\+format@{\+\_\+time\+\_\+format}}
+\index{\+\_\+time\+\_\+format@{\+\_\+time\+\_\+format}!smrtobj\+::timer\+::\+Interval\+Seconds@{smrtobj\+::timer\+::\+Interval\+Seconds}}
+\subsubsection[{\+\_\+time\+\_\+format}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf smrtobj\+::timer\+::\+Interval\+Seconds\+::\+\_\+time\+\_\+format}}\label{classsmrtobj_1_1timer_1_1_interval_seconds_a6ea1edd04e074d9fbaacee7ce297c7f8}
+Time format \begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{D\+E\+F\+A\+U\+L\+T\+\_\+\+T\+F@{D\+E\+F\+A\+U\+L\+T\+\_\+\+T\+F}!smrtobj\+::timer\+::\+Interval\+Seconds@{smrtobj\+::timer\+::\+Interval\+Seconds}}\index{smrtobj\+::timer\+::\+Interval\+Seconds@{smrtobj\+::timer\+::\+Interval\+Seconds}!D\+E\+F\+A\+U\+L\+T\+\_\+\+T\+F@{D\+E\+F\+A\+U\+L\+T\+\_\+\+T\+F}}\item[{\em 
+\hypertarget{classsmrtobj_1_1timer_1_1_interval_seconds_a6ea1edd04e074d9fbaacee7ce297c7f8a5e6def1fd27d935d55908db5ce04e808}{}D\+E\+F\+A\+U\+L\+T\+\_\+\+T\+F\label{classsmrtobj_1_1timer_1_1_interval_seconds_a6ea1edd04e074d9fbaacee7ce297c7f8a5e6def1fd27d935d55908db5ce04e808}
+}]Default format\+: D\+D/\+M\+M/\+Y\+Y\+Y\+Y hh\+:mm\+:ss. \index{E\+N@{E\+N}!smrtobj\+::timer\+::\+Interval\+Seconds@{smrtobj\+::timer\+::\+Interval\+Seconds}}\index{smrtobj\+::timer\+::\+Interval\+Seconds@{smrtobj\+::timer\+::\+Interval\+Seconds}!E\+N@{E\+N}}\item[{\em 
+\hypertarget{classsmrtobj_1_1timer_1_1_interval_seconds_a6ea1edd04e074d9fbaacee7ce297c7f8a0993e789564a57e0bab49c5dad63be94}{}E\+N\label{classsmrtobj_1_1timer_1_1_interval_seconds_a6ea1edd04e074d9fbaacee7ce297c7f8a0993e789564a57e0bab49c5dad63be94}
+}]English format\+: M\+M/\+D\+D/\+Y\+Y\+Y\+Y hh\+:mm\+:ss. \index{I\+O\+T@{I\+O\+T}!smrtobj\+::timer\+::\+Interval\+Seconds@{smrtobj\+::timer\+::\+Interval\+Seconds}}\index{smrtobj\+::timer\+::\+Interval\+Seconds@{smrtobj\+::timer\+::\+Interval\+Seconds}!I\+O\+T@{I\+O\+T}}\item[{\em 
+\hypertarget{classsmrtobj_1_1timer_1_1_interval_seconds_a6ea1edd04e074d9fbaacee7ce297c7f8a88d4402a7caafbd1e4383f0e40ec4b4b}{}I\+O\+T\label{classsmrtobj_1_1timer_1_1_interval_seconds_a6ea1edd04e074d9fbaacee7ce297c7f8a88d4402a7caafbd1e4383f0e40ec4b4b}
+}]Default format\+: M\+M/\+D\+D/\+Y\+Y\+Y\+Y hh\+:mm. \end{description}
+\end{Desc}
+
+
+Definition at line 45 of file intervalseconds.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classsmrtobj_1_1timer_1_1_interval_seconds_ac20f0f88661147329c47f397ca327900}{}\index{smrtobj\+::timer\+::\+Interval\+Seconds@{smrtobj\+::timer\+::\+Interval\+Seconds}!Interval\+Seconds@{Interval\+Seconds}}
+\index{Interval\+Seconds@{Interval\+Seconds}!smrtobj\+::timer\+::\+Interval\+Seconds@{smrtobj\+::timer\+::\+Interval\+Seconds}}
+\subsubsection[{Interval\+Seconds()}]{\setlength{\rightskip}{0pt plus 5cm}smrtobj\+::timer\+::\+Interval\+Seconds\+::\+Interval\+Seconds (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classsmrtobj_1_1timer_1_1_interval_seconds_ac20f0f88661147329c47f397ca327900}
+Default Constructor It sets all internal variables as the start time at current time as seconds from 1970. 
+
+Definition at line 18 of file intervalseconds.\+cpp.
+
+\hypertarget{classsmrtobj_1_1timer_1_1_interval_seconds_ab6e29ed19bd3b68089c249fe16b62f42}{}\index{smrtobj\+::timer\+::\+Interval\+Seconds@{smrtobj\+::timer\+::\+Interval\+Seconds}!Interval\+Seconds@{Interval\+Seconds}}
+\index{Interval\+Seconds@{Interval\+Seconds}!smrtobj\+::timer\+::\+Interval\+Seconds@{smrtobj\+::timer\+::\+Interval\+Seconds}}
+\subsubsection[{Interval\+Seconds(unsigned long start)}]{\setlength{\rightskip}{0pt plus 5cm}smrtobj\+::timer\+::\+Interval\+Seconds\+::\+Interval\+Seconds (
+\begin{DoxyParamCaption}
+\item[{unsigned long}]{start}
+\end{DoxyParamCaption}
+)}\label{classsmrtobj_1_1timer_1_1_interval_seconds_ab6e29ed19bd3b68089c249fe16b62f42}
+Constructor It sets the start time at a given value.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em start} & start time \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 24 of file intervalseconds.\+cpp.
+
+\hypertarget{classsmrtobj_1_1timer_1_1_interval_seconds_a3867300221f4967d7330c6ccced4813f}{}\index{smrtobj\+::timer\+::\+Interval\+Seconds@{smrtobj\+::timer\+::\+Interval\+Seconds}!Interval\+Seconds@{Interval\+Seconds}}
+\index{Interval\+Seconds@{Interval\+Seconds}!smrtobj\+::timer\+::\+Interval\+Seconds@{smrtobj\+::timer\+::\+Interval\+Seconds}}
+\subsubsection[{Interval\+Seconds(const Interval\+Seconds \&s)}]{\setlength{\rightskip}{0pt plus 5cm}smrtobj\+::timer\+::\+Interval\+Seconds\+::\+Interval\+Seconds (
+\begin{DoxyParamCaption}
+\item[{const {\bf Interval\+Seconds} \&}]{s}
+\end{DoxyParamCaption}
+)}\label{classsmrtobj_1_1timer_1_1_interval_seconds_a3867300221f4967d7330c6ccced4813f}
+Copy Constructor 
+
+Definition at line 30 of file intervalseconds.\+cpp.
+
+\hypertarget{classsmrtobj_1_1timer_1_1_interval_seconds_ac91271734ede29acfb795e4a0980f039}{}\index{smrtobj\+::timer\+::\+Interval\+Seconds@{smrtobj\+::timer\+::\+Interval\+Seconds}!````~Interval\+Seconds@{$\sim$\+Interval\+Seconds}}
+\index{````~Interval\+Seconds@{$\sim$\+Interval\+Seconds}!smrtobj\+::timer\+::\+Interval\+Seconds@{smrtobj\+::timer\+::\+Interval\+Seconds}}
+\subsubsection[{$\sim$\+Interval\+Seconds()}]{\setlength{\rightskip}{0pt plus 5cm}smrtobj\+::timer\+::\+Interval\+Seconds\+::$\sim$\+Interval\+Seconds (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classsmrtobj_1_1timer_1_1_interval_seconds_ac91271734ede29acfb795e4a0980f039}
+Destructor 
+
+Definition at line 36 of file intervalseconds.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classsmrtobj_1_1timer_1_1_interval_seconds_ac4d08e03f84041a3132616b291c4c0ea}{}\index{smrtobj\+::timer\+::\+Interval\+Seconds@{smrtobj\+::timer\+::\+Interval\+Seconds}!get\+Time\+As\+String@{get\+Time\+As\+String}}
+\index{get\+Time\+As\+String@{get\+Time\+As\+String}!smrtobj\+::timer\+::\+Interval\+Seconds@{smrtobj\+::timer\+::\+Interval\+Seconds}}
+\subsubsection[{get\+Time\+As\+String(byte format=\+D\+E\+F\+A\+U\+L\+T\+\_\+\+T\+F)}]{\setlength{\rightskip}{0pt plus 5cm}char $\ast$ smrtobj\+::timer\+::\+Interval\+Seconds\+::get\+Time\+As\+String (
+\begin{DoxyParamCaption}
+\item[{byte}]{format = {\ttfamily {\bf D\+E\+F\+A\+U\+L\+T\+\_\+\+T\+F}}}
+\end{DoxyParamCaption}
+)}\label{classsmrtobj_1_1timer_1_1_interval_seconds_ac4d08e03f84041a3132616b291c4c0ea}
+Gets time in readable form as a string.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em format} & format time accorting to \hyperlink{classsmrtobj_1_1timer_1_1_interval_seconds_a6ea1edd04e074d9fbaacee7ce297c7f8}{\+\_\+time\+\_\+format}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+time as a string 
+\end{DoxyReturn}
+
+
+Definition at line 65 of file intervalseconds.\+cpp.
+
+\hypertarget{classsmrtobj_1_1timer_1_1_interval_seconds_a2cc3e997f084e994bcf38494be513f02}{}\index{smrtobj\+::timer\+::\+Interval\+Seconds@{smrtobj\+::timer\+::\+Interval\+Seconds}!operator=@{operator=}}
+\index{operator=@{operator=}!smrtobj\+::timer\+::\+Interval\+Seconds@{smrtobj\+::timer\+::\+Interval\+Seconds}}
+\subsubsection[{operator=(const Interval\+Seconds \&)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Interval\+Seconds} \& smrtobj\+::timer\+::\+Interval\+Seconds\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Interval\+Seconds} \&}]{s}
+\end{DoxyParamCaption}
+)}\label{classsmrtobj_1_1timer_1_1_interval_seconds_a2cc3e997f084e994bcf38494be513f02}
+Overload operator = 
+
+Definition at line 40 of file intervalseconds.\+cpp.
+
+\hypertarget{classsmrtobj_1_1timer_1_1_interval_seconds_a0a2d997d360532f179a43c6d858afd37}{}\index{smrtobj\+::timer\+::\+Interval\+Seconds@{smrtobj\+::timer\+::\+Interval\+Seconds}!reset@{reset}}
+\index{reset@{reset}!smrtobj\+::timer\+::\+Interval\+Seconds@{smrtobj\+::timer\+::\+Interval\+Seconds}}
+\subsubsection[{reset(unsigned long start)}]{\setlength{\rightskip}{0pt plus 5cm}void smrtobj\+::timer\+::\+Interval\+Seconds\+::reset (
+\begin{DoxyParamCaption}
+\item[{unsigned long}]{start}
+\end{DoxyParamCaption}
+)}\label{classsmrtobj_1_1timer_1_1_interval_seconds_a0a2d997d360532f179a43c6d858afd37}
+Resets the start time to now().
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em start} & start time \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 53 of file intervalseconds.\+cpp.
+
+\hypertarget{classsmrtobj_1_1timer_1_1_interval_seconds_a1f8919a76123d44358ff32a1066c42b6}{}\index{smrtobj\+::timer\+::\+Interval\+Seconds@{smrtobj\+::timer\+::\+Interval\+Seconds}!start@{start}}
+\index{start@{start}!smrtobj\+::timer\+::\+Interval\+Seconds@{smrtobj\+::timer\+::\+Interval\+Seconds}}
+\subsubsection[{start()}]{\setlength{\rightskip}{0pt plus 5cm}unsigned long smrtobj\+::timer\+::\+Interval\+Seconds\+::start (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classsmrtobj_1_1timer_1_1_interval_seconds_a1f8919a76123d44358ff32a1066c42b6}
+Returns the start time (in seconds from 1970).
+
+\begin{DoxyReturn}{Returns}
+start time 
+\end{DoxyReturn}
+
+
+Definition at line 133 of file intervalseconds.\+h.
+
+\hypertarget{classsmrtobj_1_1timer_1_1_interval_seconds_a677364e751bbed28d85980f1270575a8}{}\index{smrtobj\+::timer\+::\+Interval\+Seconds@{smrtobj\+::timer\+::\+Interval\+Seconds}!time@{time}}
+\index{time@{time}!smrtobj\+::timer\+::\+Interval\+Seconds@{smrtobj\+::timer\+::\+Interval\+Seconds}}
+\subsubsection[{time()}]{\setlength{\rightskip}{0pt plus 5cm}unsigned long smrtobj\+::timer\+::\+Interval\+Seconds\+::time (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classsmrtobj_1_1timer_1_1_interval_seconds_a677364e751bbed28d85980f1270575a8}
+Returns the time passed from the start time (in seconds).
+
+\begin{DoxyReturn}{Returns}
+time passed 
+\end{DoxyReturn}
+
+
+Definition at line 47 of file intervalseconds.\+cpp.
+
+\hypertarget{classsmrtobj_1_1timer_1_1_interval_seconds_a7253c7ab7b9e311dd13bbefbaa807c78}{}\index{smrtobj\+::timer\+::\+Interval\+Seconds@{smrtobj\+::timer\+::\+Interval\+Seconds}!update@{update}}
+\index{update@{update}!smrtobj\+::timer\+::\+Interval\+Seconds@{smrtobj\+::timer\+::\+Interval\+Seconds}}
+\subsubsection[{update()}]{\setlength{\rightskip}{0pt plus 5cm}void smrtobj\+::timer\+::\+Interval\+Seconds\+::update (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{classsmrtobj_1_1timer_1_1_interval_seconds_a7253c7ab7b9e311dd13bbefbaa807c78}
+Updates the start time at current time. 
+
+Definition at line 128 of file intervalseconds.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+libraries/\+Smrt\+Obj\+Time/src/intervalseconds.\+h\item 
+libraries/\+Smrt\+Obj\+Time/src/intervalseconds.\+cpp\end{DoxyCompactItemize}

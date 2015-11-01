@@ -1,0 +1,216 @@
+\hypertarget{classsmrtobj_1_1i2c_1_1_i_a_q2000}{}\section{smrtobj\+:\+:i2c\+:\+:I\+A\+Q2000 Class Reference}
+\label{classsmrtobj_1_1i2c_1_1_i_a_q2000}\index{smrtobj\+::i2c\+::\+I\+A\+Q2000@{smrtobj\+::i2c\+::\+I\+A\+Q2000}}
+
+
+{\ttfamily \#include $<$I\+A\+Q2000.\+h$>$}
+
+Inheritance diagram for smrtobj\+:\+:i2c\+:\+:I\+A\+Q2000\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classsmrtobj_1_1i2c_1_1_i_a_q2000}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsmrtobj_1_1i2c_1_1_i_a_q2000_a4261abb895def12fc22dcc528936d761}{I\+A\+Q2000} ()
+\item 
+\hyperlink{classsmrtobj_1_1i2c_1_1_i_a_q2000_a3562f73c2c8403fb86b8647051e22842}{I\+A\+Q2000} (const \hyperlink{classsmrtobj_1_1i2c_1_1_i_a_q2000}{I\+A\+Q2000} \&s)
+\item 
+virtual \hyperlink{classsmrtobj_1_1i2c_1_1_i_a_q2000_aa2cb430098fc621f69de12d74a1fc39f}{$\sim$\+I\+A\+Q2000} ()
+\item 
+\hyperlink{classsmrtobj_1_1i2c_1_1_i_a_q2000}{I\+A\+Q2000} \& \hyperlink{classsmrtobj_1_1i2c_1_1_i_a_q2000_a79a72c585448c25db99a0af5e8f660af}{operator=} (const \hyperlink{classsmrtobj_1_1i2c_1_1_i_a_q2000}{I\+A\+Q2000} \&s)
+\item 
+virtual bool \hyperlink{classsmrtobj_1_1i2c_1_1_i_a_q2000_ae586b35f7da1356a8acbe44e5e4911a1}{initialize} ()
+\item 
+virtual bool \hyperlink{classsmrtobj_1_1i2c_1_1_i_a_q2000_a3efac4a4e37fd0d061e69ba185df3100}{is\+Connected} ()
+\item 
+virtual bool \hyperlink{classsmrtobj_1_1i2c_1_1_i_a_q2000_a026848c4fca394f36929c7d831a675aa}{read} ()
+\item 
+virtual float \hyperlink{classsmrtobj_1_1i2c_1_1_i_a_q2000_ad1b66960d4ec931dd3535f7b220a2251}{measure} ()
+\item 
+uint16\+\_\+t \hyperlink{classsmrtobj_1_1i2c_1_1_i_a_q2000_ad08f070b9bb2ad32f3b16b69b44eb4f8}{value} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classsmrtobj_1_1i2c_1_1_i_a_q2000_a7497e793ec38667bcc8722fe833fbe74}{}static const uint8\+\_\+t \hyperlink{classsmrtobj_1_1i2c_1_1_i_a_q2000_a7497e793ec38667bcc8722fe833fbe74}{D\+E\+V\+I\+C\+E\+\_\+\+A\+D\+D\+R\+E\+S\+S} = 0x5\+A\label{classsmrtobj_1_1i2c_1_1_i_a_q2000_a7497e793ec38667bcc8722fe833fbe74}
+
+\begin{DoxyCompactList}\small\item\em Device address used by default. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Class \hyperlink{classsmrtobj_1_1i2c_1_1_i_a_q2000}{I\+A\+Q2000} models the I2\+C i\+A\+Q2000 sensor. The i\+A\+Q2000 is designed to sense the level of volatile organic compounds (V\+O\+Cs) such as smoke, cooking odors, bio-\/effluence and pollutants. This sensor gives a direct and reliable correlation to C\+O2 levels\+: output in ppm (parts-\/per-\/million)\+: predicted C\+O2 concentration based on human induced volatile organic compounds (V\+O\+C) detection (in ppm V\+O\+C + C\+O2 equivalents) 
+
+Definition at line 29 of file I\+A\+Q2000.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classsmrtobj_1_1i2c_1_1_i_a_q2000_a4261abb895def12fc22dcc528936d761}{}\index{smrtobj\+::i2c\+::\+I\+A\+Q2000@{smrtobj\+::i2c\+::\+I\+A\+Q2000}!I\+A\+Q2000@{I\+A\+Q2000}}
+\index{I\+A\+Q2000@{I\+A\+Q2000}!smrtobj\+::i2c\+::\+I\+A\+Q2000@{smrtobj\+::i2c\+::\+I\+A\+Q2000}}
+\subsubsection[{I\+A\+Q2000()}]{\setlength{\rightskip}{0pt plus 5cm}smrtobj\+::i2c\+::\+I\+A\+Q2000\+::\+I\+A\+Q2000 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classsmrtobj_1_1i2c_1_1_i_a_q2000_a4261abb895def12fc22dcc528936d761}
+Default Constructor. Sets the device address. 
+
+Definition at line 22 of file I\+A\+Q2000.\+cpp.
+
+\hypertarget{classsmrtobj_1_1i2c_1_1_i_a_q2000_a3562f73c2c8403fb86b8647051e22842}{}\index{smrtobj\+::i2c\+::\+I\+A\+Q2000@{smrtobj\+::i2c\+::\+I\+A\+Q2000}!I\+A\+Q2000@{I\+A\+Q2000}}
+\index{I\+A\+Q2000@{I\+A\+Q2000}!smrtobj\+::i2c\+::\+I\+A\+Q2000@{smrtobj\+::i2c\+::\+I\+A\+Q2000}}
+\subsubsection[{I\+A\+Q2000(const I\+A\+Q2000 \&s)}]{\setlength{\rightskip}{0pt plus 5cm}smrtobj\+::i2c\+::\+I\+A\+Q2000\+::\+I\+A\+Q2000 (
+\begin{DoxyParamCaption}
+\item[{const {\bf I\+A\+Q2000} \&}]{s}
+\end{DoxyParamCaption}
+)}\label{classsmrtobj_1_1i2c_1_1_i_a_q2000_a3562f73c2c8403fb86b8647051e22842}
+Copy Constructor.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em s} & i2c sensor object \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 27 of file I\+A\+Q2000.\+cpp.
+
+\hypertarget{classsmrtobj_1_1i2c_1_1_i_a_q2000_aa2cb430098fc621f69de12d74a1fc39f}{}\index{smrtobj\+::i2c\+::\+I\+A\+Q2000@{smrtobj\+::i2c\+::\+I\+A\+Q2000}!````~I\+A\+Q2000@{$\sim$\+I\+A\+Q2000}}
+\index{````~I\+A\+Q2000@{$\sim$\+I\+A\+Q2000}!smrtobj\+::i2c\+::\+I\+A\+Q2000@{smrtobj\+::i2c\+::\+I\+A\+Q2000}}
+\subsubsection[{$\sim$\+I\+A\+Q2000()}]{\setlength{\rightskip}{0pt plus 5cm}smrtobj\+::i2c\+::\+I\+A\+Q2000\+::$\sim$\+I\+A\+Q2000 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classsmrtobj_1_1i2c_1_1_i_a_q2000_aa2cb430098fc621f69de12d74a1fc39f}
+Destructor. 
+
+Definition at line 32 of file I\+A\+Q2000.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classsmrtobj_1_1i2c_1_1_i_a_q2000_ae586b35f7da1356a8acbe44e5e4911a1}{}\index{smrtobj\+::i2c\+::\+I\+A\+Q2000@{smrtobj\+::i2c\+::\+I\+A\+Q2000}!initialize@{initialize}}
+\index{initialize@{initialize}!smrtobj\+::i2c\+::\+I\+A\+Q2000@{smrtobj\+::i2c\+::\+I\+A\+Q2000}}
+\subsubsection[{initialize()}]{\setlength{\rightskip}{0pt plus 5cm}bool smrtobj\+::i2c\+::\+I\+A\+Q2000\+::initialize (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classsmrtobj_1_1i2c_1_1_i_a_q2000_ae586b35f7da1356a8acbe44e5e4911a1}
+Initializes the i2c device\+: power on and prepare for general usage. Nothing is required by this device.
+
+\begin{DoxyReturn}{Returns}
+true for success, or false if any error occurs. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classsmrtobj_1_1i2c_1_1_i2_c_interface_a4ff1ff083d877c7c0816299b11965eb4}{smrtobj\+::i2c\+::\+I2\+C\+Interface}.
+
+
+
+Definition at line 46 of file I\+A\+Q2000.\+cpp.
+
+\hypertarget{classsmrtobj_1_1i2c_1_1_i_a_q2000_a3efac4a4e37fd0d061e69ba185df3100}{}\index{smrtobj\+::i2c\+::\+I\+A\+Q2000@{smrtobj\+::i2c\+::\+I\+A\+Q2000}!is\+Connected@{is\+Connected}}
+\index{is\+Connected@{is\+Connected}!smrtobj\+::i2c\+::\+I\+A\+Q2000@{smrtobj\+::i2c\+::\+I\+A\+Q2000}}
+\subsubsection[{is\+Connected()}]{\setlength{\rightskip}{0pt plus 5cm}bool smrtobj\+::i2c\+::\+I\+A\+Q2000\+::is\+Connected (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classsmrtobj_1_1i2c_1_1_i_a_q2000_a3efac4a4e37fd0d061e69ba185df3100}
+Tests if the device is connected. Make sure the device is connected and responds as expected.
+
+\begin{DoxyReturn}{Returns}
+true if connection is valid, false otherwise 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classsmrtobj_1_1i2c_1_1_i2_c_interface_a33fd37bafaf8c7e8184acb6470322bce}{smrtobj\+::i2c\+::\+I2\+C\+Interface}.
+
+
+
+Definition at line 52 of file I\+A\+Q2000.\+cpp.
+
+\hypertarget{classsmrtobj_1_1i2c_1_1_i_a_q2000_ad1b66960d4ec931dd3535f7b220a2251}{}\index{smrtobj\+::i2c\+::\+I\+A\+Q2000@{smrtobj\+::i2c\+::\+I\+A\+Q2000}!measure@{measure}}
+\index{measure@{measure}!smrtobj\+::i2c\+::\+I\+A\+Q2000@{smrtobj\+::i2c\+::\+I\+A\+Q2000}}
+\subsubsection[{measure()}]{\setlength{\rightskip}{0pt plus 5cm}float smrtobj\+::i2c\+::\+I\+A\+Q2000\+::measure (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classsmrtobj_1_1i2c_1_1_i_a_q2000_ad1b66960d4ec931dd3535f7b220a2251}
+Returns last data read as a floating point number.
+
+\begin{DoxyReturn}{Returns}
+last data read 
+\end{DoxyReturn}
+
+
+Definition at line 68 of file I\+A\+Q2000.\+cpp.
+
+\hypertarget{classsmrtobj_1_1i2c_1_1_i_a_q2000_a79a72c585448c25db99a0af5e8f660af}{}\index{smrtobj\+::i2c\+::\+I\+A\+Q2000@{smrtobj\+::i2c\+::\+I\+A\+Q2000}!operator=@{operator=}}
+\index{operator=@{operator=}!smrtobj\+::i2c\+::\+I\+A\+Q2000@{smrtobj\+::i2c\+::\+I\+A\+Q2000}}
+\subsubsection[{operator=(const I\+A\+Q2000 \&s)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+A\+Q2000} \& smrtobj\+::i2c\+::\+I\+A\+Q2000\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf I\+A\+Q2000} \&}]{s}
+\end{DoxyParamCaption}
+)}\label{classsmrtobj_1_1i2c_1_1_i_a_q2000_a79a72c585448c25db99a0af5e8f660af}
+Override operator =
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em s} & source signal object\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+destination signal reference 
+\end{DoxyReturn}
+
+
+Definition at line 36 of file I\+A\+Q2000.\+cpp.
+
+\hypertarget{classsmrtobj_1_1i2c_1_1_i_a_q2000_a026848c4fca394f36929c7d831a675aa}{}\index{smrtobj\+::i2c\+::\+I\+A\+Q2000@{smrtobj\+::i2c\+::\+I\+A\+Q2000}!read@{read}}
+\index{read@{read}!smrtobj\+::i2c\+::\+I\+A\+Q2000@{smrtobj\+::i2c\+::\+I\+A\+Q2000}}
+\subsubsection[{read()}]{\setlength{\rightskip}{0pt plus 5cm}bool smrtobj\+::i2c\+::\+I\+A\+Q2000\+::read (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classsmrtobj_1_1i2c_1_1_i_a_q2000_a026848c4fca394f36929c7d831a675aa}
+Reads data from the i2c device. This function read 2 byte\+:
+\begin{DoxyItemize}
+\item 1st byte (Byte0) is the most significant byte
+\item 2nd byte (Byte1) is the less significant byte Data is calculate as\+: value = (Byte0\mbox{]} $<$$<$ 8) $\vert$ Byte1; The value read is stored in m\+\_\+value.
+\end{DoxyItemize}
+
+\begin{DoxyReturn}{Returns}
+true for success, or false if any error occurs. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classsmrtobj_1_1i2c_1_1_i2_c_interface_a58bc734662a60de6a7cb7976c2179753}{smrtobj\+::i2c\+::\+I2\+C\+Interface}.
+
+
+
+Definition at line 64 of file I\+A\+Q2000.\+cpp.
+
+\hypertarget{classsmrtobj_1_1i2c_1_1_i_a_q2000_ad08f070b9bb2ad32f3b16b69b44eb4f8}{}\index{smrtobj\+::i2c\+::\+I\+A\+Q2000@{smrtobj\+::i2c\+::\+I\+A\+Q2000}!value@{value}}
+\index{value@{value}!smrtobj\+::i2c\+::\+I\+A\+Q2000@{smrtobj\+::i2c\+::\+I\+A\+Q2000}}
+\subsubsection[{value()}]{\setlength{\rightskip}{0pt plus 5cm}uint16\+\_\+t smrtobj\+::i2c\+::\+I\+A\+Q2000\+::value (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classsmrtobj_1_1i2c_1_1_i_a_q2000_ad08f070b9bb2ad32f3b16b69b44eb4f8}
+Returns last value read as unsigned integer of 16 bits.
+
+\begin{DoxyReturn}{Returns}
+last value read 
+\end{DoxyReturn}
+
+
+Definition at line 103 of file I\+A\+Q2000.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+libraries/\+Smrt\+Obj\+I2\+C/src/sensors/\hyperlink{_i_a_q2000_8h}{I\+A\+Q2000.\+h}\item 
+libraries/\+Smrt\+Obj\+I2\+C/src/sensors/\hyperlink{_i_a_q2000_8cpp}{I\+A\+Q2000.\+cpp}\end{DoxyCompactItemize}

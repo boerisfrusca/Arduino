@@ -1,0 +1,131 @@
+\hypertarget{classsmrtobj_1_1data_1_1_avg_value}{}\section{smrtobj\+:\+:data\+:\+:Avg\+Value Class Reference}
+\label{classsmrtobj_1_1data_1_1_avg_value}\index{smrtobj\+::data\+::\+Avg\+Value@{smrtobj\+::data\+::\+Avg\+Value}}
+
+
+{\ttfamily \#include $<$avgvalue.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsmrtobj_1_1data_1_1_avg_value_a8cbe114baf7324d79cee11979a6e6a99}{Avg\+Value} ()
+\item 
+\hyperlink{classsmrtobj_1_1data_1_1_avg_value_a00996d9c894650af2b1176ba507c5c46}{Avg\+Value} (const \hyperlink{classsmrtobj_1_1data_1_1_avg_value}{Avg\+Value} \&v)
+\item 
+virtual \hyperlink{classsmrtobj_1_1data_1_1_avg_value_ae41c2c06bad9a42328428834087b515a}{$\sim$\+Avg\+Value} ()
+\item 
+void \hyperlink{classsmrtobj_1_1data_1_1_avg_value_a328e6e7a7865b5e6c5e2306388bbd75d}{reset} ()
+\item 
+float \hyperlink{classsmrtobj_1_1data_1_1_avg_value_a49ddff6c0e51bfbc2394b37d21a1d655}{value} () const 
+\item 
+bool \hyperlink{classsmrtobj_1_1data_1_1_avg_value_a5cea9434d761b6ef93c4452d48c9d840}{is\+Valid} () const 
+\item 
+float \hyperlink{classsmrtobj_1_1data_1_1_avg_value_ad6d0f942767eba04fa21bb5e42d85da7}{add} (float \hyperlink{classsmrtobj_1_1data_1_1_avg_value_a49ddff6c0e51bfbc2394b37d21a1d655}{value})
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{classsmrtobj_1_1data_1_1_avg_value}{Avg\+Value} class implements a moving average using a cululative moving average formula. In a cumulative moving average, the data arrive in an ordered datum stream, and it is possible to get the average of all of the data up until the current datum point.
+
+$ CMA(n+1) = CMA(n) + \frac{x(n+1) + CMA(n)}{n + 1} $ 
+
+Definition at line 36 of file avgvalue.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classsmrtobj_1_1data_1_1_avg_value_a8cbe114baf7324d79cee11979a6e6a99}{}\index{smrtobj\+::data\+::\+Avg\+Value@{smrtobj\+::data\+::\+Avg\+Value}!Avg\+Value@{Avg\+Value}}
+\index{Avg\+Value@{Avg\+Value}!smrtobj\+::data\+::\+Avg\+Value@{smrtobj\+::data\+::\+Avg\+Value}}
+\subsubsection[{Avg\+Value()}]{\setlength{\rightskip}{0pt plus 5cm}smrtobj\+::data\+::\+Avg\+Value\+::\+Avg\+Value (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classsmrtobj_1_1data_1_1_avg_value_a8cbe114baf7324d79cee11979a6e6a99}
+Default Constructor \hypertarget{classsmrtobj_1_1data_1_1_avg_value_a00996d9c894650af2b1176ba507c5c46}{}\index{smrtobj\+::data\+::\+Avg\+Value@{smrtobj\+::data\+::\+Avg\+Value}!Avg\+Value@{Avg\+Value}}
+\index{Avg\+Value@{Avg\+Value}!smrtobj\+::data\+::\+Avg\+Value@{smrtobj\+::data\+::\+Avg\+Value}}
+\subsubsection[{Avg\+Value(const Avg\+Value \&v)}]{\setlength{\rightskip}{0pt plus 5cm}smrtobj\+::data\+::\+Avg\+Value\+::\+Avg\+Value (
+\begin{DoxyParamCaption}
+\item[{const {\bf Avg\+Value} \&}]{v}
+\end{DoxyParamCaption}
+)}\label{classsmrtobj_1_1data_1_1_avg_value_a00996d9c894650af2b1176ba507c5c46}
+Copy Constructor
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em v} & Average \\
+\hline
+\end{DoxyParams}
+\hypertarget{classsmrtobj_1_1data_1_1_avg_value_ae41c2c06bad9a42328428834087b515a}{}\index{smrtobj\+::data\+::\+Avg\+Value@{smrtobj\+::data\+::\+Avg\+Value}!````~Avg\+Value@{$\sim$\+Avg\+Value}}
+\index{````~Avg\+Value@{$\sim$\+Avg\+Value}!smrtobj\+::data\+::\+Avg\+Value@{smrtobj\+::data\+::\+Avg\+Value}}
+\subsubsection[{$\sim$\+Avg\+Value()}]{\setlength{\rightskip}{0pt plus 5cm}virtual smrtobj\+::data\+::\+Avg\+Value\+::$\sim$\+Avg\+Value (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classsmrtobj_1_1data_1_1_avg_value_ae41c2c06bad9a42328428834087b515a}
+Destructor 
+
+\subsection{Member Function Documentation}
+\hypertarget{classsmrtobj_1_1data_1_1_avg_value_ad6d0f942767eba04fa21bb5e42d85da7}{}\index{smrtobj\+::data\+::\+Avg\+Value@{smrtobj\+::data\+::\+Avg\+Value}!add@{add}}
+\index{add@{add}!smrtobj\+::data\+::\+Avg\+Value@{smrtobj\+::data\+::\+Avg\+Value}}
+\subsubsection[{add(float value)}]{\setlength{\rightskip}{0pt plus 5cm}float smrtobj\+::data\+::\+Avg\+Value\+::add (
+\begin{DoxyParamCaption}
+\item[{float}]{value}
+\end{DoxyParamCaption}
+)}\label{classsmrtobj_1_1data_1_1_avg_value_ad6d0f942767eba04fa21bb5e42d85da7}
+Adds value to the average
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & value to add\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+new average value 
+\end{DoxyReturn}
+\hypertarget{classsmrtobj_1_1data_1_1_avg_value_a5cea9434d761b6ef93c4452d48c9d840}{}\index{smrtobj\+::data\+::\+Avg\+Value@{smrtobj\+::data\+::\+Avg\+Value}!is\+Valid@{is\+Valid}}
+\index{is\+Valid@{is\+Valid}!smrtobj\+::data\+::\+Avg\+Value@{smrtobj\+::data\+::\+Avg\+Value}}
+\subsubsection[{is\+Valid() const }]{\setlength{\rightskip}{0pt plus 5cm}bool smrtobj\+::data\+::\+Avg\+Value\+::is\+Valid (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classsmrtobj_1_1data_1_1_avg_value_a5cea9434d761b6ef93c4452d48c9d840}
+Checks if average is valid (not 0 elements)
+
+\begin{DoxyReturn}{Returns}
+true if is valid, false otherwise 
+\end{DoxyReturn}
+
+
+Definition at line 81 of file avgvalue.\+h.
+
+\hypertarget{classsmrtobj_1_1data_1_1_avg_value_a328e6e7a7865b5e6c5e2306388bbd75d}{}\index{smrtobj\+::data\+::\+Avg\+Value@{smrtobj\+::data\+::\+Avg\+Value}!reset@{reset}}
+\index{reset@{reset}!smrtobj\+::data\+::\+Avg\+Value@{smrtobj\+::data\+::\+Avg\+Value}}
+\subsubsection[{reset()}]{\setlength{\rightskip}{0pt plus 5cm}void smrtobj\+::data\+::\+Avg\+Value\+::reset (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classsmrtobj_1_1data_1_1_avg_value_a328e6e7a7865b5e6c5e2306388bbd75d}
+Resets cumulative average 
+
+Definition at line 67 of file avgvalue.\+h.
+
+\hypertarget{classsmrtobj_1_1data_1_1_avg_value_a49ddff6c0e51bfbc2394b37d21a1d655}{}\index{smrtobj\+::data\+::\+Avg\+Value@{smrtobj\+::data\+::\+Avg\+Value}!value@{value}}
+\index{value@{value}!smrtobj\+::data\+::\+Avg\+Value@{smrtobj\+::data\+::\+Avg\+Value}}
+\subsubsection[{value() const }]{\setlength{\rightskip}{0pt plus 5cm}float smrtobj\+::data\+::\+Avg\+Value\+::value (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classsmrtobj_1_1data_1_1_avg_value_a49ddff6c0e51bfbc2394b37d21a1d655}
+Gets average value
+
+\begin{DoxyReturn}{Returns}
+current average value 
+\end{DoxyReturn}
+
+
+Definition at line 74 of file avgvalue.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+libraries/\+Smrt\+Obj\+Data/src/\hyperlink{avgvalue_8h}{avgvalue.\+h}\end{DoxyCompactItemize}

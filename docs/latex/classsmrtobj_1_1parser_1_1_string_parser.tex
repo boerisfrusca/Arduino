@@ -1,0 +1,391 @@
+\hypertarget{classsmrtobj_1_1parser_1_1_string_parser}{}\section{smrtobj\+:\+:parser\+:\+:String\+Parser Class Reference}
+\label{classsmrtobj_1_1parser_1_1_string_parser}\index{smrtobj\+::parser\+::\+String\+Parser@{smrtobj\+::parser\+::\+String\+Parser}}
+
+
+{\ttfamily \#include $<$stringparser.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsmrtobj_1_1parser_1_1_string_parser_a855c13686d232d10fc7264fb4e13a2fb}{String\+Parser} ()
+\item 
+virtual \hyperlink{classsmrtobj_1_1parser_1_1_string_parser_ac62234192a7e3fa3041d0838f31b5d01}{$\sim$\+String\+Parser} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \hyperlink{classsmrtobj_1_1parser_1_1_string_parser_a286ba7afb015d6101dce638ca639980e}{to\+Int} (char $\ast$str, uint8\+\_\+t \&n, uint8\+\_\+t size=255)
+\item 
+static bool \hyperlink{classsmrtobj_1_1parser_1_1_string_parser_a238387a4fcadf8f9e5eb84d52e46d054}{to\+Int} (char $\ast$str, int \&n, uint8\+\_\+t size=255)
+\item 
+static bool \hyperlink{classsmrtobj_1_1parser_1_1_string_parser_a60d66796fdacb1b3a93603d48ce81c6b}{to\+Int} (char $\ast$str, unsigned int \&n, uint8\+\_\+t size)
+\item 
+static bool \hyperlink{classsmrtobj_1_1parser_1_1_string_parser_ad2dd013347a1bb807549e3aa1ec1bff6}{to\+Long} (char $\ast$str, long \&n, uint8\+\_\+t size)
+\item 
+static bool \hyperlink{classsmrtobj_1_1parser_1_1_string_parser_a8545f1404542abfac2ccb15675ed4891}{to\+Long} (char $\ast$str, unsigned long \&n, uint8\+\_\+t size)
+\item 
+static bool \hyperlink{classsmrtobj_1_1parser_1_1_string_parser_a8e36c1d12527b4120cbde1bbbdc18562}{to\+Float} (char $\ast$str, float \&n, uint8\+\_\+t size)
+\item 
+static bool \hyperlink{classsmrtobj_1_1parser_1_1_string_parser_a35408e896e31a3de9271f4950d8ed891}{to\+I\+P\+Address} (char $\ast$str, uint8\+\_\+t $\ast$ip, uint8\+\_\+t size=255)
+\item 
+static bool \hyperlink{classsmrtobj_1_1parser_1_1_string_parser_a454373fb32886498a684d49b49897474}{is\+Digit\+Str} (char $\ast$str, uint8\+\_\+t size=255)
+\item 
+static bool \hyperlink{classsmrtobj_1_1parser_1_1_string_parser_a7584c8c2b0859c1160cb4fc1ece14e2d}{is\+I\+P\+Address} (char $\ast$str, uint8\+\_\+t size=255)
+\item 
+static bool \hyperlink{classsmrtobj_1_1parser_1_1_string_parser_a2dc94649a00e706b4ce7d62cc6d6fd11}{is\+Float\+Str} (char $\ast$str, uint8\+\_\+t size=255)
+\item 
+static bool \hyperlink{classsmrtobj_1_1parser_1_1_string_parser_aeafed5972a553a95c9a1cd0b6f77f771}{convert\+Float} (float n, char $\ast$buff, uint8\+\_\+t stot, uint8\+\_\+t decimal)
+\item 
+static bool \hyperlink{classsmrtobj_1_1parser_1_1_string_parser_a532a1adbdd310bb30f64a26565f0cb77}{read\+String\+From\+Flash} (const char str\mbox{[}$\,$\mbox{]} P\+R\+O\+G\+M\+E\+M, char $\ast$buf, uint8\+\_\+t size\+\_\+b)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classsmrtobj_1_1parser_1_1_string_parser}{String\+Parser} is a collection of functions to parse and use strings. 
+
+Definition at line 30 of file stringparser.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classsmrtobj_1_1parser_1_1_string_parser_a855c13686d232d10fc7264fb4e13a2fb}{}\index{smrtobj\+::parser\+::\+String\+Parser@{smrtobj\+::parser\+::\+String\+Parser}!String\+Parser@{String\+Parser}}
+\index{String\+Parser@{String\+Parser}!smrtobj\+::parser\+::\+String\+Parser@{smrtobj\+::parser\+::\+String\+Parser}}
+\subsubsection[{String\+Parser()}]{\setlength{\rightskip}{0pt plus 5cm}smrtobj\+::i2c\+::\+String\+Parser\+::\+String\+Parser (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classsmrtobj_1_1parser_1_1_string_parser_a855c13686d232d10fc7264fb4e13a2fb}
+Default Constructor It sets all internal variables as the start time at current time as seconds from 1970. 
+
+Definition at line 17 of file stringparser.\+cpp.
+
+\hypertarget{classsmrtobj_1_1parser_1_1_string_parser_ac62234192a7e3fa3041d0838f31b5d01}{}\index{smrtobj\+::parser\+::\+String\+Parser@{smrtobj\+::parser\+::\+String\+Parser}!````~String\+Parser@{$\sim$\+String\+Parser}}
+\index{````~String\+Parser@{$\sim$\+String\+Parser}!smrtobj\+::parser\+::\+String\+Parser@{smrtobj\+::parser\+::\+String\+Parser}}
+\subsubsection[{$\sim$\+String\+Parser()}]{\setlength{\rightskip}{0pt plus 5cm}smrtobj\+::i2c\+::\+String\+Parser\+::$\sim$\+String\+Parser (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classsmrtobj_1_1parser_1_1_string_parser_ac62234192a7e3fa3041d0838f31b5d01}
+Destructor 
+
+Definition at line 21 of file stringparser.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classsmrtobj_1_1parser_1_1_string_parser_aeafed5972a553a95c9a1cd0b6f77f771}{}\index{smrtobj\+::parser\+::\+String\+Parser@{smrtobj\+::parser\+::\+String\+Parser}!convert\+Float@{convert\+Float}}
+\index{convert\+Float@{convert\+Float}!smrtobj\+::parser\+::\+String\+Parser@{smrtobj\+::parser\+::\+String\+Parser}}
+\subsubsection[{convert\+Float(float n, char $\ast$buff, uint8\+\_\+t stot, uint8\+\_\+t decimal)}]{\setlength{\rightskip}{0pt plus 5cm}bool smrtobj\+::i2c\+::\+String\+Parser\+::convert\+Float (
+\begin{DoxyParamCaption}
+\item[{float}]{n, }
+\item[{char $\ast$}]{buff, }
+\item[{uint8\+\_\+t}]{stot, }
+\item[{uint8\+\_\+t}]{decimal}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classsmrtobj_1_1parser_1_1_string_parser_aeafed5972a553a95c9a1cd0b6f77f771}
+Converts a floating number to a string of maximum size stot and save it in str. The number of decimals are set by the parameter decimal.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em n} & number to convert in a string. \\
+\hline
+\mbox{\tt in}  & {\em buff} & where store the number as a string. \\
+\hline
+\mbox{\tt in}  & {\em stot} & maximim size of the string. \\
+\hline
+\mbox{\tt in}  & {\em decimal} & number of decimals.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false if the strins is not enough big. 
+\end{DoxyReturn}
+
+
+Definition at line 261 of file stringparser.\+cpp.
+
+\hypertarget{classsmrtobj_1_1parser_1_1_string_parser_a454373fb32886498a684d49b49897474}{}\index{smrtobj\+::parser\+::\+String\+Parser@{smrtobj\+::parser\+::\+String\+Parser}!is\+Digit\+Str@{is\+Digit\+Str}}
+\index{is\+Digit\+Str@{is\+Digit\+Str}!smrtobj\+::parser\+::\+String\+Parser@{smrtobj\+::parser\+::\+String\+Parser}}
+\subsubsection[{is\+Digit\+Str(char $\ast$str, uint8\+\_\+t size=255)}]{\setlength{\rightskip}{0pt plus 5cm}bool smrtobj\+::i2c\+::\+String\+Parser\+::is\+Digit\+Str (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{str, }
+\item[{uint8\+\_\+t}]{size = {\ttfamily 255}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classsmrtobj_1_1parser_1_1_string_parser_a454373fb32886498a684d49b49897474}
+Checks if the string str contains an integer number. It returns false if the string is not an integer number.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em str} & string with the representation of an integer number. \\
+\hline
+\mbox{\tt in}  & {\em size} & maximum size of string str.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false if the string is not an integer number. 
+\end{DoxyReturn}
+
+
+Definition at line 25 of file stringparser.\+cpp.
+
+\hypertarget{classsmrtobj_1_1parser_1_1_string_parser_a2dc94649a00e706b4ce7d62cc6d6fd11}{}\index{smrtobj\+::parser\+::\+String\+Parser@{smrtobj\+::parser\+::\+String\+Parser}!is\+Float\+Str@{is\+Float\+Str}}
+\index{is\+Float\+Str@{is\+Float\+Str}!smrtobj\+::parser\+::\+String\+Parser@{smrtobj\+::parser\+::\+String\+Parser}}
+\subsubsection[{is\+Float\+Str(char $\ast$str, uint8\+\_\+t size=255)}]{\setlength{\rightskip}{0pt plus 5cm}bool smrtobj\+::i2c\+::\+String\+Parser\+::is\+Float\+Str (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{str, }
+\item[{uint8\+\_\+t}]{size = {\ttfamily 255}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classsmrtobj_1_1parser_1_1_string_parser_a2dc94649a00e706b4ce7d62cc6d6fd11}
+Checks if the string str contains a floating point number. It returns false if the string is not a floating point numbers.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em str} & string with the representation of a floating point number. \\
+\hline
+\mbox{\tt in}  & {\em size} & maximum size of string str.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false if the string is not a floating point numbers. 
+\end{DoxyReturn}
+
+
+Definition at line 112 of file stringparser.\+cpp.
+
+\hypertarget{classsmrtobj_1_1parser_1_1_string_parser_a7584c8c2b0859c1160cb4fc1ece14e2d}{}\index{smrtobj\+::parser\+::\+String\+Parser@{smrtobj\+::parser\+::\+String\+Parser}!is\+I\+P\+Address@{is\+I\+P\+Address}}
+\index{is\+I\+P\+Address@{is\+I\+P\+Address}!smrtobj\+::parser\+::\+String\+Parser@{smrtobj\+::parser\+::\+String\+Parser}}
+\subsubsection[{is\+I\+P\+Address(char $\ast$str, uint8\+\_\+t size=255)}]{\setlength{\rightskip}{0pt plus 5cm}bool smrtobj\+::i2c\+::\+String\+Parser\+::is\+I\+P\+Address (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{str, }
+\item[{uint8\+\_\+t}]{size = {\ttfamily 255}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classsmrtobj_1_1parser_1_1_string_parser_a7584c8c2b0859c1160cb4fc1ece14e2d}
+Checks if the string str contains an I\+P address. It returns false if the string is not an I\+P address.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em str} & string with the representation of an I\+P address. \\
+\hline
+\mbox{\tt in}  & {\em size} & maximum size of string str.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false if the string is not an I\+P address. 
+\end{DoxyReturn}
+
+
+Definition at line 45 of file stringparser.\+cpp.
+
+\hypertarget{classsmrtobj_1_1parser_1_1_string_parser_a532a1adbdd310bb30f64a26565f0cb77}{}\index{smrtobj\+::parser\+::\+String\+Parser@{smrtobj\+::parser\+::\+String\+Parser}!read\+String\+From\+Flash@{read\+String\+From\+Flash}}
+\index{read\+String\+From\+Flash@{read\+String\+From\+Flash}!smrtobj\+::parser\+::\+String\+Parser@{smrtobj\+::parser\+::\+String\+Parser}}
+\subsubsection[{read\+String\+From\+Flash(const char str[] P\+R\+O\+G\+M\+E\+M, char $\ast$buf, uint8\+\_\+t size\+\_\+b)}]{\setlength{\rightskip}{0pt plus 5cm}bool smrtobj\+::i2c\+::\+String\+Parser\+::read\+String\+From\+Flash (
+\begin{DoxyParamCaption}
+\item[{const char str\mbox{[}$\,$\mbox{]}}]{P\+R\+O\+G\+M\+E\+M, }
+\item[{char $\ast$}]{buf, }
+\item[{uint8\+\_\+t}]{size\+\_\+b}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classsmrtobj_1_1parser_1_1_string_parser_a532a1adbdd310bb30f64a26565f0cb77}
+Reads a string from Flash memory. String is stored in a buffer \textquotesingle{}buf\textquotesingle{} of size \textquotesingle{}size\+\_\+b\textquotesingle{}. Buffer \textquotesingle{}buf\textquotesingle{} must be enough large to store the wole string. If it is smaller function returns false.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em str} & string stored in flash memory \\
+\hline
+\mbox{\tt out}  & {\em buf} & buffer where store string \\
+\hline
+\mbox{\tt in}  & {\em size\+\_\+b} & size of buffer \textquotesingle{}buf\textquotesingle{}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false if buffer \textquotesingle{}buf\textquotesingle{} is smaller then the string store in flash memory. 
+\end{DoxyReturn}
+
+
+Definition at line 289 of file stringparser.\+cpp.
+
+\hypertarget{classsmrtobj_1_1parser_1_1_string_parser_a8e36c1d12527b4120cbde1bbbdc18562}{}\index{smrtobj\+::parser\+::\+String\+Parser@{smrtobj\+::parser\+::\+String\+Parser}!to\+Float@{to\+Float}}
+\index{to\+Float@{to\+Float}!smrtobj\+::parser\+::\+String\+Parser@{smrtobj\+::parser\+::\+String\+Parser}}
+\subsubsection[{to\+Float(char $\ast$str, float \&n, uint8\+\_\+t size)}]{\setlength{\rightskip}{0pt plus 5cm}bool smrtobj\+::i2c\+::\+String\+Parser\+::to\+Float (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{str, }
+\item[{float \&}]{n, }
+\item[{uint8\+\_\+t}]{size}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classsmrtobj_1_1parser_1_1_string_parser_a8e36c1d12527b4120cbde1bbbdc18562}
+Parses the string str interpreting its content as a floating point number and save it in the variable n. It returns false if the string is not a number.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em str} & string with the representation of a floating point number. \\
+\hline
+\mbox{\tt out}  & {\em n} & variable where it is saved the number to return. \\
+\hline
+\mbox{\tt in}  & {\em size} & maximum size of string str.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false if the string is not a number. 
+\end{DoxyReturn}
+
+
+Definition at line 234 of file stringparser.\+cpp.
+
+\hypertarget{classsmrtobj_1_1parser_1_1_string_parser_a286ba7afb015d6101dce638ca639980e}{}\index{smrtobj\+::parser\+::\+String\+Parser@{smrtobj\+::parser\+::\+String\+Parser}!to\+Int@{to\+Int}}
+\index{to\+Int@{to\+Int}!smrtobj\+::parser\+::\+String\+Parser@{smrtobj\+::parser\+::\+String\+Parser}}
+\subsubsection[{to\+Int(char $\ast$str, uint8\+\_\+t \&n, uint8\+\_\+t size=255)}]{\setlength{\rightskip}{0pt plus 5cm}static bool smrtobj\+::parser\+::\+String\+Parser\+::to\+Int (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{str, }
+\item[{uint8\+\_\+t \&}]{n, }
+\item[{uint8\+\_\+t}]{size = {\ttfamily 255}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classsmrtobj_1_1parser_1_1_string_parser_a286ba7afb015d6101dce638ca639980e}
+Parses the string str interpreting its content as an integral number of 8 bits and save it in the variable n. It returns false if the string is not a number.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em str} & string with the representation of an integral number. \\
+\hline
+\mbox{\tt out}  & {\em n} & 8 bit variable where it is saved the number to return. \\
+\hline
+\mbox{\tt in}  & {\em size} & maximum size of string str.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false if the string is not a number. 
+\end{DoxyReturn}
+\hypertarget{classsmrtobj_1_1parser_1_1_string_parser_a238387a4fcadf8f9e5eb84d52e46d054}{}\index{smrtobj\+::parser\+::\+String\+Parser@{smrtobj\+::parser\+::\+String\+Parser}!to\+Int@{to\+Int}}
+\index{to\+Int@{to\+Int}!smrtobj\+::parser\+::\+String\+Parser@{smrtobj\+::parser\+::\+String\+Parser}}
+\subsubsection[{to\+Int(char $\ast$str, int \&n, uint8\+\_\+t size=255)}]{\setlength{\rightskip}{0pt plus 5cm}static bool smrtobj\+::parser\+::\+String\+Parser\+::to\+Int (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{str, }
+\item[{int \&}]{n, }
+\item[{uint8\+\_\+t}]{size = {\ttfamily 255}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classsmrtobj_1_1parser_1_1_string_parser_a238387a4fcadf8f9e5eb84d52e46d054}
+Parses the string str interpreting its content as an integral number of 16 bits and save it in the variable n. It returns false if the string is not a number.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em str} & string with the representation of an integral number. \\
+\hline
+\mbox{\tt out}  & {\em n} & 16 bit variable where it is saved the number to return. \\
+\hline
+\mbox{\tt in}  & {\em size} & maximum size of string str.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false if the string is not a number. 
+\end{DoxyReturn}
+\hypertarget{classsmrtobj_1_1parser_1_1_string_parser_a60d66796fdacb1b3a93603d48ce81c6b}{}\index{smrtobj\+::parser\+::\+String\+Parser@{smrtobj\+::parser\+::\+String\+Parser}!to\+Int@{to\+Int}}
+\index{to\+Int@{to\+Int}!smrtobj\+::parser\+::\+String\+Parser@{smrtobj\+::parser\+::\+String\+Parser}}
+\subsubsection[{to\+Int(char $\ast$str, unsigned int \&n, uint8\+\_\+t size)}]{\setlength{\rightskip}{0pt plus 5cm}bool smrtobj\+::i2c\+::\+String\+Parser\+::to\+Int (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{str, }
+\item[{unsigned int \&}]{n, }
+\item[{uint8\+\_\+t}]{size}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classsmrtobj_1_1parser_1_1_string_parser_a60d66796fdacb1b3a93603d48ce81c6b}
+Parses the string str interpreting its content as an unsigned integral number of 16 bits and save it in the variable n. It returns false if the string is not a number.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em str} & string with the representation of an integral number. \\
+\hline
+\mbox{\tt out}  & {\em n} & unsigned 16 bit variable where it is saved the number to return. \\
+\hline
+\mbox{\tt in}  & {\em size} & maximum size of string str.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false if the string is not a number. 
+\end{DoxyReturn}
+
+
+Definition at line 186 of file stringparser.\+cpp.
+
+\hypertarget{classsmrtobj_1_1parser_1_1_string_parser_a35408e896e31a3de9271f4950d8ed891}{}\index{smrtobj\+::parser\+::\+String\+Parser@{smrtobj\+::parser\+::\+String\+Parser}!to\+I\+P\+Address@{to\+I\+P\+Address}}
+\index{to\+I\+P\+Address@{to\+I\+P\+Address}!smrtobj\+::parser\+::\+String\+Parser@{smrtobj\+::parser\+::\+String\+Parser}}
+\subsubsection[{to\+I\+P\+Address(char $\ast$str, uint8\+\_\+t $\ast$ip, uint8\+\_\+t size=255)}]{\setlength{\rightskip}{0pt plus 5cm}bool smrtobj\+::i2c\+::\+String\+Parser\+::to\+I\+P\+Address (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{str, }
+\item[{uint8\+\_\+t $\ast$}]{ip, }
+\item[{uint8\+\_\+t}]{size = {\ttfamily 255}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classsmrtobj_1_1parser_1_1_string_parser_a35408e896e31a3de9271f4950d8ed891}
+Parses the string str interpreting its content as an I\+P address (array of 4 integral number of 8 bits). It returns false if the string is not a I\+P address.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em str} & string with the representation of an I\+P address. \\
+\hline
+\mbox{\tt out}  & {\em ip} & array whey the octets are saved. \\
+\hline
+\mbox{\tt in}  & {\em size} & maximum size of string str.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false if the string is not a I\+P address. 
+\end{DoxyReturn}
+
+
+Definition at line 79 of file stringparser.\+cpp.
+
+\hypertarget{classsmrtobj_1_1parser_1_1_string_parser_ad2dd013347a1bb807549e3aa1ec1bff6}{}\index{smrtobj\+::parser\+::\+String\+Parser@{smrtobj\+::parser\+::\+String\+Parser}!to\+Long@{to\+Long}}
+\index{to\+Long@{to\+Long}!smrtobj\+::parser\+::\+String\+Parser@{smrtobj\+::parser\+::\+String\+Parser}}
+\subsubsection[{to\+Long(char $\ast$str, long \&n, uint8\+\_\+t size)}]{\setlength{\rightskip}{0pt plus 5cm}bool smrtobj\+::i2c\+::\+String\+Parser\+::to\+Long (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{str, }
+\item[{long \&}]{n, }
+\item[{uint8\+\_\+t}]{size}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classsmrtobj_1_1parser_1_1_string_parser_ad2dd013347a1bb807549e3aa1ec1bff6}
+Parses the string str interpreting its content as an unsigned integral number of 32 bits and save it in the variable n. It returns false if the string is not a number.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em str} & string with the representation of an integral number. \\
+\hline
+\mbox{\tt out}  & {\em n} & 32 bit variable where it is saved the number to return. \\
+\hline
+\mbox{\tt in}  & {\em size} & maximum size of string str.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false if the string is not a number. 
+\end{DoxyReturn}
+
+
+Definition at line 218 of file stringparser.\+cpp.
+
+\hypertarget{classsmrtobj_1_1parser_1_1_string_parser_a8545f1404542abfac2ccb15675ed4891}{}\index{smrtobj\+::parser\+::\+String\+Parser@{smrtobj\+::parser\+::\+String\+Parser}!to\+Long@{to\+Long}}
+\index{to\+Long@{to\+Long}!smrtobj\+::parser\+::\+String\+Parser@{smrtobj\+::parser\+::\+String\+Parser}}
+\subsubsection[{to\+Long(char $\ast$str, unsigned long \&n, uint8\+\_\+t size)}]{\setlength{\rightskip}{0pt plus 5cm}bool smrtobj\+::i2c\+::\+String\+Parser\+::to\+Long (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{str, }
+\item[{unsigned long \&}]{n, }
+\item[{uint8\+\_\+t}]{size}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classsmrtobj_1_1parser_1_1_string_parser_a8545f1404542abfac2ccb15675ed4891}
+Parses the string str interpreting its content as an integral number of 32 bits and save it in the variable n. It returns false if the string is not a number.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em str} & string with the representation of an integral number. \\
+\hline
+\mbox{\tt out}  & {\em n} & 32 bit variable where it is saved the number to return. \\
+\hline
+\mbox{\tt in}  & {\em size} & maximum size of string str.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false if the string is not a number. 
+\end{DoxyReturn}
+
+
+Definition at line 202 of file stringparser.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+libraries/\+Smrt\+Obj\+Str\+Parser/src/\hyperlink{stringparser_8h}{stringparser.\+h}\item 
+libraries/\+Smrt\+Obj\+Str\+Parser/src/\hyperlink{stringparser_8cpp}{stringparser.\+cpp}\end{DoxyCompactItemize}
