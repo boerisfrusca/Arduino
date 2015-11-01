@@ -17,7 +17,7 @@
 #define PERIOD 20
 
 //! Time interval in seconds
-smrtobj::IntervalSeconds t;
+smrtobj::timer::IntervalSeconds t;
 
 void setup() {
   // Open serial port to debug

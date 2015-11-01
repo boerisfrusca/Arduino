@@ -5,7 +5,6 @@
 #######################################
 AvgValue	KEYWORD1
 GPSPosition	KEYWORD1
-Measure	KEYWORD1
 
 #######################################
 # Methods and Functions 
