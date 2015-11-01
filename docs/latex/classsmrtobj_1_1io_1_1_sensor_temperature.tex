@@ -1,0 +1,255 @@
+\hypertarget{classsmrtobj_1_1io_1_1_sensor_temperature}{}\section{smrtobj\+:\+:io\+:\+:Sensor\+Temperature Class Reference}
+\label{classsmrtobj_1_1io_1_1_sensor_temperature}\index{smrtobj\+::io\+::\+Sensor\+Temperature@{smrtobj\+::io\+::\+Sensor\+Temperature}}
+
+
+{\ttfamily \#include $<$sensortemperature.\+h$>$}
+
+Inheritance diagram for smrtobj\+:\+:io\+:\+:Sensor\+Temperature\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classsmrtobj_1_1io_1_1_sensor_temperature}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsmrtobj_1_1io_1_1_sensor_temperature_a48b0c65a7f0936a7fc1dd5925755c2b4}{Sensor\+Temperature} ()
+\item 
+virtual \hyperlink{classsmrtobj_1_1io_1_1_sensor_temperature_a1aee690f03a707a92288aade52571e50}{$\sim$\+Sensor\+Temperature} ()
+\item 
+virtual float \hyperlink{classsmrtobj_1_1io_1_1_sensor_temperature_abea20003ad3b583d8f7b6021584afabe}{celsius} ()=0
+\item 
+virtual float \hyperlink{classsmrtobj_1_1io_1_1_sensor_temperature_acd4a57d06be72757c3cdd5f1d14be117}{kelvin} ()=0
+\item 
+virtual float \hyperlink{classsmrtobj_1_1io_1_1_sensor_temperature_a042ea89c32c26955d03186cc16e049b0}{farenheit} ()=0
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static float \hyperlink{classsmrtobj_1_1io_1_1_sensor_temperature_ae5dc959e4b7594c4391e11422befc1d4}{celsius2farenheit} (float degree)
+\item 
+static float \hyperlink{classsmrtobj_1_1io_1_1_sensor_temperature_a149aa907b8b6809af604fa26ca4ab195}{farenheit2celsius} (float degree)
+\item 
+static float \hyperlink{classsmrtobj_1_1io_1_1_sensor_temperature_a3b37e6573c43fa26fd3cf9479e8a58b7}{celsius2kelvin} (float degree)
+\item 
+static float \hyperlink{classsmrtobj_1_1io_1_1_sensor_temperature_a19f7bc55c7c52aec53c9e28cefa79c42}{kelvin2celsius} (float degree)
+\item 
+static float \hyperlink{classsmrtobj_1_1io_1_1_sensor_temperature_a14838f9c052b09b64da47c0544975502}{farenheit2kelvin} (float degree)
+\item 
+static float \hyperlink{classsmrtobj_1_1io_1_1_sensor_temperature_a526a3716f3b1f38ad376bb5c8d3649a4}{kelvin2farenheit} (float degree)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classsmrtobj_1_1io_1_1_sensor_temperature}{Sensor\+Temperature} is an interface to model a generic sensor temperature. It defines the main functions to convert the measurement from a unit to an other. The units supported are\+: Celsius, Farenheit and kelvin degrees. 
+
+Definition at line 24 of file sensortemperature.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classsmrtobj_1_1io_1_1_sensor_temperature_a48b0c65a7f0936a7fc1dd5925755c2b4}{}\index{smrtobj\+::io\+::\+Sensor\+Temperature@{smrtobj\+::io\+::\+Sensor\+Temperature}!Sensor\+Temperature@{Sensor\+Temperature}}
+\index{Sensor\+Temperature@{Sensor\+Temperature}!smrtobj\+::io\+::\+Sensor\+Temperature@{smrtobj\+::io\+::\+Sensor\+Temperature}}
+\subsubsection[{Sensor\+Temperature()}]{\setlength{\rightskip}{0pt plus 5cm}smrtobj\+::io\+::\+Sensor\+Temperature\+::\+Sensor\+Temperature (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classsmrtobj_1_1io_1_1_sensor_temperature_a48b0c65a7f0936a7fc1dd5925755c2b4}
+Default Constructor. 
+
+Definition at line 19 of file sensortemperature.\+cpp.
+
+\hypertarget{classsmrtobj_1_1io_1_1_sensor_temperature_a1aee690f03a707a92288aade52571e50}{}\index{smrtobj\+::io\+::\+Sensor\+Temperature@{smrtobj\+::io\+::\+Sensor\+Temperature}!````~Sensor\+Temperature@{$\sim$\+Sensor\+Temperature}}
+\index{````~Sensor\+Temperature@{$\sim$\+Sensor\+Temperature}!smrtobj\+::io\+::\+Sensor\+Temperature@{smrtobj\+::io\+::\+Sensor\+Temperature}}
+\subsubsection[{$\sim$\+Sensor\+Temperature()}]{\setlength{\rightskip}{0pt plus 5cm}smrtobj\+::io\+::\+Sensor\+Temperature\+::$\sim$\+Sensor\+Temperature (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classsmrtobj_1_1io_1_1_sensor_temperature_a1aee690f03a707a92288aade52571e50}
+Destructor. 
+
+Definition at line 25 of file sensortemperature.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classsmrtobj_1_1io_1_1_sensor_temperature_abea20003ad3b583d8f7b6021584afabe}{}\index{smrtobj\+::io\+::\+Sensor\+Temperature@{smrtobj\+::io\+::\+Sensor\+Temperature}!celsius@{celsius}}
+\index{celsius@{celsius}!smrtobj\+::io\+::\+Sensor\+Temperature@{smrtobj\+::io\+::\+Sensor\+Temperature}}
+\subsubsection[{celsius()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual float smrtobj\+::io\+::\+Sensor\+Temperature\+::celsius (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{classsmrtobj_1_1io_1_1_sensor_temperature_abea20003ad3b583d8f7b6021584afabe}
+Gets temperature in celsius degrees
+
+\begin{DoxyReturn}{Returns}
+celsuius degrees 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classsmrtobj_1_1io_1_1_m_c_p9700_a_ac80d2ee7705df843f6353f579be6f773}{smrtobj\+::io\+::\+M\+C\+P9700\+A}.
+
+\hypertarget{classsmrtobj_1_1io_1_1_sensor_temperature_ae5dc959e4b7594c4391e11422befc1d4}{}\index{smrtobj\+::io\+::\+Sensor\+Temperature@{smrtobj\+::io\+::\+Sensor\+Temperature}!celsius2farenheit@{celsius2farenheit}}
+\index{celsius2farenheit@{celsius2farenheit}!smrtobj\+::io\+::\+Sensor\+Temperature@{smrtobj\+::io\+::\+Sensor\+Temperature}}
+\subsubsection[{celsius2farenheit(float degree)}]{\setlength{\rightskip}{0pt plus 5cm}float smrtobj\+::io\+::\+Sensor\+Temperature\+::celsius2farenheit (
+\begin{DoxyParamCaption}
+\item[{float}]{degree}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classsmrtobj_1_1io_1_1_sensor_temperature_ae5dc959e4b7594c4391e11422befc1d4}
+Converts from celsius to farenheit degrees.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em degree} & temperature in celsius degrees\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+farenheit degrees 
+\end{DoxyReturn}
+
+
+Definition at line 30 of file sensortemperature.\+cpp.
+
+\hypertarget{classsmrtobj_1_1io_1_1_sensor_temperature_a3b37e6573c43fa26fd3cf9479e8a58b7}{}\index{smrtobj\+::io\+::\+Sensor\+Temperature@{smrtobj\+::io\+::\+Sensor\+Temperature}!celsius2kelvin@{celsius2kelvin}}
+\index{celsius2kelvin@{celsius2kelvin}!smrtobj\+::io\+::\+Sensor\+Temperature@{smrtobj\+::io\+::\+Sensor\+Temperature}}
+\subsubsection[{celsius2kelvin(float degree)}]{\setlength{\rightskip}{0pt plus 5cm}float smrtobj\+::io\+::\+Sensor\+Temperature\+::celsius2kelvin (
+\begin{DoxyParamCaption}
+\item[{float}]{degree}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classsmrtobj_1_1io_1_1_sensor_temperature_a3b37e6573c43fa26fd3cf9479e8a58b7}
+Converts from celsius to kelvin degrees.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em degree} & temperature in celsius degrees\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+kelvin degrees 
+\end{DoxyReturn}
+
+
+Definition at line 49 of file sensortemperature.\+cpp.
+
+\hypertarget{classsmrtobj_1_1io_1_1_sensor_temperature_a042ea89c32c26955d03186cc16e049b0}{}\index{smrtobj\+::io\+::\+Sensor\+Temperature@{smrtobj\+::io\+::\+Sensor\+Temperature}!farenheit@{farenheit}}
+\index{farenheit@{farenheit}!smrtobj\+::io\+::\+Sensor\+Temperature@{smrtobj\+::io\+::\+Sensor\+Temperature}}
+\subsubsection[{farenheit()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual float smrtobj\+::io\+::\+Sensor\+Temperature\+::farenheit (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{classsmrtobj_1_1io_1_1_sensor_temperature_a042ea89c32c26955d03186cc16e049b0}
+Gets temperature in farenheit degrees
+
+\begin{DoxyReturn}{Returns}
+farenheit degrees 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classsmrtobj_1_1io_1_1_m_c_p9700_a_a15dc548ff322a4e9f831273d96023038}{smrtobj\+::io\+::\+M\+C\+P9700\+A}.
+
+\hypertarget{classsmrtobj_1_1io_1_1_sensor_temperature_a149aa907b8b6809af604fa26ca4ab195}{}\index{smrtobj\+::io\+::\+Sensor\+Temperature@{smrtobj\+::io\+::\+Sensor\+Temperature}!farenheit2celsius@{farenheit2celsius}}
+\index{farenheit2celsius@{farenheit2celsius}!smrtobj\+::io\+::\+Sensor\+Temperature@{smrtobj\+::io\+::\+Sensor\+Temperature}}
+\subsubsection[{farenheit2celsius(float degree)}]{\setlength{\rightskip}{0pt plus 5cm}float smrtobj\+::io\+::\+Sensor\+Temperature\+::farenheit2celsius (
+\begin{DoxyParamCaption}
+\item[{float}]{degree}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classsmrtobj_1_1io_1_1_sensor_temperature_a149aa907b8b6809af604fa26ca4ab195}
+Converts from farenheit to celsius degrees.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em degree} & temperature in farenheit degrees\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+celsius degrees 
+\end{DoxyReturn}
+
+
+Definition at line 39 of file sensortemperature.\+cpp.
+
+\hypertarget{classsmrtobj_1_1io_1_1_sensor_temperature_a14838f9c052b09b64da47c0544975502}{}\index{smrtobj\+::io\+::\+Sensor\+Temperature@{smrtobj\+::io\+::\+Sensor\+Temperature}!farenheit2kelvin@{farenheit2kelvin}}
+\index{farenheit2kelvin@{farenheit2kelvin}!smrtobj\+::io\+::\+Sensor\+Temperature@{smrtobj\+::io\+::\+Sensor\+Temperature}}
+\subsubsection[{farenheit2kelvin(float degree)}]{\setlength{\rightskip}{0pt plus 5cm}float smrtobj\+::io\+::\+Sensor\+Temperature\+::farenheit2kelvin (
+\begin{DoxyParamCaption}
+\item[{float}]{degree}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classsmrtobj_1_1io_1_1_sensor_temperature_a14838f9c052b09b64da47c0544975502}
+Converts from farenheit to kelvin degrees.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em degree} & temperature in farenheit degrees\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+kelvin degrees 
+\end{DoxyReturn}
+
+
+Definition at line 63 of file sensortemperature.\+cpp.
+
+\hypertarget{classsmrtobj_1_1io_1_1_sensor_temperature_acd4a57d06be72757c3cdd5f1d14be117}{}\index{smrtobj\+::io\+::\+Sensor\+Temperature@{smrtobj\+::io\+::\+Sensor\+Temperature}!kelvin@{kelvin}}
+\index{kelvin@{kelvin}!smrtobj\+::io\+::\+Sensor\+Temperature@{smrtobj\+::io\+::\+Sensor\+Temperature}}
+\subsubsection[{kelvin()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual float smrtobj\+::io\+::\+Sensor\+Temperature\+::kelvin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{classsmrtobj_1_1io_1_1_sensor_temperature_acd4a57d06be72757c3cdd5f1d14be117}
+Gets temperature in kelvin degrees
+
+\begin{DoxyReturn}{Returns}
+kelvin degrees 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classsmrtobj_1_1io_1_1_m_c_p9700_a_a5ed9f0c208b167fd8e4e1338062d8668}{smrtobj\+::io\+::\+M\+C\+P9700\+A}.
+
+\hypertarget{classsmrtobj_1_1io_1_1_sensor_temperature_a19f7bc55c7c52aec53c9e28cefa79c42}{}\index{smrtobj\+::io\+::\+Sensor\+Temperature@{smrtobj\+::io\+::\+Sensor\+Temperature}!kelvin2celsius@{kelvin2celsius}}
+\index{kelvin2celsius@{kelvin2celsius}!smrtobj\+::io\+::\+Sensor\+Temperature@{smrtobj\+::io\+::\+Sensor\+Temperature}}
+\subsubsection[{kelvin2celsius(float degree)}]{\setlength{\rightskip}{0pt plus 5cm}float smrtobj\+::io\+::\+Sensor\+Temperature\+::kelvin2celsius (
+\begin{DoxyParamCaption}
+\item[{float}]{degree}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classsmrtobj_1_1io_1_1_sensor_temperature_a19f7bc55c7c52aec53c9e28cefa79c42}
+Converts from kelvin to celsius degrees.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em degree} & temperature in kelvin degrees\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+celsius degrees 
+\end{DoxyReturn}
+
+
+Definition at line 56 of file sensortemperature.\+cpp.
+
+\hypertarget{classsmrtobj_1_1io_1_1_sensor_temperature_a526a3716f3b1f38ad376bb5c8d3649a4}{}\index{smrtobj\+::io\+::\+Sensor\+Temperature@{smrtobj\+::io\+::\+Sensor\+Temperature}!kelvin2farenheit@{kelvin2farenheit}}
+\index{kelvin2farenheit@{kelvin2farenheit}!smrtobj\+::io\+::\+Sensor\+Temperature@{smrtobj\+::io\+::\+Sensor\+Temperature}}
+\subsubsection[{kelvin2farenheit(float degree)}]{\setlength{\rightskip}{0pt plus 5cm}float smrtobj\+::io\+::\+Sensor\+Temperature\+::kelvin2farenheit (
+\begin{DoxyParamCaption}
+\item[{float}]{degree}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classsmrtobj_1_1io_1_1_sensor_temperature_a526a3716f3b1f38ad376bb5c8d3649a4}
+Converts from kelvin to farenheit degrees.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em degree} & temperature in kelvin degrees\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+farenheit degrees 
+\end{DoxyReturn}
+
+
+Definition at line 69 of file sensortemperature.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+libraries/\+Smrt\+Obj\+I\+O/src/interfaces/\hyperlink{sensortemperature_8h}{sensortemperature.\+h}\item 
+libraries/\+Smrt\+Obj\+I\+O/src/interfaces/sensortemperature.\+cpp\end{DoxyCompactItemize}

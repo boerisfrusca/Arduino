@@ -1,0 +1,329 @@
+\hypertarget{classsmrtobj_1_1io_1_1_analog_input}{}\section{smrtobj\+:\+:io\+:\+:Analog\+Input Class Reference}
+\label{classsmrtobj_1_1io_1_1_analog_input}\index{smrtobj\+::io\+::\+Analog\+Input@{smrtobj\+::io\+::\+Analog\+Input}}
+
+
+{\ttfamily \#include $<$iosignal.\+h$>$}
+
+Inheritance diagram for smrtobj\+:\+:io\+:\+:Analog\+Input\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classsmrtobj_1_1io_1_1_analog_input}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{classsmrtobj_1_1io_1_1_analog_input_a4e2bf85b374d5856fc0dee0225fbd025}{\+\_\+v\+\_\+default} \{ \hyperlink{classsmrtobj_1_1io_1_1_analog_input_a4e2bf85b374d5856fc0dee0225fbd025a61b0cbe28d17a05cb3a268398c370cb9}{V0\+\_\+0} = 0, 
+\hyperlink{classsmrtobj_1_1io_1_1_analog_input_a4e2bf85b374d5856fc0dee0225fbd025a2692641238f0ae5eb558d1f9c1688604}{V5\+\_\+0} = 1, 
+\hyperlink{classsmrtobj_1_1io_1_1_analog_input_a4e2bf85b374d5856fc0dee0225fbd025aac4c61fd6d37aacbf3bd6a3be6d835d3}{V3\+\_\+3} = 2
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsmrtobj_1_1io_1_1_analog_input_a40008473025615c63d22cf82091f1c49}{Analog\+Input} ()
+\item 
+\hyperlink{classsmrtobj_1_1io_1_1_analog_input_a3cf704d9977129fc9548f4d10d344dcc}{Analog\+Input} (const \hyperlink{classsmrtobj_1_1io_1_1_analog_input}{Analog\+Input} \&o)
+\item 
+virtual \hyperlink{classsmrtobj_1_1io_1_1_analog_input_a663423c6a8c4556498b8b7c15ad2f163}{$\sim$\+Analog\+Input} ()
+\item 
+\hyperlink{classsmrtobj_1_1io_1_1_analog_input}{Analog\+Input} \& \hyperlink{classsmrtobj_1_1io_1_1_analog_input_a98027675f727183bc289d5276eb1f38e}{operator=} (const \hyperlink{classsmrtobj_1_1io_1_1_analog_input}{Analog\+Input} \&i)
+\item 
+byte \hyperlink{classsmrtobj_1_1io_1_1_analog_input_a08fe1be7aca445768e1b2293cb48b96a}{type} ()
+\item 
+void \hyperlink{classsmrtobj_1_1io_1_1_analog_input_a05e6a75658d9c5d9c5b9cbfffb8e2a91}{init} (byte \hyperlink{classsmrtobj_1_1io_1_1_analog_input_a5768f6b56a7ad5b9eb7da2b95951d5e6}{pin}, bool pullup=false)
+\item 
+unsigned long \hyperlink{classsmrtobj_1_1io_1_1_analog_input_aa223ad3c6350b5f94f8563870134f4e3}{value} ()
+\item 
+byte \hyperlink{classsmrtobj_1_1io_1_1_analog_input_a5768f6b56a7ad5b9eb7da2b95951d5e6}{pin} ()
+\item 
+unsigned long \hyperlink{classsmrtobj_1_1io_1_1_analog_input_aed112dc7b72d12075c93a5ca29a661f7}{read} ()
+\item 
+float \hyperlink{classsmrtobj_1_1io_1_1_analog_input_a99054ad9e24ffa6d1f2d5832ff3ad640}{input\+Voltage} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static float \hyperlink{classsmrtobj_1_1io_1_1_analog_input_a71d194e2abf9852b8ac5d0750568be4c}{reference} ()
+\item 
+static bool \hyperlink{classsmrtobj_1_1io_1_1_analog_input_aec6587007c8d16a2483e22fbf621631e}{set\+Reference\+Default} (byte vdef=\hyperlink{classsmrtobj_1_1io_1_1_analog_input_a4e2bf85b374d5856fc0dee0225fbd025a2692641238f0ae5eb558d1f9c1688604}{V5\+\_\+0})
+\item 
+static bool \hyperlink{classsmrtobj_1_1io_1_1_analog_input_a868ba4197c49394a0e0c70bd47ca2074}{set\+Reference} (float voltage)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classsmrtobj_1_1io_1_1_analog_input_af12741094c2f05dfdb9598bac6c78e6c}{}static const byte \hyperlink{classsmrtobj_1_1io_1_1_analog_input_af12741094c2f05dfdb9598bac6c78e6c}{R\+E\+S\+O\+L\+U\+T\+I\+O\+N} = 10\label{classsmrtobj_1_1io_1_1_analog_input_af12741094c2f05dfdb9598bac6c78e6c}
+
+\begin{DoxyCompactList}\small\item\em A\+D\+C resolution. \end{DoxyCompactList}\item 
+\hypertarget{classsmrtobj_1_1io_1_1_analog_input_a170725a849e4b1676d739c7c7b96ee71}{}static const float \hyperlink{classsmrtobj_1_1io_1_1_analog_input_a170725a849e4b1676d739c7c7b96ee71}{D\+E\+F\+A\+U\+L\+T\+\_\+\+V\+R\+E\+F} = 5.\+0\label{classsmrtobj_1_1io_1_1_analog_input_a170725a849e4b1676d739c7c7b96ee71}
+
+\begin{DoxyCompactList}\small\item\em Default A\+D\+C reference voltage. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+The \hyperlink{classsmrtobj_1_1io_1_1_analog_input}{Analog\+Input} class models a analog input. Using this, it is possible read the value from a specified analog pin.
+
+The Arduino board contains a 6 channel (8 channels on the Mini and Nano, 16 on the Mega), 10-\/bit analog to digital converter. This means that it will map input voltages between 0 and 5 volts into integer values between 0 and 1023. This yields a resolution between readings of\+: 5 volts / 1024 units or, .0049 volts (4.\+9 m\+V) per unit. The input range and resolution can be changed using analog\+Reference().
+
+It takes about 100 microseconds (0.\+0001 s) to read an analog input, so the maximum reading rate is about 10,000 times a second. 
+
+Definition at line 303 of file iosignal.\+h.
+
+
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{classsmrtobj_1_1io_1_1_analog_input_a4e2bf85b374d5856fc0dee0225fbd025}{}\index{smrtobj\+::io\+::\+Analog\+Input@{smrtobj\+::io\+::\+Analog\+Input}!\+\_\+v\+\_\+default@{\+\_\+v\+\_\+default}}
+\index{\+\_\+v\+\_\+default@{\+\_\+v\+\_\+default}!smrtobj\+::io\+::\+Analog\+Input@{smrtobj\+::io\+::\+Analog\+Input}}
+\subsubsection[{\+\_\+v\+\_\+default}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf smrtobj\+::io\+::\+Analog\+Input\+::\+\_\+v\+\_\+default}}\label{classsmrtobj_1_1io_1_1_analog_input_a4e2bf85b374d5856fc0dee0225fbd025}
+Default reference voltage \begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{V0\+\_\+0@{V0\+\_\+0}!smrtobj\+::io\+::\+Analog\+Input@{smrtobj\+::io\+::\+Analog\+Input}}\index{smrtobj\+::io\+::\+Analog\+Input@{smrtobj\+::io\+::\+Analog\+Input}!V0\+\_\+0@{V0\+\_\+0}}\item[{\em 
+\hypertarget{classsmrtobj_1_1io_1_1_analog_input_a4e2bf85b374d5856fc0dee0225fbd025a61b0cbe28d17a05cb3a268398c370cb9}{}V0\+\_\+0\label{classsmrtobj_1_1io_1_1_analog_input_a4e2bf85b374d5856fc0dee0225fbd025a61b0cbe28d17a05cb3a268398c370cb9}
+}]Off, 0.\+0 Volt. \index{V5\+\_\+0@{V5\+\_\+0}!smrtobj\+::io\+::\+Analog\+Input@{smrtobj\+::io\+::\+Analog\+Input}}\index{smrtobj\+::io\+::\+Analog\+Input@{smrtobj\+::io\+::\+Analog\+Input}!V5\+\_\+0@{V5\+\_\+0}}\item[{\em 
+\hypertarget{classsmrtobj_1_1io_1_1_analog_input_a4e2bf85b374d5856fc0dee0225fbd025a2692641238f0ae5eb558d1f9c1688604}{}V5\+\_\+0\label{classsmrtobj_1_1io_1_1_analog_input_a4e2bf85b374d5856fc0dee0225fbd025a2692641238f0ae5eb558d1f9c1688604}
+}]5.\+0 Volt \index{V3\+\_\+3@{V3\+\_\+3}!smrtobj\+::io\+::\+Analog\+Input@{smrtobj\+::io\+::\+Analog\+Input}}\index{smrtobj\+::io\+::\+Analog\+Input@{smrtobj\+::io\+::\+Analog\+Input}!V3\+\_\+3@{V3\+\_\+3}}\item[{\em 
+\hypertarget{classsmrtobj_1_1io_1_1_analog_input_a4e2bf85b374d5856fc0dee0225fbd025aac4c61fd6d37aacbf3bd6a3be6d835d3}{}V3\+\_\+3\label{classsmrtobj_1_1io_1_1_analog_input_a4e2bf85b374d5856fc0dee0225fbd025aac4c61fd6d37aacbf3bd6a3be6d835d3}
+}]3.\+3 Volt \end{description}
+\end{Desc}
+
+
+Definition at line 315 of file iosignal.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classsmrtobj_1_1io_1_1_analog_input_a40008473025615c63d22cf82091f1c49}{}\index{smrtobj\+::io\+::\+Analog\+Input@{smrtobj\+::io\+::\+Analog\+Input}!Analog\+Input@{Analog\+Input}}
+\index{Analog\+Input@{Analog\+Input}!smrtobj\+::io\+::\+Analog\+Input@{smrtobj\+::io\+::\+Analog\+Input}}
+\subsubsection[{Analog\+Input()}]{\setlength{\rightskip}{0pt plus 5cm}smrtobj\+::io\+::\+Analog\+Input\+::\+Analog\+Input (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classsmrtobj_1_1io_1_1_analog_input_a40008473025615c63d22cf82091f1c49}
+Default Constructor It initializes the last value read to 0 and the pin number to 0. 
+
+Definition at line 208 of file iosignal.\+cpp.
+
+\hypertarget{classsmrtobj_1_1io_1_1_analog_input_a3cf704d9977129fc9548f4d10d344dcc}{}\index{smrtobj\+::io\+::\+Analog\+Input@{smrtobj\+::io\+::\+Analog\+Input}!Analog\+Input@{Analog\+Input}}
+\index{Analog\+Input@{Analog\+Input}!smrtobj\+::io\+::\+Analog\+Input@{smrtobj\+::io\+::\+Analog\+Input}}
+\subsubsection[{Analog\+Input(const Analog\+Input \&o)}]{\setlength{\rightskip}{0pt plus 5cm}smrtobj\+::io\+::\+Analog\+Input\+::\+Analog\+Input (
+\begin{DoxyParamCaption}
+\item[{const {\bf Analog\+Input} \&}]{o}
+\end{DoxyParamCaption}
+)}\label{classsmrtobj_1_1io_1_1_analog_input_a3cf704d9977129fc9548f4d10d344dcc}
+Copy Constructor
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em o} & source digital input\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+reference to the destination digital input object 
+\end{DoxyReturn}
+
+
+Definition at line 213 of file iosignal.\+cpp.
+
+\hypertarget{classsmrtobj_1_1io_1_1_analog_input_a663423c6a8c4556498b8b7c15ad2f163}{}\index{smrtobj\+::io\+::\+Analog\+Input@{smrtobj\+::io\+::\+Analog\+Input}!````~Analog\+Input@{$\sim$\+Analog\+Input}}
+\index{````~Analog\+Input@{$\sim$\+Analog\+Input}!smrtobj\+::io\+::\+Analog\+Input@{smrtobj\+::io\+::\+Analog\+Input}}
+\subsubsection[{$\sim$\+Analog\+Input()}]{\setlength{\rightskip}{0pt plus 5cm}smrtobj\+::io\+::\+Analog\+Input\+::$\sim$\+Analog\+Input (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classsmrtobj_1_1io_1_1_analog_input_a663423c6a8c4556498b8b7c15ad2f163}
+Destructor 
+
+Definition at line 219 of file iosignal.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classsmrtobj_1_1io_1_1_analog_input_a05e6a75658d9c5d9c5b9cbfffb8e2a91}{}\index{smrtobj\+::io\+::\+Analog\+Input@{smrtobj\+::io\+::\+Analog\+Input}!init@{init}}
+\index{init@{init}!smrtobj\+::io\+::\+Analog\+Input@{smrtobj\+::io\+::\+Analog\+Input}}
+\subsubsection[{init(byte pin, bool pullup=false)}]{\setlength{\rightskip}{0pt plus 5cm}void smrtobj\+::io\+::\+Analog\+Input\+::init (
+\begin{DoxyParamCaption}
+\item[{byte}]{pin, }
+\item[{bool}]{pullup = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}\label{classsmrtobj_1_1io_1_1_analog_input_a05e6a75658d9c5d9c5b9cbfffb8e2a91}
+Opens the pin in input mode. It is possible use internal pull up resistor.~\newline
+The analog pins also have pullup resistors, which work identically to pullup resistors on the digital pins.~\newline
+Be aware however that turning on a pullup will affect the values reported by analog\+Read().
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em pin} & number of the input pin \\
+\hline
+\mbox{\tt in}  & {\em pullup} & use internal pull up resistor. Default value is false \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 232 of file iosignal.\+cpp.
+
+\hypertarget{classsmrtobj_1_1io_1_1_analog_input_a99054ad9e24ffa6d1f2d5832ff3ad640}{}\index{smrtobj\+::io\+::\+Analog\+Input@{smrtobj\+::io\+::\+Analog\+Input}!input\+Voltage@{input\+Voltage}}
+\index{input\+Voltage@{input\+Voltage}!smrtobj\+::io\+::\+Analog\+Input@{smrtobj\+::io\+::\+Analog\+Input}}
+\subsubsection[{input\+Voltage()}]{\setlength{\rightskip}{0pt plus 5cm}float smrtobj\+::io\+::\+Analog\+Input\+::input\+Voltage (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classsmrtobj_1_1io_1_1_analog_input_a99054ad9e24ffa6d1f2d5832ff3ad640}
+Gets value as voltage. Pay attention, this value depends on reference voltage, if it has been set a wrong value for this voltage, function will return a wrong result. See \#smrtobj\+::\+Analog\+Sensor\+::set\+Reference\+Default and \hyperlink{classsmrtobj_1_1io_1_1_analog_input_a868ba4197c49394a0e0c70bd47ca2074}{smrtobj\+::io\+::\+Analog\+Sensor\+::set\+Reference}
+
+\begin{DoxyReturn}{Returns}
+input value as voltage 
+\end{DoxyReturn}
+
+
+Definition at line 256 of file iosignal.\+cpp.
+
+\hypertarget{classsmrtobj_1_1io_1_1_analog_input_a98027675f727183bc289d5276eb1f38e}{}\index{smrtobj\+::io\+::\+Analog\+Input@{smrtobj\+::io\+::\+Analog\+Input}!operator=@{operator=}}
+\index{operator=@{operator=}!smrtobj\+::io\+::\+Analog\+Input@{smrtobj\+::io\+::\+Analog\+Input}}
+\subsubsection[{operator=(const Analog\+Input \&i)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Analog\+Input} \& smrtobj\+::io\+::\+Analog\+Input\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Analog\+Input} \&}]{i}
+\end{DoxyParamCaption}
+)}\label{classsmrtobj_1_1io_1_1_analog_input_a98027675f727183bc289d5276eb1f38e}
+Override operator = 
+
+Definition at line 223 of file iosignal.\+cpp.
+
+\hypertarget{classsmrtobj_1_1io_1_1_analog_input_a5768f6b56a7ad5b9eb7da2b95951d5e6}{}\index{smrtobj\+::io\+::\+Analog\+Input@{smrtobj\+::io\+::\+Analog\+Input}!pin@{pin}}
+\index{pin@{pin}!smrtobj\+::io\+::\+Analog\+Input@{smrtobj\+::io\+::\+Analog\+Input}}
+\subsubsection[{pin()}]{\setlength{\rightskip}{0pt plus 5cm}byte smrtobj\+::io\+::\+Analog\+Input\+::pin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classsmrtobj_1_1io_1_1_analog_input_a5768f6b56a7ad5b9eb7da2b95951d5e6}
+Gets the number of the analog input pin.
+
+\begin{DoxyReturn}{Returns}
+pin number 
+\end{DoxyReturn}
+
+
+Definition at line 424 of file iosignal.\+h.
+
+\hypertarget{classsmrtobj_1_1io_1_1_analog_input_aed112dc7b72d12075c93a5ca29a661f7}{}\index{smrtobj\+::io\+::\+Analog\+Input@{smrtobj\+::io\+::\+Analog\+Input}!read@{read}}
+\index{read@{read}!smrtobj\+::io\+::\+Analog\+Input@{smrtobj\+::io\+::\+Analog\+Input}}
+\subsubsection[{read()}]{\setlength{\rightskip}{0pt plus 5cm}unsigned long smrtobj\+::io\+::\+Analog\+Input\+::read (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classsmrtobj_1_1io_1_1_analog_input_aed112dc7b72d12075c93a5ca29a661f7}
+Reads value from the analog input. If the input has not been opened yet, it returns 0.
+
+\begin{DoxyReturn}{Returns}
+value, it is a number between 0 and 1023 
+\end{DoxyReturn}
+
+
+Definition at line 244 of file iosignal.\+cpp.
+
+\hypertarget{classsmrtobj_1_1io_1_1_analog_input_a71d194e2abf9852b8ac5d0750568be4c}{}\index{smrtobj\+::io\+::\+Analog\+Input@{smrtobj\+::io\+::\+Analog\+Input}!reference@{reference}}
+\index{reference@{reference}!smrtobj\+::io\+::\+Analog\+Input@{smrtobj\+::io\+::\+Analog\+Input}}
+\subsubsection[{reference()}]{\setlength{\rightskip}{0pt plus 5cm}float smrtobj\+::io\+::\+Analog\+Input\+::reference (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classsmrtobj_1_1io_1_1_analog_input_a71d194e2abf9852b8ac5d0750568be4c}
+Gets reference voltage for A\+D\+Cs in volts
+
+\begin{DoxyReturn}{Returns}
+reference voltage for A\+D\+Cs 
+\end{DoxyReturn}
+
+
+Definition at line 175 of file iosignal.\+cpp.
+
+\hypertarget{classsmrtobj_1_1io_1_1_analog_input_a868ba4197c49394a0e0c70bd47ca2074}{}\index{smrtobj\+::io\+::\+Analog\+Input@{smrtobj\+::io\+::\+Analog\+Input}!set\+Reference@{set\+Reference}}
+\index{set\+Reference@{set\+Reference}!smrtobj\+::io\+::\+Analog\+Input@{smrtobj\+::io\+::\+Analog\+Input}}
+\subsubsection[{set\+Reference(float voltage)}]{\setlength{\rightskip}{0pt plus 5cm}bool smrtobj\+::io\+::\+Analog\+Input\+::set\+Reference (
+\begin{DoxyParamCaption}
+\item[{float}]{voltage}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classsmrtobj_1_1io_1_1_analog_input_a868ba4197c49394a0e0c70bd47ca2074}
+Change reference for A\+D\+Cs, using external reference. The voltage applied to the A\+R\+E\+F pin (0 to 5\+V only) is used as the reference. It is suggested to initialize before the default voltage using smrtobj\+::\+Analog\+Sensor\+::set\+Reference\+Default before set an external reference voltage. If you use an invalid voltage as parameter, it will be use the default voltage and return false.
+
+{\bfseries Note\+:} Check the correct default voltage for your Arduino board! This function sets this value in an internal attribute. If it is different from the actual board, reading will give a wrong result.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em voltage} & the voltage applied to the A\+R\+E\+F pin (0 to 5\+V only).\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if voltage is valid, false otherwise 
+\end{DoxyReturn}
+
+
+Definition at line 196 of file iosignal.\+cpp.
+
+\hypertarget{classsmrtobj_1_1io_1_1_analog_input_aec6587007c8d16a2483e22fbf621631e}{}\index{smrtobj\+::io\+::\+Analog\+Input@{smrtobj\+::io\+::\+Analog\+Input}!set\+Reference\+Default@{set\+Reference\+Default}}
+\index{set\+Reference\+Default@{set\+Reference\+Default}!smrtobj\+::io\+::\+Analog\+Input@{smrtobj\+::io\+::\+Analog\+Input}}
+\subsubsection[{set\+Reference\+Default(byte vdef=\+V5\+\_\+0)}]{\setlength{\rightskip}{0pt plus 5cm}bool smrtobj\+::io\+::\+Analog\+Input\+::set\+Reference\+Default (
+\begin{DoxyParamCaption}
+\item[{byte}]{vdef = {\ttfamily {\bf V5\+\_\+0}}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classsmrtobj_1_1io_1_1_analog_input_aec6587007c8d16a2483e22fbf621631e}
+Change reference for A\+D\+Cs, using default board value. Please check the working voltage for your Arduino board\+: default analog reference of 5 volts (on 5\+V Arduino boards) or 3.\+3 volts (on 3.\+3\+V Arduino boards). If {\ttfamily vdef} parameter is not valid (\#smrtobj\+::\+Analog\+Sensor\+::\+\_\+v\+\_\+default) all A\+D\+Cs will be turned off, putting the reference voltage to 0.\+0\+V.
+
+{\bfseries Note\+:} Check the correct default voltage for your Arduino board! This function sets this value in an internal attribute. If it is different from the actual board, reading will give a wrong result.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em vdef} & analog reference for your Arduino board according to \#smrtobj\+::\+Analog\+Sensor\+::\+\_\+v\+\_\+default enum.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if default voltage is correct, false otherwise 
+\end{DoxyReturn}
+
+
+Definition at line 180 of file iosignal.\+cpp.
+
+\hypertarget{classsmrtobj_1_1io_1_1_analog_input_a08fe1be7aca445768e1b2293cb48b96a}{}\index{smrtobj\+::io\+::\+Analog\+Input@{smrtobj\+::io\+::\+Analog\+Input}!type@{type}}
+\index{type@{type}!smrtobj\+::io\+::\+Analog\+Input@{smrtobj\+::io\+::\+Analog\+Input}}
+\subsubsection[{type()}]{\setlength{\rightskip}{0pt plus 5cm}byte smrtobj\+::io\+::\+Analog\+Input\+::type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{classsmrtobj_1_1io_1_1_analog_input_a08fe1be7aca445768e1b2293cb48b96a}
+Gets the type of the interface according to \#smrtobj\+::\+Signal\+::\+\_\+type enum
+
+\begin{DoxyReturn}{Returns}
+type of the interface 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classsmrtobj_1_1io_1_1_signal_a38cd36f413f1ad2213684e4364ac4270}{smrtobj\+::io\+::\+Signal}.
+
+
+
+Definition at line 399 of file iosignal.\+h.
+
+\hypertarget{classsmrtobj_1_1io_1_1_analog_input_aa223ad3c6350b5f94f8563870134f4e3}{}\index{smrtobj\+::io\+::\+Analog\+Input@{smrtobj\+::io\+::\+Analog\+Input}!value@{value}}
+\index{value@{value}!smrtobj\+::io\+::\+Analog\+Input@{smrtobj\+::io\+::\+Analog\+Input}}
+\subsubsection[{value()}]{\setlength{\rightskip}{0pt plus 5cm}unsigned long smrtobj\+::io\+::\+Analog\+Input\+::value (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classsmrtobj_1_1io_1_1_analog_input_aa223ad3c6350b5f94f8563870134f4e3}
+Gets the last value read. If the input has not been opened yet, it returns 0.
+
+\begin{DoxyReturn}{Returns}
+last value read 
+\end{DoxyReturn}
+
+
+Definition at line 417 of file iosignal.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+libraries/\+Smrt\+Obj\+I\+O/src/\hyperlink{iosignal_8h}{iosignal.\+h}\item 
+libraries/\+Smrt\+Obj\+I\+O/src/\hyperlink{iosignal_8cpp}{iosignal.\+cpp}\end{DoxyCompactItemize}

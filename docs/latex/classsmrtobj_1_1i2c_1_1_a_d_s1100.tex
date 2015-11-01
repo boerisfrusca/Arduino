@@ -1,0 +1,278 @@
+\hypertarget{classsmrtobj_1_1i2c_1_1_a_d_s1100}{}\section{smrtobj\+:\+:i2c\+:\+:A\+D\+S1100 Class Reference}
+\label{classsmrtobj_1_1i2c_1_1_a_d_s1100}\index{smrtobj\+::i2c\+::\+A\+D\+S1100@{smrtobj\+::i2c\+::\+A\+D\+S1100}}
+
+
+{\ttfamily \#include $<$A\+D\+S1100.\+h$>$}
+
+Inheritance diagram for smrtobj\+:\+:i2c\+:\+:A\+D\+S1100\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classsmrtobj_1_1i2c_1_1_a_d_s1100}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsmrtobj_1_1i2c_1_1_a_d_s1100_a52f87f6cbfdc26c07a2c9bfa9e703928}{A\+D\+S1100} ()
+\item 
+\hyperlink{classsmrtobj_1_1i2c_1_1_a_d_s1100_a22e0bfc04d0cf6eb9c4a56e643b20a7e}{A\+D\+S1100} (uint8\+\_\+t addr)
+\item 
+\hyperlink{classsmrtobj_1_1i2c_1_1_a_d_s1100_a04610e29101e86c39e786c17b756e960}{A\+D\+S1100} (const \hyperlink{classsmrtobj_1_1i2c_1_1_a_d_s1100}{A\+D\+S1100} \&d)
+\item 
+virtual \hyperlink{classsmrtobj_1_1i2c_1_1_a_d_s1100_a658ca003cc76799a7199e1c38e34d1ea}{$\sim$\+A\+D\+S1100} ()
+\item 
+\hyperlink{classsmrtobj_1_1i2c_1_1_a_d_s1100}{A\+D\+S1100} \& \hyperlink{classsmrtobj_1_1i2c_1_1_a_d_s1100_ac023e56015781bc14ed0af5da16e4adb}{operator=} (const \hyperlink{classsmrtobj_1_1i2c_1_1_a_d_s1100}{A\+D\+S1100} \&d)
+\item 
+virtual bool \hyperlink{classsmrtobj_1_1i2c_1_1_a_d_s1100_af6a30ae17ea283aa979bbd933d84ee08}{initialize} ()
+\item 
+virtual bool \hyperlink{classsmrtobj_1_1i2c_1_1_a_d_s1100_a707ea27963bcca7465d51195cee0af04}{is\+Connected} ()
+\item 
+virtual bool \hyperlink{classsmrtobj_1_1i2c_1_1_a_d_s1100_ae57857e0b925c23af5406773bbaa3da9}{read} ()
+\item 
+virtual float \hyperlink{classsmrtobj_1_1i2c_1_1_a_d_s1100_ade27b68b0e321e5a8bd79fd119725f04}{measure} ()
+\item 
+uint16\+\_\+t \hyperlink{classsmrtobj_1_1i2c_1_1_a_d_s1100_aaf1867906432c5de522d7f3f0cd889c5}{value} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classsmrtobj_1_1i2c_1_1_a_d_s1100_afa5602c2717ec53e4401a1d31bb1d0dd}{}static const uint8\+\_\+t \hyperlink{classsmrtobj_1_1i2c_1_1_a_d_s1100_afa5602c2717ec53e4401a1d31bb1d0dd}{D\+E\+V\+I\+C\+E\+\_\+\+A\+D\+D\+R\+E\+S\+S} = 0x48\label{classsmrtobj_1_1i2c_1_1_a_d_s1100_afa5602c2717ec53e4401a1d31bb1d0dd}
+
+\begin{DoxyCompactList}\small\item\em Device address used by default. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Class \hyperlink{classsmrtobj_1_1i2c_1_1_a_d_s1100}{A\+D\+S1100} models the Analog-\/to-\/\+Digital (A/\+D) converter T\+I \hyperlink{classsmrtobj_1_1i2c_1_1_a_d_s1100}{A\+D\+S1100}. The \hyperlink{classsmrtobj_1_1i2c_1_1_a_d_s1100}{A\+D\+S1100} is a precision, continuously self-\/calibrating A\+D\+C with differential inputs and up to 16 bits of resolution in a small S\+O\+T23-\/6 package. Conversions are performed ratiometrically, using the power supply as the reference voltage. The \hyperlink{classsmrtobj_1_1i2c_1_1_a_d_s1100}{A\+D\+S1100} uses an I2\+C-\/compatible serial interface and operates from a single power supply ranging from 2.\+7\+V to 5.\+5\+V. 
+
+Definition at line 27 of file A\+D\+S1100.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classsmrtobj_1_1i2c_1_1_a_d_s1100_a52f87f6cbfdc26c07a2c9bfa9e703928}{}\index{smrtobj\+::i2c\+::\+A\+D\+S1100@{smrtobj\+::i2c\+::\+A\+D\+S1100}!A\+D\+S1100@{A\+D\+S1100}}
+\index{A\+D\+S1100@{A\+D\+S1100}!smrtobj\+::i2c\+::\+A\+D\+S1100@{smrtobj\+::i2c\+::\+A\+D\+S1100}}
+\subsubsection[{A\+D\+S1100()}]{\setlength{\rightskip}{0pt plus 5cm}smrtobj\+::i2c\+::\+A\+D\+S1100\+::\+A\+D\+S1100 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classsmrtobj_1_1i2c_1_1_a_d_s1100_a52f87f6cbfdc26c07a2c9bfa9e703928}
+Default Constructor. 
+
+Definition at line 16 of file A\+D\+S1100.\+cpp.
+
+\hypertarget{classsmrtobj_1_1i2c_1_1_a_d_s1100_a22e0bfc04d0cf6eb9c4a56e643b20a7e}{}\index{smrtobj\+::i2c\+::\+A\+D\+S1100@{smrtobj\+::i2c\+::\+A\+D\+S1100}!A\+D\+S1100@{A\+D\+S1100}}
+\index{A\+D\+S1100@{A\+D\+S1100}!smrtobj\+::i2c\+::\+A\+D\+S1100@{smrtobj\+::i2c\+::\+A\+D\+S1100}}
+\subsubsection[{A\+D\+S1100(uint8\+\_\+t addr)}]{\setlength{\rightskip}{0pt plus 5cm}smrtobj\+::i2c\+::\+A\+D\+S1100\+::\+A\+D\+S1100 (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{addr}
+\end{DoxyParamCaption}
+)}\label{classsmrtobj_1_1i2c_1_1_a_d_s1100_a22e0bfc04d0cf6eb9c4a56e643b20a7e}
+Constructor. Sets the device address.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em addr} & device address \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 21 of file A\+D\+S1100.\+cpp.
+
+\hypertarget{classsmrtobj_1_1i2c_1_1_a_d_s1100_a04610e29101e86c39e786c17b756e960}{}\index{smrtobj\+::i2c\+::\+A\+D\+S1100@{smrtobj\+::i2c\+::\+A\+D\+S1100}!A\+D\+S1100@{A\+D\+S1100}}
+\index{A\+D\+S1100@{A\+D\+S1100}!smrtobj\+::i2c\+::\+A\+D\+S1100@{smrtobj\+::i2c\+::\+A\+D\+S1100}}
+\subsubsection[{A\+D\+S1100(const A\+D\+S1100 \&d)}]{\setlength{\rightskip}{0pt plus 5cm}smrtobj\+::i2c\+::\+A\+D\+S1100\+::\+A\+D\+S1100 (
+\begin{DoxyParamCaption}
+\item[{const {\bf A\+D\+S1100} \&}]{d}
+\end{DoxyParamCaption}
+)}\label{classsmrtobj_1_1i2c_1_1_a_d_s1100_a04610e29101e86c39e786c17b756e960}
+Copy Constructor.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em d} & i2c device object \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 26 of file A\+D\+S1100.\+cpp.
+
+\hypertarget{classsmrtobj_1_1i2c_1_1_a_d_s1100_a658ca003cc76799a7199e1c38e34d1ea}{}\index{smrtobj\+::i2c\+::\+A\+D\+S1100@{smrtobj\+::i2c\+::\+A\+D\+S1100}!````~A\+D\+S1100@{$\sim$\+A\+D\+S1100}}
+\index{````~A\+D\+S1100@{$\sim$\+A\+D\+S1100}!smrtobj\+::i2c\+::\+A\+D\+S1100@{smrtobj\+::i2c\+::\+A\+D\+S1100}}
+\subsubsection[{$\sim$\+A\+D\+S1100()}]{\setlength{\rightskip}{0pt plus 5cm}smrtobj\+::i2c\+::\+A\+D\+S1100\+::$\sim$\+A\+D\+S1100 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classsmrtobj_1_1i2c_1_1_a_d_s1100_a658ca003cc76799a7199e1c38e34d1ea}
+Destructor. 
+
+Definition at line 31 of file A\+D\+S1100.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classsmrtobj_1_1i2c_1_1_a_d_s1100_af6a30ae17ea283aa979bbd933d84ee08}{}\index{smrtobj\+::i2c\+::\+A\+D\+S1100@{smrtobj\+::i2c\+::\+A\+D\+S1100}!initialize@{initialize}}
+\index{initialize@{initialize}!smrtobj\+::i2c\+::\+A\+D\+S1100@{smrtobj\+::i2c\+::\+A\+D\+S1100}}
+\subsubsection[{initialize()}]{\setlength{\rightskip}{0pt plus 5cm}bool smrtobj\+::i2c\+::\+A\+D\+S1100\+::initialize (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classsmrtobj_1_1i2c_1_1_a_d_s1100_af6a30ae17ea283aa979bbd933d84ee08}
+Initializes the i2c device\+: power on and prepare for general usage. Nothing is required by this device, it returns always true
+
+\begin{DoxyReturn}{Returns}
+always true. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classsmrtobj_1_1i2c_1_1_i2_c_interface_a4ff1ff083d877c7c0816299b11965eb4}{smrtobj\+::i2c\+::\+I2\+C\+Interface}.
+
+
+
+Definition at line 46 of file A\+D\+S1100.\+cpp.
+
+\hypertarget{classsmrtobj_1_1i2c_1_1_a_d_s1100_a707ea27963bcca7465d51195cee0af04}{}\index{smrtobj\+::i2c\+::\+A\+D\+S1100@{smrtobj\+::i2c\+::\+A\+D\+S1100}!is\+Connected@{is\+Connected}}
+\index{is\+Connected@{is\+Connected}!smrtobj\+::i2c\+::\+A\+D\+S1100@{smrtobj\+::i2c\+::\+A\+D\+S1100}}
+\subsubsection[{is\+Connected()}]{\setlength{\rightskip}{0pt plus 5cm}bool smrtobj\+::i2c\+::\+A\+D\+S1100\+::is\+Connected (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classsmrtobj_1_1i2c_1_1_a_d_s1100_a707ea27963bcca7465d51195cee0af04}
+Tests if the device is connected. Make sure the device is connected and responds as expected.
+
+\begin{DoxyReturn}{Returns}
+true if connection is valid, false otherwise 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classsmrtobj_1_1i2c_1_1_i2_c_interface_a33fd37bafaf8c7e8184acb6470322bce}{smrtobj\+::i2c\+::\+I2\+C\+Interface}.
+
+
+
+Definition at line 52 of file A\+D\+S1100.\+cpp.
+
+\hypertarget{classsmrtobj_1_1i2c_1_1_a_d_s1100_ade27b68b0e321e5a8bd79fd119725f04}{}\index{smrtobj\+::i2c\+::\+A\+D\+S1100@{smrtobj\+::i2c\+::\+A\+D\+S1100}!measure@{measure}}
+\index{measure@{measure}!smrtobj\+::i2c\+::\+A\+D\+S1100@{smrtobj\+::i2c\+::\+A\+D\+S1100}}
+\subsubsection[{measure()}]{\setlength{\rightskip}{0pt plus 5cm}float smrtobj\+::i2c\+::\+A\+D\+S1100\+::measure (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classsmrtobj_1_1i2c_1_1_a_d_s1100_ade27b68b0e321e5a8bd79fd119725f04}
+Converts data read (saved in {\itshape m\+\_\+value} variable) in voltage. Note\+: To be changed!! now it use the formula of A\+D\+S1110. Example\+:
+
+
+\begin{DoxyCode}
+smrtobj::i2c::ASD1100 adc(0x48);
+
+\textcolor{comment}{// Test if device is connected }
+\textcolor{keywordflow}{if}( adc.isConnected() )
+\{
+  \textcolor{keywordflow}{if} ( adc.read() )
+  \{
+    \textcolor{keywordtype}{float} voltage = adc.measure();
+    ...
+  \}
+\}
+\end{DoxyCode}
+
+
+\begin{DoxyReturn}{Returns}
+last data read as voltage level. 
+\end{DoxyReturn}
+
+
+Definition at line 67 of file A\+D\+S1100.\+cpp.
+
+\hypertarget{classsmrtobj_1_1i2c_1_1_a_d_s1100_ac023e56015781bc14ed0af5da16e4adb}{}\index{smrtobj\+::i2c\+::\+A\+D\+S1100@{smrtobj\+::i2c\+::\+A\+D\+S1100}!operator=@{operator=}}
+\index{operator=@{operator=}!smrtobj\+::i2c\+::\+A\+D\+S1100@{smrtobj\+::i2c\+::\+A\+D\+S1100}}
+\subsubsection[{operator=(const A\+D\+S1100 \&d)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf A\+D\+S1100} \& smrtobj\+::i2c\+::\+A\+D\+S1100\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf A\+D\+S1100} \&}]{d}
+\end{DoxyParamCaption}
+)}\label{classsmrtobj_1_1i2c_1_1_a_d_s1100_ac023e56015781bc14ed0af5da16e4adb}
+Override operator =
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em d} & source device object\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+destination device reference 
+\end{DoxyReturn}
+
+
+Definition at line 35 of file A\+D\+S1100.\+cpp.
+
+\hypertarget{classsmrtobj_1_1i2c_1_1_a_d_s1100_ae57857e0b925c23af5406773bbaa3da9}{}\index{smrtobj\+::i2c\+::\+A\+D\+S1100@{smrtobj\+::i2c\+::\+A\+D\+S1100}!read@{read}}
+\index{read@{read}!smrtobj\+::i2c\+::\+A\+D\+S1100@{smrtobj\+::i2c\+::\+A\+D\+S1100}}
+\subsubsection[{read()}]{\setlength{\rightskip}{0pt plus 5cm}bool smrtobj\+::i2c\+::\+A\+D\+S1100\+::read (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classsmrtobj_1_1i2c_1_1_a_d_s1100_ae57857e0b925c23af5406773bbaa3da9}
+Reads data from the i2c device. This function read 2 byte\+:
+\begin{DoxyItemize}
+\item 1st byte (Byte0) is the most significant byte
+\item 2nd byte (Byte1) is the less significant byte
+\end{DoxyItemize}
+
+Data is calculate as\+:
+
+
+\begin{DoxyCode}
+\hyperlink{classsmrtobj_1_1i2c_1_1_a_d_s1100_aaf1867906432c5de522d7f3f0cd889c5}{value} = (Byte0] << 8) | Byte1;
+\end{DoxyCode}
+
+
+The value read is stored in the internal buffer ({\itshape m\+\_\+value}).
+
+\begin{DoxyReturn}{Returns}
+true for success, or false if any error occurs. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classsmrtobj_1_1i2c_1_1_i2_c_interface_a58bc734662a60de6a7cb7976c2179753}{smrtobj\+::i2c\+::\+I2\+C\+Interface}.
+
+
+
+Definition at line 62 of file A\+D\+S1100.\+cpp.
+
+\hypertarget{classsmrtobj_1_1i2c_1_1_a_d_s1100_aaf1867906432c5de522d7f3f0cd889c5}{}\index{smrtobj\+::i2c\+::\+A\+D\+S1100@{smrtobj\+::i2c\+::\+A\+D\+S1100}!value@{value}}
+\index{value@{value}!smrtobj\+::i2c\+::\+A\+D\+S1100@{smrtobj\+::i2c\+::\+A\+D\+S1100}}
+\subsubsection[{value()}]{\setlength{\rightskip}{0pt plus 5cm}uint16\+\_\+t smrtobj\+::i2c\+::\+A\+D\+S1100\+::value (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classsmrtobj_1_1i2c_1_1_a_d_s1100_aaf1867906432c5de522d7f3f0cd889c5}
+Returns last A\+D\+C value read. Example\+:
+
+
+\begin{DoxyCode}
+smrtobj::i2c::ASD1100 adc(0x48);
+
+\textcolor{comment}{// Test if device is connected }
+\textcolor{keywordflow}{if}( adc.isConnected() )
+\{
+  \textcolor{keywordflow}{if} ( adc.read() )
+  \{
+    uint16\_t adc\_value = adc.value();
+    ...
+  \}
+\}
+\end{DoxyCode}
+
+
+\begin{DoxyReturn}{Returns}
+last value read 
+\end{DoxyReturn}
+
+
+Definition at line 142 of file A\+D\+S1100.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+libraries/\+Smrt\+Obj\+I2\+C/src/sensors/\hyperlink{_a_d_s1100_8h}{A\+D\+S1100.\+h}\item 
+libraries/\+Smrt\+Obj\+I2\+C/src/sensors/\hyperlink{_a_d_s1100_8cpp}{A\+D\+S1100.\+cpp}\end{DoxyCompactItemize}

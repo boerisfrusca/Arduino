@@ -1,0 +1,205 @@
+\hypertarget{classsmrtobj_1_1io_1_1_digital_output}{}\section{smrtobj\+:\+:io\+:\+:Digital\+Output Class Reference}
+\label{classsmrtobj_1_1io_1_1_digital_output}\index{smrtobj\+::io\+::\+Digital\+Output@{smrtobj\+::io\+::\+Digital\+Output}}
+
+
+{\ttfamily \#include $<$iosignal.\+h$>$}
+
+Inheritance diagram for smrtobj\+:\+:io\+:\+:Digital\+Output\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classsmrtobj_1_1io_1_1_digital_output}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsmrtobj_1_1io_1_1_digital_output_a4f8b427dd834072bc274cfe8fd44f1ac}{Digital\+Output} ()
+\item 
+\hyperlink{classsmrtobj_1_1io_1_1_digital_output_a6ccc224b58e5ab04c327b3fd62f592ef}{Digital\+Output} (const \hyperlink{classsmrtobj_1_1io_1_1_digital_output}{Digital\+Output} \&o)
+\item 
+virtual \hyperlink{classsmrtobj_1_1io_1_1_digital_output_a43e0743797dcbdf400340a94c38c8da0}{$\sim$\+Digital\+Output} ()
+\item 
+\hyperlink{classsmrtobj_1_1io_1_1_digital_output}{Digital\+Output} \& \hyperlink{classsmrtobj_1_1io_1_1_digital_output_ae7d37f28cc4e9db61f6853cccfe4f6c5}{operator=} (const \hyperlink{classsmrtobj_1_1io_1_1_digital_output}{Digital\+Output} \&o)
+\item 
+byte \hyperlink{classsmrtobj_1_1io_1_1_digital_output_a9c9e665bb38c2c8164cfce1a3ce94dcc}{type} ()
+\item 
+void \hyperlink{classsmrtobj_1_1io_1_1_digital_output_a62cc30d2d5e3ea1d11bfd5b3a5b59312}{init} (byte \hyperlink{classsmrtobj_1_1io_1_1_digital_output_aef26855d23bba50d3b47ec76443fe1c9}{pin})
+\item 
+bool \hyperlink{classsmrtobj_1_1io_1_1_digital_output_a0e7ee22a168f81b438fd513ceab22e27}{value} ()
+\item 
+byte \hyperlink{classsmrtobj_1_1io_1_1_digital_output_aef26855d23bba50d3b47ec76443fe1c9}{pin} ()
+\item 
+bool \hyperlink{classsmrtobj_1_1io_1_1_digital_output_a12fab5b3bd5012fa042c6d3cb6ab2663}{write} (bool \hyperlink{classsmrtobj_1_1io_1_1_digital_output_a0e7ee22a168f81b438fd513ceab22e27}{value})
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+The \hyperlink{classsmrtobj_1_1io_1_1_digital_output}{Digital\+Output} class models an digital output. Output value can be {\bfseries H\+I\+G\+H} or {\bfseries L\+O\+W}. The last value written is stored in an internal variable. The default output pin is 0. 
+
+Definition at line 26 of file iosignal.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classsmrtobj_1_1io_1_1_digital_output_a4f8b427dd834072bc274cfe8fd44f1ac}{}\index{smrtobj\+::io\+::\+Digital\+Output@{smrtobj\+::io\+::\+Digital\+Output}!Digital\+Output@{Digital\+Output}}
+\index{Digital\+Output@{Digital\+Output}!smrtobj\+::io\+::\+Digital\+Output@{smrtobj\+::io\+::\+Digital\+Output}}
+\subsubsection[{Digital\+Output()}]{\setlength{\rightskip}{0pt plus 5cm}smrtobj\+::io\+::\+Digital\+Output\+::\+Digital\+Output (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classsmrtobj_1_1io_1_1_digital_output_a4f8b427dd834072bc274cfe8fd44f1ac}
+Default Constructor. It initializes the last value written to L\+O\+W and the pin number to 0. 
+
+Definition at line 19 of file iosignal.\+cpp.
+
+\hypertarget{classsmrtobj_1_1io_1_1_digital_output_a6ccc224b58e5ab04c327b3fd62f592ef}{}\index{smrtobj\+::io\+::\+Digital\+Output@{smrtobj\+::io\+::\+Digital\+Output}!Digital\+Output@{Digital\+Output}}
+\index{Digital\+Output@{Digital\+Output}!smrtobj\+::io\+::\+Digital\+Output@{smrtobj\+::io\+::\+Digital\+Output}}
+\subsubsection[{Digital\+Output(const Digital\+Output \&o)}]{\setlength{\rightskip}{0pt plus 5cm}smrtobj\+::io\+::\+Digital\+Output\+::\+Digital\+Output (
+\begin{DoxyParamCaption}
+\item[{const {\bf Digital\+Output} \&}]{o}
+\end{DoxyParamCaption}
+)}\label{classsmrtobj_1_1io_1_1_digital_output_a6ccc224b58e5ab04c327b3fd62f592ef}
+Copy Constructor.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em o} & source digital output \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 24 of file iosignal.\+cpp.
+
+\hypertarget{classsmrtobj_1_1io_1_1_digital_output_a43e0743797dcbdf400340a94c38c8da0}{}\index{smrtobj\+::io\+::\+Digital\+Output@{smrtobj\+::io\+::\+Digital\+Output}!````~Digital\+Output@{$\sim$\+Digital\+Output}}
+\index{````~Digital\+Output@{$\sim$\+Digital\+Output}!smrtobj\+::io\+::\+Digital\+Output@{smrtobj\+::io\+::\+Digital\+Output}}
+\subsubsection[{$\sim$\+Digital\+Output()}]{\setlength{\rightskip}{0pt plus 5cm}smrtobj\+::io\+::\+Digital\+Output\+::$\sim$\+Digital\+Output (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classsmrtobj_1_1io_1_1_digital_output_a43e0743797dcbdf400340a94c38c8da0}
+Destructor. 
+
+Definition at line 30 of file iosignal.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classsmrtobj_1_1io_1_1_digital_output_a62cc30d2d5e3ea1d11bfd5b3a5b59312}{}\index{smrtobj\+::io\+::\+Digital\+Output@{smrtobj\+::io\+::\+Digital\+Output}!init@{init}}
+\index{init@{init}!smrtobj\+::io\+::\+Digital\+Output@{smrtobj\+::io\+::\+Digital\+Output}}
+\subsubsection[{init(byte pin)}]{\setlength{\rightskip}{0pt plus 5cm}void smrtobj\+::io\+::\+Digital\+Output\+::init (
+\begin{DoxyParamCaption}
+\item[{byte}]{pin}
+\end{DoxyParamCaption}
+)}\label{classsmrtobj_1_1io_1_1_digital_output_a62cc30d2d5e3ea1d11bfd5b3a5b59312}
+Opens the pin and initializes the digital output.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em pin} & number of the output pin \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 43 of file iosignal.\+cpp.
+
+\hypertarget{classsmrtobj_1_1io_1_1_digital_output_ae7d37f28cc4e9db61f6853cccfe4f6c5}{}\index{smrtobj\+::io\+::\+Digital\+Output@{smrtobj\+::io\+::\+Digital\+Output}!operator=@{operator=}}
+\index{operator=@{operator=}!smrtobj\+::io\+::\+Digital\+Output@{smrtobj\+::io\+::\+Digital\+Output}}
+\subsubsection[{operator=(const Digital\+Output \&o)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Digital\+Output} \& smrtobj\+::io\+::\+Digital\+Output\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Digital\+Output} \&}]{o}
+\end{DoxyParamCaption}
+)}\label{classsmrtobj_1_1io_1_1_digital_output_ae7d37f28cc4e9db61f6853cccfe4f6c5}
+Override operator =
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em o} & source digital output\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+reference to the destination digital output 
+\end{DoxyReturn}
+
+
+Definition at line 34 of file iosignal.\+cpp.
+
+\hypertarget{classsmrtobj_1_1io_1_1_digital_output_aef26855d23bba50d3b47ec76443fe1c9}{}\index{smrtobj\+::io\+::\+Digital\+Output@{smrtobj\+::io\+::\+Digital\+Output}!pin@{pin}}
+\index{pin@{pin}!smrtobj\+::io\+::\+Digital\+Output@{smrtobj\+::io\+::\+Digital\+Output}}
+\subsubsection[{pin()}]{\setlength{\rightskip}{0pt plus 5cm}byte smrtobj\+::io\+::\+Digital\+Output\+::pin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classsmrtobj_1_1io_1_1_digital_output_aef26855d23bba50d3b47ec76443fe1c9}
+Gets the number of the output pin.
+
+\begin{DoxyReturn}{Returns}
+pin number 
+\end{DoxyReturn}
+
+
+Definition at line 85 of file iosignal.\+h.
+
+\hypertarget{classsmrtobj_1_1io_1_1_digital_output_a9c9e665bb38c2c8164cfce1a3ce94dcc}{}\index{smrtobj\+::io\+::\+Digital\+Output@{smrtobj\+::io\+::\+Digital\+Output}!type@{type}}
+\index{type@{type}!smrtobj\+::io\+::\+Digital\+Output@{smrtobj\+::io\+::\+Digital\+Output}}
+\subsubsection[{type()}]{\setlength{\rightskip}{0pt plus 5cm}byte smrtobj\+::io\+::\+Digital\+Output\+::type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{classsmrtobj_1_1io_1_1_digital_output_a9c9e665bb38c2c8164cfce1a3ce94dcc}
+Gets the type of the interface according to \#smrtobj\+::\+Signal\+::\+\_\+type enum
+
+\begin{DoxyReturn}{Returns}
+type of the interface 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classsmrtobj_1_1io_1_1_signal_a38cd36f413f1ad2213684e4364ac4270}{smrtobj\+::io\+::\+Signal}.
+
+
+
+Definition at line 63 of file iosignal.\+h.
+
+\hypertarget{classsmrtobj_1_1io_1_1_digital_output_a0e7ee22a168f81b438fd513ceab22e27}{}\index{smrtobj\+::io\+::\+Digital\+Output@{smrtobj\+::io\+::\+Digital\+Output}!value@{value}}
+\index{value@{value}!smrtobj\+::io\+::\+Digital\+Output@{smrtobj\+::io\+::\+Digital\+Output}}
+\subsubsection[{value()}]{\setlength{\rightskip}{0pt plus 5cm}bool smrtobj\+::io\+::\+Digital\+Output\+::value (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classsmrtobj_1_1io_1_1_digital_output_a0e7ee22a168f81b438fd513ceab22e27}
+Gets the last value written.
+
+\begin{DoxyReturn}{Returns}
+last value written 
+\end{DoxyReturn}
+
+
+Definition at line 78 of file iosignal.\+h.
+
+\hypertarget{classsmrtobj_1_1io_1_1_digital_output_a12fab5b3bd5012fa042c6d3cb6ab2663}{}\index{smrtobj\+::io\+::\+Digital\+Output@{smrtobj\+::io\+::\+Digital\+Output}!write@{write}}
+\index{write@{write}!smrtobj\+::io\+::\+Digital\+Output@{smrtobj\+::io\+::\+Digital\+Output}}
+\subsubsection[{write(bool value)}]{\setlength{\rightskip}{0pt plus 5cm}bool smrtobj\+::io\+::\+Digital\+Output\+::write (
+\begin{DoxyParamCaption}
+\item[{bool}]{value}
+\end{DoxyParamCaption}
+)}\label{classsmrtobj_1_1io_1_1_digital_output_a12fab5b3bd5012fa042c6d3cb6ab2663}
+Writes value on the digital output
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em value} & digital value. It can be L\+O\+W or H\+I\+G\+H\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false if digital output not initialized yet 
+\end{DoxyReturn}
+
+
+Definition at line 50 of file iosignal.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+libraries/\+Smrt\+Obj\+I\+O/src/\hyperlink{iosignal_8h}{iosignal.\+h}\item 
+libraries/\+Smrt\+Obj\+I\+O/src/\hyperlink{iosignal_8cpp}{iosignal.\+cpp}\end{DoxyCompactItemize}
