@@ -42,7 +42,7 @@ namespace io
    *
    *   ...
    *
-   *   class MyLEDs: public smrtobj::LEDArray
+   *   class MyLEDs: public smrtobj::io::LEDArray
    *   {
    *     public:
    *       //! Number of debug LEDs
@@ -54,15 +54,15 @@ namespace io
    *       ...
    *
    *       virtual bool check();
-   *       virtual bool attach(smrtobj::DigitalActuator &led, byte pos);
+   *       virtual bool attach(smrtobj::io::DigitalActuator &led, byte pos);
    *       virtual bool change(byte state);
    *
    *       private:
    *         //! Array of pointer to the outpu LEDs
-   *         smrtobj::DigitalActuator *m_leds[N_LEDS];
+   *         smrtobj::io::DigitalActuator *m_leds[N_LEDS];
    *   }
    *
-   *   bool MyLEDs::attach(smrtobj::DigitalActuator &led, byte pos)
+   *   bool MyLEDs::attach(smrtobj::io::DigitalActuator &led, byte pos)
    *   {
    *     m_leds[pos] = &led;
    *
@@ -133,7 +133,7 @@ namespace io
        * \param[in] ledsArray pointer to the LED array
        * \param[in] size size of the LED array
        */
-      static bool check(smrtobj::DigitalActuator** ledsArray, byte size);
+      static bool check(smrtobj::io::DigitalActuator** ledsArray, byte size);
 
       //! State of the LED array
       byte m_state;
@@ -165,7 +165,7 @@ namespace io
       byte state() const { return m_state; }
 
       /**
-       * Checks if all LEDs works correctly, blinking them for #smrtobj::LEDArray::CHECK_TIME milliseconds
+       * Checks if all LEDs works correctly, blinking them for smrtobj::io::LEDArray::CHECK_TIME milliseconds
        *
        * \return true if no errors, false otherwise
        */

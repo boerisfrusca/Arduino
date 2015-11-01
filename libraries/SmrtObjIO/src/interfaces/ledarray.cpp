@@ -27,7 +27,7 @@ namespace smrtobj
     {
     }
   
-    bool LEDArray::check(smrtobj::DigitalActuator** ledsArray, byte size)
+    bool LEDArray::check(smrtobj::io::DigitalActuator** ledsArray, byte size)
     {
       for (byte cycle = 0; cycle < 3; cycle++)
       {
