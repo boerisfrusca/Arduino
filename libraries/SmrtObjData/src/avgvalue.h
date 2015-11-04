@@ -79,9 +79,18 @@ namespace smrtobj
          * \return true if is valid, false otherwise
          */
         bool isValid() const { return (m_i > 0); };
-  
+
         /**
-         * Adds value to the average
+         * Adds value to the cumulativaaverage
+         *
+         * \param value value to add
+         *
+         * \return new average value
+         */
+        float push(float value);
+
+        /**
+         * Adds value to the total value
          *
          * \param value value to add
          *
@@ -89,6 +98,8 @@ namespace smrtobj
          */
         float add(float value);
   
+        unsigned int index() { return m_i; }
+
     };
   
   } /* namespace data */

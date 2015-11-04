@@ -79,7 +79,6 @@ namespace smrtobj
       else
         m_ctrl_reg &= ~(mask);
 
-
       return write();
     }
 

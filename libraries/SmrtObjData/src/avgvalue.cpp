@@ -29,10 +29,21 @@ namespace smrtobj
     AvgValue::~AvgValue()
     {
     }
-  
-    float AvgValue::add(float value)
+
+    float AvgValue::push(float value)
     {
       m_value += (value - m_value) / ( ++m_i );
+  
+      return m_value;
+    }
+
+    float AvgValue::add(float value)
+    {
+      //Serial.println(m_value);
+      m_value += value;
+      //Serial.println(m_value);
+      ++m_i;
+      //Serial.println(m_i);
   
       return m_value;
     }

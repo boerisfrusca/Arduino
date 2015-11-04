@@ -24,6 +24,7 @@ namespace smrtobj
 
   namespace parser
   {
+
     /**
      * StringParser is a collection of functions to parse and use strings.
      */
@@ -164,7 +165,7 @@ namespace smrtobj
          *
          * \param[in] n number to convert in a string.
          * \param[in] buff where store the number as a string.
-         * \param[in] stot maximim size of the string.
+         * \param[in] stot maximum size of the string.
          * \param[in] decimal number of decimals.
          *
          * \return false if the strins is not enough big.
@@ -182,7 +183,7 @@ namespace smrtobj
          * \return false if buffer 'buf' is smaller then the string store in flash memory.
          * /
          static bool readStringFromFlash(const char str[] PROGMEM, char* buf, uint8_t size_b);
-		 */
+         */
     };
   
   } /* namespace parser */

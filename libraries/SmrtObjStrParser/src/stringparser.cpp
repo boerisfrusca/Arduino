@@ -247,17 +247,6 @@ namespace smrtobj
       return ret;
     }
   
-        /**
-         * Converts a floating number to a string of maximum size stot and save it in str.
-  	   * The number of decimals are set by the parameter decimal.
-         *
-         * \param[in] n number to convert in a string.
-         * \param[in] buff where store the number as a string.
-         * \param[in] stot maximim size of the string.
-         * \param[in] decimal number of decimals.
-  	   *
-  	   * \return false if the strins is not enough big.
-         */
     bool StringParser::convertFloat(float n, char* buff, uint8_t stot, uint8_t decimal)
     {
       uint8_t sz = 2 + decimal;              // '.' + '\0' + decimal size
@@ -285,6 +274,7 @@ namespace smrtobj
   
       return false;
     }
+
     /*
     bool StringParser::readStringFromFlash(const char str[] PROGMEM, char* buf, uint8_t size_b)
     {
@@ -297,7 +287,7 @@ namespace smrtobj
       
       for (k = 0; k < len && k < size_b; k++)
       {
-        buf[k] =  pgm_read_uint8_t_near(str + k);
+        buf[k] = pgm_read_uint8_t_near(str + k);
       }
       if ( k == len )
       {
@@ -307,7 +297,7 @@ namespace smrtobj
       //buf[size_b - 1] =  0;
       return false;
     }
-	*/
+    */
   
   } /* namespace parser */
   

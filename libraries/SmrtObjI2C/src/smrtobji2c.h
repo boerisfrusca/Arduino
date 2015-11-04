@@ -22,4 +22,5 @@
 // Devices (multiplexer, driver, etc)
 #include "devices/PCA9548A.h"  // I2C multiplexer
 #include "devices/TCA6507.h"   // LED driver
+#include "devices/PIC24FV32KA301.h"   // PIC
 #endif /* SMRTOBJI2C_H_ */
