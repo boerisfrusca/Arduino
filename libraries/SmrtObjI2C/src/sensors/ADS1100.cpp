@@ -43,7 +43,8 @@ namespace smrtobj
     }
   
   
-    bool ADS1100::initialize() {
+    bool ADS1100::initialize()
+    {
         // Nothing is required, but
         // the method should exist anyway.
       return true;

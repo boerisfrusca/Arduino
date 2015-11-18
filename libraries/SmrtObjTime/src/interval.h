@@ -78,18 +78,21 @@ namespace smrtobj
         /**
          * Returns the time passed from the start time (in milliseconds).
          *
+         * \param[in] tref external reference time, if 0 use system time
+         *
          * \return time passed
          */
-        unsigned long time();
+        unsigned long time(unsigned long tref = 0);
   
         /**
          * Returns the remaining time calculated as endTime - m_start (in milliseconds).
          *
          * \param[in] endTime end time of an interval
+         * \param[in] tref external reference time, if 0 use system time
          *
          * \return residual time
          */
-        unsigned long residualTime(unsigned long endTime);
+        unsigned long residualTime(unsigned long endTime, unsigned long tref = 0);
   
         /**
          *  Overload operator =

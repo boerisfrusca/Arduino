@@ -52,9 +52,9 @@ namespace smrtobj
       }
     }
   
-    unsigned long Interval::time()
+    unsigned long Interval::time(unsigned long tref)
     {
-      unsigned long now = millis();
+      unsigned long now = (tref!=0)?tref:millis();
       unsigned long t = now - m_start;
   
       if (now < m_start)
@@ -69,9 +69,9 @@ namespace smrtobj
       return t;
     }
   
-    unsigned long Interval::residualTime(unsigned long endTime)
+    unsigned long Interval::residualTime(unsigned long endTime, unsigned long tref)
     {
-      if (time() >= endTime)
+      if (time(tref) >= endTime)
       {
         return 0;
       }

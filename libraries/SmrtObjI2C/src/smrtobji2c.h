@@ -18,6 +18,8 @@
 #include "sensors/TCS34725.h"  // Lighting
 #include "sensors/IAQ2000.h"   // VOC
 #include "sensors/ADS1100.h"   // CH2O
+#include "sensors/T6713.h"     // CO2
+#include "sensors/HIH7121.h"   // T and RH
 
 // Devices (multiplexer, driver, etc)
 #include "devices/PCA9548A.h"  // I2C multiplexer

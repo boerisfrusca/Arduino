@@ -6,6 +6,7 @@
  *
  */
 #include "interfaces/i2cinterface.h"
+#include <smrtobjtime.h>                      // Time interval
 
 namespace smrtobj
 {
@@ -56,8 +57,12 @@ namespace smrtobj
   
          Wire.requestFrom(devAddr, length);
   
-         uint32_t t1 = millis();
-         for (; Wire.available() && (timeout == 0 || millis() - t1 < timeout); count++) {
+         //uint32_t t1 = millis();
+
+         smrtobj::timer::Interval t;
+         t.update();
+
+         for (; Wire.available() && (timeout == 0 || /*millis() - t1 < timeout*/ t.residualTime(timeout) == 0); count++) {
      #if ((I2CDEV_IMPLEMENTATION == I2CDEV_ARDUINO_WIRE && ARDUINO < 100) || I2CDEV_IMPLEMENTATION == I2CDEV_BUILTIN_NBWIRE)
              data[count] = Wire.receive();
      #elif (I2CDEV_IMPLEMENTATION == I2CDEV_ARDUINO_WIRE && ARDUINO >= 100)
@@ -68,7 +73,7 @@ namespace smrtobj
              if (count + 1 < length) Serial.print(" ");
      #endif
          }
-         if (timeout > 0 && millis() - t1 >= timeout && count < length) count = -1; // timeout
+         if (timeout > 0 && /*millis() - t1 >= timeout*/ t.residualTime(timeout) == 0 && count < length) count = -1; // timeout
   
      #ifdef I2CDEV_SERIAL_DEBUG
          Serial.print( F(". Done (") );
@@ -122,7 +127,7 @@ namespace smrtobj
      bool I2CInterface::read_word(uint16_t &value, bool MSB) {
        uint8_t buffer[2] = {0};
        // read bytes from the DATA1 AND DATA2 registers and bit-shifting them into a 16-bit value
-       uint8_t rb = readAllBytes(m_device_addr, 2, buffer);
+       uint8_t rb = readAllBytes(m_device_addr, 2, buffer, 0);
        if (MSB)
          value = (buffer[0] << 8) | buffer[1];
        else

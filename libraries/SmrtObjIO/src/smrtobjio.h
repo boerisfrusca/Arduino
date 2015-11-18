@@ -24,6 +24,7 @@
 
 // Sensors
 #include "sensor/analogsensor.h"
+#include "sensor/sensorbase.h"
 #include "sensor/mcp9700a.h"
 
 // IO signals

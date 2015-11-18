@@ -64,9 +64,12 @@ namespace smrtobj
     bool PIC24FV32KA301::read()
     {
       uint8_t buf[4 * N_SENS] = {0};
+      uint8_t n = 0;
 
-      if ( readAllBytes(address(), 4 * N_SENS, (uint8_t*) &buf) != 4 * N_SENS )
+      if ( ( n= readAllBytes(address(), 4 * N_SENS, (uint8_t*) &buf, 0) ) != 4 * N_SENS )
+      {
         return false;
+      }
 
       uint8_t i = 0;
       for ( i = 0; i < N_SENS; i++ )

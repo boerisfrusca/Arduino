@@ -1,60 +1,78 @@
 /**
- * \file ADS1100.h
- * \brief  ADS1100 is a class to handle an I2C ADC ADS1100.
+ * \file T6713.h
+ * \brief  T6713 is a class to handle an I2C Co2 meter.
  *
  * \author Marco Boeris Frusca
  *
  */
-#ifndef ADS1100_H_
-#define ADS1100_H_
+#ifndef T6713_H_
+#define T6713_H_
 
 #include <interfaces/i2cinterface.h>
   
-namespace smrtobj
+ namespace smrtobj
 {
   
   namespace i2c
   {
   
     /**
-     * Class ADS1100 models the Analog-to-Digital (A/D) converter TI ADS1100.
-     * The ADS1100 is a precision, continuously self-calibrating ADC with differential inputs and up to 16 bits
-     * of resolution in a small SOT23-6 package. Conversions are performed ratiometrically, using the power supply
-     * as the reference voltage. The ADS1100 uses an I2C-compatible serial interface and operates from a single
-     * power supply ranging from 2.7V to 5.5V.
+     * Class T6713 models the ....
      *
      */
-    class ADS1100 : public I2CInterface, public smrtobj::io::Sensor
+    class T6713: public I2CInterface, public smrtobj::io::Sensor
     {
       public:
+        enum _cmd_address{
+          FUNCTION_READ = 0x04,
+
+          FIRMWARE = 0x1389,
+
+          STATUS = 0x138A,
+
+          GAS_PPM = 0x138B,
+
+        };
+
+        enum _status
+        {
+          ERROR = 0x0001,
+
+          FLASH_ERROR = 0x0002,
+
+          CALIBRATION_ERROR = 0x0004,
+
+          RS232 = 0x0100,
+
+          RS485 = 0x0200,
+
+          I2C = 0x0400,
+
+          WARMUP_MODE = 0x0800,
+
+          SINGLE_POINT_CALIBRATION = 0x8000,
+
+        };
         //! Device address used by default
-        static const uint8_t DEVICE_ADDRESS = 0x48;
+        static const uint8_t DEVICE_ADDRESS = 0x15;
   
         /**
          * Default Constructor.
          *
          */
-        ADS1100();
-  
-        /**
-         * Constructor.
-         * Sets the device address.
-         *
-         * \param[in] addr device address
-         */
-        ADS1100(uint8_t addr);
+        T6713();
   
         /**
          * Copy Constructor.
          *
          * \param[in] d i2c device object
          */
-        ADS1100(const ADS1100 &d);
+        T6713(const T6713 &d);
   
         /**
          * Destructor.
          */
-        virtual ~ADS1100();
+        virtual ~T6713();
   
         /**
          * Override operator =
@@ -63,7 +81,7 @@ namespace smrtobj
          *
          * \return destination device reference
          */
-        ADS1100 & operator=(const ADS1100 &d);
+        T6713 & operator=(const T6713 &d);
   
         /**
          * Initializes the i2c device: power on and prepare for general usage.
@@ -97,6 +115,8 @@ namespace smrtobj
          * \return true for success, or false if any error occurs.
          */
         virtual bool read();
+
+        bool readStatus();
   
         /**
          * Converts data read (saved in \e m_value variable) in voltage.
@@ -139,16 +159,22 @@ namespace smrtobj
          * 
          * \return last value read
          */
-        uint16_t value() { return m_value; }
-  
+        uint16_t rgstr() { return m_register; }
+
+      protected:
+
+        bool read(uint16_t cmd);
+
+        void setRgstr(uint16_t value) { m_register = value; }
+
       private:
         //! Last value read
-        uint16_t m_value;
+        uint16_t m_register;
     };
   
   } /* namespace i2c */
   
 } /* namespace smrtobj */
   
-#endif /* ADS1100_H_ */
+  #endif /* ADS1100_H_ */
   

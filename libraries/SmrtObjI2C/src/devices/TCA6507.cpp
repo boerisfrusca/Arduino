@@ -62,7 +62,7 @@ namespace smrtobj
     {
       uint8_t result = 0;
 
-      return ( I2Cdev::readByte(DEVICE_ADDRESS, SELECT0, &result) == 1);
+      return ( I2Cdev::readByte(DEVICE_ADDRESS, SELECT0, &result, 0) == 1);
     };
 
     bool TCA6507::RAWSelRegsDrv(uint8_t s0, uint8_t s1, uint8_t s2)
@@ -87,7 +87,7 @@ namespace smrtobj
     {
       uint8_t result = 0;
 
-     I2Cdev::readByte(DEVICE_ADDRESS, reg, &result);
+     I2Cdev::readByte(DEVICE_ADDRESS, reg, &result, 0);
 
       return result;
     }

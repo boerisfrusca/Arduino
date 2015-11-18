@@ -94,7 +94,7 @@ namespace smrtobj
     {
       uint8_t r_register = 0;
   
-      if ( !I2Cdev::readByte(DEVICE_ADDRESS, create_command(ID_ADDR), &r_register) )
+      if ( !I2Cdev::readByte(DEVICE_ADDRESS, create_command(ID_ADDR), &r_register, 0) )
         return false;
   
       if ( r_register == 0x44 )
@@ -109,7 +109,7 @@ namespace smrtobj
     {
       uint8_t buf[8] = {0};
   
-      if ( ! I2Cdev::readBytes(DEVICE_ADDRESS,  create_command(COLOR_ADDR), 8, buf) )
+      if ( ! I2Cdev::readBytes(DEVICE_ADDRESS,  create_command(COLOR_ADDR), 8, buf, 0) )
         return false;
   
       m_clear = (uint16_t)(buf[1]<<8) + (uint16_t)buf[0];

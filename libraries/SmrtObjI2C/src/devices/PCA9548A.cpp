@@ -57,12 +57,12 @@ namespace smrtobj
 
     bool PCA9548A::read()
     {
-      return ( readAllBytes(address(), 1, &m_ctrl_reg) > 0 );
+      return ( readAllBytes(address(), 1, &m_ctrl_reg, 0) > 0 );
     }
 
     bool PCA9548A::write ()
     {
-      return ( writeAllBytes(address(), 1, &m_ctrl_reg) > 0 );
+      return ( writeAllBytes(address(), 1, &m_ctrl_reg, 0) > 0 );
     }
 
     bool PCA9548A::setChannel(uint8_t n, bool en)
