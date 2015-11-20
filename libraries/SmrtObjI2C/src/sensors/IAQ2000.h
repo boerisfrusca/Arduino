@@ -101,10 +101,46 @@ namespace smrtobj
          * \return last value read
          */
         uint16_t value() { return m_value; }
-  
+
+        /**
+         * Returns status of the last reading:
+         *
+         *   - 0x00 : OK
+         *   - 0x01 : BUSY (re-read multi byte data!)
+         *   - 0x10 : RUNIN (module in warm up phase)
+         *   - 0x80 : ERROR (if constant: replace sensor)
+         *
+         * \return status
+         */
+        uint8_t status() { return m_status; };
+
+        /**
+         * Returns the resistance value:
+         *
+         * \return resistance value
+         */
+        uint32_t resistance() { return m_resistance; };
+
+        /**
+         * Returns the tVOC value:
+         *
+         * \return resistance value
+         */
+        uint16_t tVOC() { return m_tvoc; };
+
       private:
         //! Last value read
         uint16_t m_value;
+
+        //! status
+        uint8_t m_status;
+
+        //! status
+        uint32_t m_resistance;
+
+        //! status
+        uint16_t m_tvoc;
+
     };
   
   } /* namespace i2c */

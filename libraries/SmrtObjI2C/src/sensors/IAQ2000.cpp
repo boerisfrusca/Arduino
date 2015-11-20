@@ -19,7 +19,7 @@ namespace smrtobj
   namespace i2c
   {
    
-    IAQ2000::IAQ2000() : m_value(0)
+    IAQ2000::IAQ2000() : m_value(0), m_status(0), m_resistance(0), m_tvoc(0)
     {
       setDeviceAddress(DEVICE_ADDRESS);
     }
@@ -27,6 +27,9 @@ namespace smrtobj
     IAQ2000::IAQ2000(const IAQ2000 &s) : I2CInterface(s), Sensor(s)
     {
       m_value = s.m_value;
+      m_status = s.m_status;
+      m_resistance = s.m_resistance;
+      m_tvoc = s.m_tvoc;
     }
   
     IAQ2000::~IAQ2000()
@@ -39,7 +42,10 @@ namespace smrtobj
       Sensor::operator=(s);
   
       m_value = s.m_value;
-  
+      m_status = s.m_status;
+      m_resistance = s.m_resistance;
+      m_tvoc = s.m_tvoc;
+
       return (*this);
     }
   
@@ -62,7 +68,71 @@ namespace smrtobj
     }
   
     bool IAQ2000::read() {
-      return read_word(m_value);
+      uint8_t buf[9] = {0};
+
+       if ( readAllBytes(address(), 9, buf, 0) != 9 )
+         return false;
+
+       bool valid = true;
+       m_value = 0;
+       m_resistance = 0;
+       m_tvoc = 0;
+
+
+       for (uint8_t index = 0; index < 9; index++)
+       {
+         switch (index)
+         {
+           case 0 :
+           case 1 : {
+             m_value <<= 8;
+             m_value |= buf[index];
+           }
+           break;
+
+           case 2 : {
+             m_status = buf[index];
+           }
+           break;
+
+           case 3 :
+           case 4 :
+           case 5 :
+           case 6 : {
+             m_resistance <<= 8;
+             m_resistance |= buf[index];
+           }
+           break;
+
+           case 7 :
+           case 8 : {
+             m_tvoc <<= 8;
+             m_tvoc |= buf[index];
+           }
+           break;
+         }
+         /*
+         Serial.print( F( "[" ) );
+         Serial.print( index );
+         Serial.print( F( "] : " ) );
+         Serial.println( buf[index] , HEX );
+         */
+       }
+       /*
+       Serial.print( F("PPM : ") );
+       Serial.println( m_value );
+
+       Serial.print( F("Status : ") );
+       Serial.println( m_status);
+
+       Serial.print( F("Resistance : ") );
+       Serial.println( m_resistance );
+
+       Serial.print( F("tvoc : ") );
+       Serial.println( m_tvoc );
+       */
+       return true;
+      //return read_word(m_value);
     }
   
     float IAQ2000::measure()
