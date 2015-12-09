@@ -22,6 +22,7 @@ namespace smrtobj
       if (addr < 0x70 || addr > 0x77)
       {
         addr = DEVICE_ADDRESS;
+        setDeviceAddress(addr);
       }
 
       setDeviceAddress(addr);
@@ -78,6 +79,9 @@ namespace smrtobj
         m_ctrl_reg |= mask;
       else
         m_ctrl_reg &= ~(mask);
+
+      //Serial.print( " mask .. " );
+      //Serial.println( mask , HEX );
 
       return write();
     }

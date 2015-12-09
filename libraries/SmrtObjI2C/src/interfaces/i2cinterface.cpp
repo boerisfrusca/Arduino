@@ -170,7 +170,7 @@ namespace smrtobj
       else
         value = (buffer[1] << 8) | buffer[0];
 
-      return rb > 0;
+      return rb == 2;
     }
 
     // Convert Decimal to Binary Coded Decimal (BCD)

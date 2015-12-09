@@ -71,10 +71,41 @@ namespace smrtobj
         return false;
       }
 
+/*
+      for (uint8_t n = 0; n < 4 * N_SENS; n++ )
+      {
+        Serial.print( F("[") );
+        Serial.print( n );
+        Serial.print( F("] : ") );
+        Serial.println( buf[n] , HEX);
+      }
+*/
       uint8_t i = 0;
       for ( i = 0; i < N_SENS; i++ )
       {
-        m_data[i] = (buf[(i*2)] << 8) | buf[(i*2)+1];
+/*
+        Serial.print( F("[") );
+        Serial.print( i );
+        Serial.print( F("] : ") );
+*/
+        uint16_t n = buf[(i*2)];
+        n &= 0x0FF;
+/*
+        Serial.print( n , HEX);
+        Serial.print( F(" _ ") );
+*/
+        m_data[i] = n;
+        m_data[i] <<= 8;
+        m_data[i] &= 0xFF00;
+
+        n = buf[(i*2)+1];
+        n &= 0x0FF;
+        m_data[i] |=  n;
+/*
+        Serial.print( n , HEX);
+        Serial.print( F(" _ ") );
+        Serial.println( m_data[i] , HEX );
+*/
       }
 
       i*=2;
@@ -82,6 +113,12 @@ namespace smrtobj
       for (uint8_t j = 0; j < N_SENS; j++ )
       {
         m_cfg[j] = buf[i+j];
+/*
+        Serial.print( F("[") );
+        Serial.print( j );
+        Serial.print( F("] : ") );
+        Serial.println( m_cfg[j] );
+*/
       }
 
       i+= N_SENS;
@@ -89,6 +126,12 @@ namespace smrtobj
       for (uint8_t j = 0; j < N_SENS; j++ )
       {
         m_state[j] = buf[i+j];
+/*
+        Serial.print( F("[") );
+        Serial.print( j );
+        Serial.print( F("] : ") );
+        Serial.println( m_state[j] );
+*/
       }
 
       return true;

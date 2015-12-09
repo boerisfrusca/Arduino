@@ -41,8 +41,9 @@ namespace smrtobj
          * Sets the device address.
          *
          * \param[in] addr device address
+         * \param[in] vref reference voltage
          */
-        ADS1100(uint8_t addr);
+        ADS1100(uint8_t addr, float vref);
   
         /**
          * Copy Constructor.
@@ -144,6 +145,9 @@ namespace smrtobj
       private:
         //! Last value read
         uint16_t m_value;
+
+        //! Reference voltage
+        float m_vref;
     };
   
   } /* namespace i2c */

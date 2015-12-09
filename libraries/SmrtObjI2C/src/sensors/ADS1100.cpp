@@ -13,12 +13,12 @@ namespace smrtobj
   namespace i2c
   {
   
-    ADS1100::ADS1100() : m_value(0)
+    ADS1100::ADS1100() : m_value(0), m_vref(5.0)
     {
       setDeviceAddress(DEVICE_ADDRESS);
     }
   
-    ADS1100::ADS1100(uint8_t addr) : m_value(0)
+    ADS1100::ADS1100(uint8_t addr, float vref) : m_value(0), m_vref(vref)
     {
       setDeviceAddress(addr);
     }
@@ -26,6 +26,7 @@ namespace smrtobj
     ADS1100::ADS1100(const ADS1100 &d) : I2CInterface(d), Sensor(d)
     {
       m_value = d.m_value;
+      m_vref = d.m_vref;
     }
   
     ADS1100::~ADS1100()
@@ -67,9 +68,13 @@ namespace smrtobj
   
     float ADS1100::measure()
     {
+      /*
       float voltage = m_value * 2.048 ;
       voltage = voltage / 32768.0;
-  
+      */
+      float voltage = m_value * m_vref;
+      voltage = voltage / 32768.0;
+
       return (float) voltage;
     }
   
