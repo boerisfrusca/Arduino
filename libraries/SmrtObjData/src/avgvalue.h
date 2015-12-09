@@ -98,6 +98,11 @@ namespace smrtobj
          */
         float add(float value);
   
+        /**
+         * Returns the current index.
+         *
+         * \return index.
+         */
         unsigned int index() { return m_i; }
 
     };

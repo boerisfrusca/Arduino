@@ -1,6 +1,6 @@
 /**
- * \file PPD42NS.h
- * \brief  PPD42NS is a class to handle an particolate sensor, using and I2C interface implemeted by a PIC.
+ * \file sensorbase.h
+ * \brief  Generic sensor.
  *
  * \author Marco Boeris Frusca
  *
@@ -43,7 +43,7 @@ namespace smrtobj
         /**
          * Override operator =
          *
-         * \param[in] d source device object
+         * \param[in] s source device object
          *
          * \return destination device reference
          */

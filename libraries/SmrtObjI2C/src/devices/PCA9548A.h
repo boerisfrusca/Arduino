@@ -65,29 +65,30 @@ namespace smrtobj
         /**
          * Override operator =
          *
-         * \param[in] d source device object
+         * \param[in] d source device object.
          *
-         * \return destination obiect reference
+         * \return destination obiect reference.
          */
         PCA9548A & operator=(const PCA9548A &d);
 
         /**
          * Starts I2C communications. For this device, this function does nothing.
          *
-         * \return always true
+         * \return always true.
          */
         virtual bool initialize();
 
         /**
          * Tests if the device is connected.
-         * This function makes sure the device is connected and responds when you try to read a register.
+         * This function makes sure the device is connected and responds when you try to read a register. A read operation
+         * is done to test if device responds.
          *
-         * \return true if connection is valid, false otherwise
+         * \return true if connection is valid, false otherwise.
          */
         virtual bool isConnected();
 
         /**
-         * Reads the current value of the control register and saves it into internal buffer. To get the read time use
+         * Reads the current value of the control register and saves it into internal buffer. To get the read value use
          * function smrtobj::i2c::PCA9548A::registerCtrl.
          *
          * \code{.cpp}
@@ -105,21 +106,21 @@ namespace smrtobj
         virtual bool read();
 
         /**
-         * Gets the last value read of the control register.
+         * Gets the last read value of the control register.
          *
          * \return last value read.
          */
         uint8_t registerCtrl() { return m_ctrl_reg;};
 
        /**
-        * Disables all channels. This function writes into control register value 0x00.
+        * Disables all channels. This function writes in the control register the value 0x00.
          *
          * \return true for success, or false if any error occurs. 
          */
         bool disableAll() {m_ctrl_reg = 0x00; return write ();};
 
         /**
-         * Enables all channels. This function writes into control register value 0xFF.
+         * Enables all channels. This function writes in the control register the value 0xFF.
          *
          * \return true for success, or false if any error occurs. 
          */

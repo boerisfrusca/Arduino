@@ -23,33 +23,51 @@
     class T6713: public I2CInterface, public smrtobj::io::Sensor
     {
       public:
+        /**
+         * Command addresses
+         */
         enum _cmd_address{
+          //! Read
           FUNCTION_READ = 0x04,
 
+          //! Get firmware version
           FIRMWARE = 0x1389,
 
+          //! Get status
           STATUS = 0x138A,
 
+          //! Read contration
           GAS_PPM = 0x138B,
 
         };
 
+        /**
+         * Status values
+         */
         enum _status
         {
+          //! Generic rrror
           ERROR = 0x0001,
 
+          //! Flash error
           FLASH_ERROR = 0x0002,
 
+          //! Calibration error
           CALIBRATION_ERROR = 0x0004,
 
+          /// RS-232
           RS232 = 0x0100,
 
+          /// RS-285
           RS485 = 0x0200,
 
+          //! I2C
           I2C = 0x0400,
 
+          //! Sensor is in warm-up mode
           WARMUP_MODE = 0x0800,
 
+          //! Single point calibration
           SINGLE_POINT_CALIBRATION = 0x8000,
 
         };
@@ -116,6 +134,11 @@
          */
         virtual bool read();
 
+        /**
+         * Read status.
+         *
+         * \return true for success, or false if any error occurs.
+         */
         bool readStatus();
   
         /**
@@ -163,8 +186,20 @@
 
       protected:
 
+        /**
+         * Read a register of a specific command.
+         *
+         * \param[in] cmd command register value.
+         *
+         * \return true for success, or false if any error occurs.
+         */
         bool read(uint16_t cmd);
 
+        /**
+         * Set internal register to a specific value.
+         *
+         * \param[in] value value to write in to the internal register.
+         */
         void setRgstr(uint16_t value) { m_register = value; }
 
       private:
